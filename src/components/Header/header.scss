@@ -55,6 +55,7 @@
 // Navbar
 .navigation-cont {
     position: sticky;
+    width: 100%;
     top: 0;
     z-index: 999;
 }
@@ -64,7 +65,8 @@
     align-items: center;
     justify-content: space-between;
 
-    background-color: $primary-blue;
+    background-color: rgba($primary-blue, 0.9);
+    backdrop-filter: blur(10px);
 
     padding: 16px 128px;
 
