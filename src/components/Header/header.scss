@@ -53,6 +53,12 @@
 // ------------------------------------------------------------------------
 
 // Navbar
+.navigation-cont {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
 .navigation {
     display: flex;
     align-items: center;
@@ -61,10 +67,6 @@
     background-color: $primary-blue;
 
     padding: 16px 128px;
-
-    position: sticky;
-    top: 0;
-    z-index: 999;
 
     &.scrolled {
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);

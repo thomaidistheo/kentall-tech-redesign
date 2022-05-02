@@ -22,7 +22,7 @@ export default function Header() {
     }
 
   return (
-    <>
+    <div className="navigation-cont">
         <div className="navigation">
             <div className="logo">
                 <Link to="/">
@@ -69,21 +69,6 @@ export default function Header() {
             </div>
             ) : ''
         }
-        {/* <div className="mobile-nav">
-            <ul className="nav-items">
-                <li className="link-text"> 
-                    <Link to="/contact">Contact</Link> 
-                </li>
-                <li className="link-text">
-                    <Link to="/about">About</Link>
-                </li>
-                <li>    
-                    <button className="btn btn-primary-red">
-                        Live Tracking
-                    </button>
-                </li>
-            </ul>
-        </div> */}
-    </>
+    </div>
   )
 }

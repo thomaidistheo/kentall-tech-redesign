@@ -164,6 +164,13 @@ body {
   }
 }
 
+.navigation-cont {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,10 +183,6 @@ body {
           justify-content: space-between;
   background-color: #0F233B;
   padding: 16px 128px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 999;
 }
 
 .navigation.scrolled {
