@@ -128,7 +128,14 @@ body {
           justify-content: center;
   color: #FCFCFC;
   padding: 32px 128px;
+  text-align: center;
   font-size: 24px;
+}
+
+@media (max-width: 660px) {
+  .subtitle-cont .subtitle {
+    padding: 32px 32px;
+  }
 }
 
 .subtitle-cont .subtitle__cta {
