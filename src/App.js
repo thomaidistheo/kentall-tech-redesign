@@ -1,14 +1,14 @@
 import './App.css';
-import Homepage from './components/Homepage/Homepage'
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom"
-import Preheader from './components/Header/Preheader';
-import Header from './components/Header/Header';
-import Contact from './components/Contact/Contact';
-import About from './components/About/About';
+import Preheader from '../src/components/Header/Preheader';
+import Header from '../src/components/Header/Header';
+import Homepage from './Pages/Homepage/Homepage'
+import Contact from './Pages/Contact/Contact';
+import About from './Pages/About/About';
 import ErrorPage from './ErrorPage';
 
 function App() {

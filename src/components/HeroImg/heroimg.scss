@@ -1,0 +1,54 @@
+@import '../../imports';
+
+.hero-image {
+    background-color: $primary-blue;
+    height: 80vh;
+    padding: 128px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    @media (max-width: 660px) {
+        padding: 16px;
+    }
+
+    &__text {
+        color: $primary-white;
+        font-size: 64px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        
+        z-index: 2;
+
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+        .btn {
+            font-size: 16px;
+            align-self: flex-start;
+        }
+
+        @media (max-width: 660px) {
+            font-size: 32px;
+        }
+    }
+
+    &__boat {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+
+        @media (max-width: 660px) {
+            right: -150px;
+            opacity: 0.5;
+        }
+    }
+}

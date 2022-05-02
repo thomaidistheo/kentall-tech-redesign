@@ -1,0 +1,26 @@
+@import '../../imports';
+
+@keyframes move-up {
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes move-down {
+    to {
+        transform: translateY(10px);
+    }
+}
+
+.card-cont {
+    margin-top: 128px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 128px;
+
+    padding: 0 16px;
+
+    padding-bottom: 500px;
+}

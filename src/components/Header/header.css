@@ -97,6 +97,10 @@
   color: #FCFCFC;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .preheader {
   background-color: #9C1A1A;
   color: #FCFCFC;
@@ -176,6 +180,11 @@
   position: sticky;
   top: 0;
   z-index: 999;
+}
+
+.navigation.scrolled {
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navigation .logo img {

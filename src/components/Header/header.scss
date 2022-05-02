@@ -1,5 +1,4 @@
-@import '../../buttons';
-@import '../../colors';
+@import '../../imports';
 
 // PreHeader
 .preheader {
@@ -67,6 +66,10 @@
     top: 0;
     z-index: 999;
 
+    &.scrolled {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
     // Logo Image
     .logo img {
         width: 160px;
@@ -81,9 +84,7 @@
         padding-left: 64px;
         font-size: 16px;
 
-
         li {
-            
             &:not(:last-child) {
                 margin-right: 64px;
             }
