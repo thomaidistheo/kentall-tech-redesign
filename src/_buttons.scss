@@ -1,0 +1,110 @@
+@import "colors.scss";
+
+@keyframes btn-fill-in{
+    from { width: 0% }
+    to { width: 100%; }
+}
+
+// @keyframes btn-fill-out{
+//     from { width: 100% }
+//     to { width: 0%; }
+// }
+
+// General Button Styles
+
+.btn {
+    border: none;
+    background-color: none;
+    padding: 16px 32px;
+    cursor: pointer;
+
+    position: relative;
+
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 0%;
+    //     height: 100%;
+    //     animation: btn-fill-out;
+    //     animation-duration: 200ms;
+    // }
+    
+    &:hover::before,
+    &:active::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation: btn-fill-in; 
+        animation-duration: 200ms;
+    }
+}
+
+// Primary Button
+
+.btn-primary-black {
+    background-color: $primary-black;
+    color: $primary-white;
+
+    &:hover::before {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+.btn-primary-white {
+    background-color: $primary-white;
+    color: $primary-black;
+
+    &:hover::before {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.btn-primary-red {
+    background-color: $primary-red;
+    color: $primary-white;
+
+    &:hover::before {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.btn-primary-blue {
+    background-color: $primary-blue;
+    color: $primary-white;
+
+    &:hover::before {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+// Secondary Button 
+
+.btn-secondary-black {
+    background: transparent;
+    border: 2px solid $primary-black;
+    color: $primary-white;
+}
+
+.btn-secondary-white {
+    background: transparent;
+    border: 2px solid $primary-white;
+    color: $primary-black;
+}
+
+.btn-secondary-red {
+    background: transparent;
+    border: 2px solid primary-red;
+    color: $primary-white;
+}
+
+.btn-secondary-blue {
+    background: transparent;
+    border: 2px solid $primary-blue;
+    color: $primary-white;
+}
+

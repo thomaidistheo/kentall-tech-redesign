@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@-webkit-keyframes btn-fill-in {
   from {
-    transform: rotate(0deg);
+    width: 0%;
   }
   to {
-    transform: rotate(360deg);
+    width: 100%;
   }
 }
+@keyframes btn-fill-in {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.btn {
+  border: none;
+  background-color: none;
+  padding: 16px 32px;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn:hover::before, .btn:active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: btn-fill-in;
+          animation: btn-fill-in;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+}
+
+.btn-primary-black {
+  background-color: #1E1E1E;
+  color: #FCFCFC;
+}
+
+.btn-primary-black:hover::before {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-primary-white {
+  background-color: #FCFCFC;
+  color: #1E1E1E;
+}
+
+.btn-primary-white:hover::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary-red {
+  background-color: #9C1A1A;
+  color: #FCFCFC;
+}
+
+.btn-primary-red:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary-blue {
+  background-color: #0F233B;
+  color: #FCFCFC;
+}
+
+.btn-primary-blue:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary-black {
+  background: transparent;
+  border: 2px solid #1E1E1E;
+  color: #FCFCFC;
+}
+
+.btn-secondary-white {
+  background: transparent;
+  border: 2px solid #FCFCFC;
+  color: #1E1E1E;
+}
+
+.btn-secondary-red {
+  background: transparent;
+  border: 2px solid primary-red;
+  color: #FCFCFC;
+}
+
+.btn-secondary-blue {
+  background: transparent;
+  border: 2px solid #0F233B;
+  color: #FCFCFC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Raleway', sans-serif;
+  background-color: #FCFCFC;
+}
+
+body {
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (max-width: 1140px) {
+  body {
+    background-image: none;
+    background-position: right;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+@-webkit-keyframes underline-text {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes underline-text {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=App.css.map */
