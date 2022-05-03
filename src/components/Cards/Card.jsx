@@ -21,7 +21,9 @@ export default function Card({ title, text, button, image}) {
             <div className='title'>{title}</div>
             <div className='text'>{text}</div>
             
-            <a href={button} className='btn btn-secondary-blue'>Learn More</a>
+            <Link to={button} className='btn btn-primary-blue'>
+                    Learn More
+            </Link>
             {/* <img src={image} /> */}
         </div>
     </div>

@@ -18,7 +18,7 @@
 
 .btn {
   border: none;
-  background-color: none;
+  background: none;
   padding: 16px 32px;
   cursor: pointer;
   position: relative;
@@ -31,8 +31,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-animation: btn-fill-in;
-          animation: btn-fill-in;
+  -webkit-animation-name: btn-fill-in;
+          animation-name: btn-fill-in;
   -webkit-animation-duration: 200ms;
           animation-duration: 200ms;
 }
@@ -94,6 +94,11 @@
 .btn-secondary-blue {
   background: transparent;
   border: 2px solid #0F233B;
+  color: #0F233B;
+}
+
+.btn-secondary-blue:hover::before {
+  background-color: #0F233B;
   color: #FCFCFC;
 }
 
@@ -130,7 +135,7 @@ body {
 }
 
 .card-cont {
-  margin-top: 128px;
+  background-color: #D6D6D6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,8 +147,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 128px;
-  padding: 0 16px;
-  padding-bottom: 500px;
+  gap: 64px;
+  padding: 128px 16px;
 }
 /*# sourceMappingURL=homepage.css.map */

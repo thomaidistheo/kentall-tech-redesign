@@ -13,14 +13,13 @@
 }
 
 .card-cont {
-    margin-top: 128px;
+    background-color: $col-gray-400;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 128px;
+    gap: 64px;
 
-    padding: 0 16px;
-
-    padding-bottom: 500px;
+    padding: 128px 16px;
 }

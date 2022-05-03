@@ -15,6 +15,12 @@
 .card {
     max-width: 700px;
     position: relative;
+    border-left: 10px solid $primary-blue;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+        border-left: 10px solid $primary-red;
+    }
 
     .inner {
         margin: 0 auto;
@@ -44,22 +50,17 @@
             font-size: 24px;
             font-weight: 500;
             margin-bottom: 16px;
-            
-            border-left: 4px solid $primary-blue;
-            padding-left: 8px;
         }
 
         .text {
             color: $primary-blue;
-            max-width: 600px;
+            max-width: 420px;
             margin-bottom: 32px;
             font-size: 14px;
         }
 
         .btn {
             opacity: 0.9;
-            box-shadow: 5px 5px 10px rgba($primary-blue, 0.2);
-            color: $primary-blue;
         }
     }
 

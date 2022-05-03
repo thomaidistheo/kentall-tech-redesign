@@ -9,9 +9,9 @@ export default function Preheader() {
     <div className="preheader">
       <ul>
         <li>
-          <a href="tel:2100000000">
+          <a href="tel:6948465991">
             <img src={iconTel} alt="tel"/>
-            <span className="link-text preheader-text">2100000000</span>
+            <span className="link-text preheader-text">6948465991</span>
           </a>
         </li>
         <li>
