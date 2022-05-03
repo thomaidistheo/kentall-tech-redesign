@@ -1,8 +1,9 @@
 import React from 'react'
 
 import './header.css'
-import iconMail from '../../assets/icons/mail-icon.png'
-import iconTel from '../../assets/icons/phone-icon.png'
+
+import {ReactComponent as IconMail} from '../../assets/icons/mail-icon.svg'
+import {ReactComponent as IconTel} from '../../assets/icons/phone-icon.svg'
 
 export default function Preheader() {
   return (
@@ -10,13 +11,13 @@ export default function Preheader() {
       <ul>
         <li>
           <a href="tel:6948465991">
-            <img src={iconTel} alt="tel"/>
+            <span className='preheader-icon'><IconTel /></span>
             <span className="link-text preheader-text">6948465991</span>
           </a>
         </li>
         <li>
-          <a href="tel:2100000000">
-            <img src={iconMail} alt="mail"/>
+          <a href="mailto:info@kentall-tech.com">
+            <span className='preheader-icon'><IconMail /></span>
             <span className="link-text preheader-text">info@kentall-tech.com</span>
           </a>
         </li>

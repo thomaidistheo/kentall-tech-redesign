@@ -35,8 +35,9 @@
                 display: flex;
                 align-items: center;
                 position: relative;
+                color: rgba($primary-white, 0.7);
 
-                img {
+                .preheader-icon {
                     margin-right: 16px;
                 }
 
@@ -122,20 +123,17 @@
         }
 
         .mobile-nav-btn {
-            display: block;
+            display: inline-block;
             position: absolute;
+            color: rgba($primary-white, 0.7);
             top: 50;
             left: 16px;
             transition: transform 200ms ease-in-out;
             cursor: pointer;
-
-            img {
-                transform: scale(1.2);
-            }
-
+            
             &.pressed {
-                transform: rotate(90deg);
-                transition: transform 200ms ease-in-out;
+                transform: rotate(45deg);
+                transition: transform 300ms ease-in-out;
             }
         }
     }

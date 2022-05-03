@@ -2,7 +2,10 @@ import React, { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from '../../assets/logo_hor.png'
-import hamMenu from '../../assets/icons/Hamburger_Menu.png'
+// import hamMenu from '../../assets/icons/Hamburger_Menu.png'
+import { ReactComponent as HamMenu } from '../../assets/icons/Hamburger_Menu.svg'
+import { ReactComponent as HamMenuClose } from '../../assets/icons/Hamburger_Menu_Close.svg'
+
 
 import './header.css'
 
@@ -45,7 +48,7 @@ export default function Header() {
             </ul>
 
             <div className="mobile-nav-btn" ref={mobileBtn} onClick={() => {handleMobileMenu()}}>
-                <img src={hamMenu} alt="menu button"/>
+                {!mobileMenu ? <HamMenu /> : <HamMenuClose />}
             </div>
         </div>
 
