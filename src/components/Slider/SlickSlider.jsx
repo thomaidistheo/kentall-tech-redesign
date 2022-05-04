@@ -13,7 +13,7 @@ export default function SyncSlider() {
   const [nav1, setNav1] = useState();
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,

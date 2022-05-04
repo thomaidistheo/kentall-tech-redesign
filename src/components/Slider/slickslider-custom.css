@@ -134,4 +134,13 @@ body {
 .slick-slide {
   margin: 0 16px;
 }
+
+.slick-arrow.slick-next,
+.slick-arrow.slick-prev {
+  display: none;
+}
+
+.slick-dots {
+  display: none !important;
+}
 /*# sourceMappingURL=slickslider-custom.css.map */
