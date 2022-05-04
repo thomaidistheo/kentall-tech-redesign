@@ -132,15 +132,19 @@ body {
 }
 
 .slick-slide {
-  margin: 0 16px;
+  margin: 0 16px !important;
 }
 
 .slick-arrow.slick-next,
 .slick-arrow.slick-prev {
-  display: none;
+  display: none !important;
 }
 
 .slick-dots {
   display: none !important;
+}
+
+.slick-initialized .slick-slide {
+  width: auto !important;
 }
 /*# sourceMappingURL=slickslider-custom.css.map */

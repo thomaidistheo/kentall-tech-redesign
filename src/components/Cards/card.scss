@@ -13,7 +13,7 @@
 }
 
 .card {
-    max-width: 700px;
+    max-width: 550px;
     position: relative;
     border-left: 10px solid $primary-blue;
     transition: all 150ms ease-in-out;
@@ -54,7 +54,6 @@
 
         .text {
             color: $primary-blue;
-            max-width: 420px;
             margin-bottom: 32px;
             font-size: 14px;
         }
