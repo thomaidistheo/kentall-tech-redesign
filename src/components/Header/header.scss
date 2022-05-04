@@ -39,6 +39,10 @@
 
                 .preheader-icon {
                     margin-right: 16px;
+
+                    @media (max-width: 780px) {
+                        margin-right: 0;
+                    }
                 }
 
                 .preheader-text {

@@ -165,6 +165,12 @@ body {
 }
 
 @media (max-width: 780px) {
+  .preheader ul li a .preheader-icon {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 780px) {
   .preheader ul li a .preheader-text {
     display: none;
   }
