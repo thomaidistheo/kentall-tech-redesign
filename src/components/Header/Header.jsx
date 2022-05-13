@@ -35,10 +35,10 @@ export default function Header() {
             </div>
             <ul className="nav-items">
                 <li className="link-text">
-                    <NavLink to="/contact" activeClassName="hurray">Contact</NavLink>
+                    <NavLink to="/contact" >Contact</NavLink>
                 </li>
                 <li className="link-text">
-                    <Link to="/about">About</Link>
+                    <NavLink to="/about">About</NavLink>
                 </li>
                 <li>    
                     <button className="btn btn-primary-red">

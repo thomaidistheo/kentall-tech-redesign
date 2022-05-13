@@ -110,7 +110,6 @@
             }
 
             .active {
-
                 &::after {
                     content: '';
                     position: absolute;
@@ -120,7 +119,6 @@
                     height: 2px;
                     background-color: $primary-red;
                     animation: underline-link 500ms ease-in-out;
-
                 }
             }
         }
