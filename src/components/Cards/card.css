@@ -102,8 +102,38 @@
   color: #FCFCFC;
 }
 
+.text-huge {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 600;
+}
+
+.text-bigger {
+  font-size: 46px;
+  line-height: 48px;
+  font-weight: 600;
+}
+
 body {
   overflow-x: hidden;
+  background-color: #D6D6D6;
+}
+
+*::-moz-selection {
+  background-color: #9C1A1A;
+  color: #FCFCFC;
+}
+
+*::selection {
+  background-color: #9C1A1A;
+  color: #FCFCFC;
+}
+
+.full-divider {
+  height: 4px;
+  width: 100%;
+  background-color: #9C1A1A;
+  margin: 4px 0 16px 0;
 }
 
 @-webkit-keyframes move-up {

@@ -1,0 +1,69 @@
+@import '../../imports';
+
+@keyframes underline-link{
+    from { width: 0% }
+    to { width: 100%; }
+}
+
+.page-title {
+    color: $primary-blue;
+}
+
+.contact-info,
+.contact-text {
+    padding: 0 128px;
+    font-size: 24px;
+    line-height: 26px;
+    color: $primary-blue;
+
+    @media (max-width: 780px) {
+        padding: 0 32px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+
+.contact-text {
+    margin-bottom: 64px;
+}
+
+.contact-info {
+    ul {
+        li {
+            color: $primary-blue;
+            a {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+
+                &:first-child {
+                    margin-bottom: 24px;
+                }
+
+                .icon {
+                    margin-right: 16px;
+                    width: 24px;
+                    height: 24px;
+                }
+
+                .link-text {
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: -4px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $primary-red;
+                        
+                        &:hover {
+                            animation: underline-link 500ms ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

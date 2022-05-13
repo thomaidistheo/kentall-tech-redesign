@@ -2,8 +2,8 @@ import React from 'react'
 
 import './header.css'
 
-import {ReactComponent as IconMail} from '../../assets/icons/mail-icon.svg'
-import {ReactComponent as IconTel} from '../../assets/icons/phone-icon.svg'
+import { ReactComponent as IconMail } from '../../assets/icons/mail-icon.svg'
+import { ReactComponent as IconTel } from '../../assets/icons/phone-icon.svg'
 
 export default function Preheader() {
   return (

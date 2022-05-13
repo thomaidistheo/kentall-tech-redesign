@@ -15,10 +15,20 @@
 .card-cont {
     background-color: $col-gray-400;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
     align-items: center;
     justify-content: center;
-    gap: 64px;
+    gap: 32px;
 
-    padding: 128px 16px;
+    padding: 64px 64px;
+
+    @media (max-width: 1280px) {
+        padding: 64px 32px;
+        gap: 16px;
+    }
+
+    @media (max-width: 980px) {
+        flex-wrap: wrap;
+        padding: 64px 16px;
+    }
 }

@@ -14,8 +14,7 @@ export default function SyncSlider() {
 
   const settings = {
     dots: false,
-    infinite: true,
-    speed: 500,
+    // infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,

@@ -15,7 +15,8 @@ export default function Card({ title, text, button, image}) {
                     backgroundImage: `url(${image})`,
                     // width: 700,
                     // height: 350,
-                    backgroundSize: 'cover'
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
                   }}
             ></div>
             <div className='title'>{title}</div>

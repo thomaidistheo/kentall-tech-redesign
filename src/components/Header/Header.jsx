@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 import logo from '../../assets/logo_hor.png'
 // import hamMenu from '../../assets/icons/Hamburger_Menu.png'
@@ -35,7 +35,7 @@ export default function Header() {
             </div>
             <ul className="nav-items">
                 <li className="link-text">
-                    <Link to="/contact">Contact</Link>
+                    <NavLink to="/contact" activeClassName="hurray">Contact</NavLink>
                 </li>
                 <li className="link-text">
                     <Link to="/about">About</Link>

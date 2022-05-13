@@ -102,8 +102,38 @@
   color: #FCFCFC;
 }
 
+.text-huge {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 600;
+}
+
+.text-bigger {
+  font-size: 46px;
+  line-height: 48px;
+  font-weight: 600;
+}
+
 body {
   overflow-x: hidden;
+  background-color: #D6D6D6;
+}
+
+*::-moz-selection {
+  background-color: #9C1A1A;
+  color: #FCFCFC;
+}
+
+*::selection {
+  background-color: #9C1A1A;
+  color: #FCFCFC;
+}
+
+.full-divider {
+  height: 4px;
+  width: 100%;
+  background-color: #9C1A1A;
+  margin: 4px 0 16px 0;
 }
 
 .preheader {
@@ -176,6 +206,24 @@ body {
   }
 }
 
+@-webkit-keyframes underline-link {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes underline-link {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .navigation-cont {
   position: -webkit-sticky;
   position: sticky;
@@ -222,12 +270,28 @@ body {
   font-size: 16px;
 }
 
+.navigation .nav-items li {
+  position: relative;
+}
+
 .navigation .nav-items li:not(:last-child) {
   margin-right: 64px;
 }
 
 .navigation .nav-items li:hover {
   opacity: 0.7;
+}
+
+.navigation .nav-items li .active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #9C1A1A;
+  -webkit-animation: underline-link 500ms ease-in-out;
+          animation: underline-link 500ms ease-in-out;
 }
 
 .navigation .nav-items button {
