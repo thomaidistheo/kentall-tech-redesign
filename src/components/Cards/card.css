@@ -21,6 +21,8 @@
   background: none;
   padding: 16px 32px;
   cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
   position: relative;
 }
 

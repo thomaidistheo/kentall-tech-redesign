@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/Footer/Footer'
 import HeroImg from '../../components/HeroImg/HeroImg'
 import Subtitle from '../../components/Subtitle/Subtitle'
 // import SlickSlider from '../../components/Slider/SlickSlider'
@@ -20,25 +21,26 @@ export default function Homepage() {
       {/* <SlickSlider /> */}
       <div className="card-cont">
         <Card 
-              image={motoCard}
-              title="Moto" 
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-              button="#"
-              />
-          <Card 
-            image={boatCard}
-            title="Yachting" 
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-            button="#"
-          />
-          <Card 
-            image={carCard}
-            title="Car" 
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-            button="#"
-          />
+          image={motoCard}
+          title="Moto" 
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+          button="#"
+        />
+        <Card 
+          image={boatCard}
+          title="Yachting" 
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+          button="#"
+        />
+        <Card 
+          image={carCard}
+          title="Car" 
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+          button="#"
+        />
       </div>
      
+      <Footer />
     </div>
   )
 }

@@ -21,6 +21,8 @@
   background: none;
   padding: 16px 32px;
   cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
   position: relative;
 }
 
@@ -278,7 +280,7 @@ body {
   margin-right: 64px;
 }
 
-.navigation .nav-items li:hover {
+.navigation .nav-items li:hover:not(:last-child) {
   opacity: 0.7;
 }
 
@@ -387,6 +389,8 @@ body {
   -webkit-box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
   border-bottom: 5px solid #9C1A1A;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .mobile-nav .nav-items {
