@@ -10,6 +10,7 @@ import Homepage from './Pages/Homepage/Homepage'
 import Contact from './Pages/Contact/Contact';
 import About from './Pages/About/About';
 import ErrorPage from './ErrorPage';
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -17,16 +18,30 @@ function App() {
     <div className="App">
 
       <Router>
-        <Preheader />
-        <Header />
 
+        <div className='header'>
+          <Preheader />
+          <Header />
+        </div>
+
+
+        <div className="app-content">
         <Routes> 
           <Route path="/" element={<Homepage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/*" elemenet={<ErrorPage />} />
         </Routes>
+        </div>
+        
+        <div className="footer">
+          <Footer />
+        </div>
+
       </Router>
+
+
+
     </div>
   );
 }

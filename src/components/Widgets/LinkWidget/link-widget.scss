@@ -1,0 +1,35 @@
+@import '../../../imports';
+
+.link-widget-cont {
+    display: flex;
+    flex-direction: column; 
+    max-width: 256px;
+
+    .widget-title {
+        margin-bottom: 32px;
+        text-transform: uppercase;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 28px;
+            left: 0;
+            height: 2px;
+            width: 256px;
+            background-color: $primary-red;
+        }
+    }
+
+    ul {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}

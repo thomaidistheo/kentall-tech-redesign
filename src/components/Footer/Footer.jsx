@@ -13,7 +13,7 @@ export default function Footer() {
             item1={ <Link to="/guides"> Guides </Link> }
             item2={ <Link to="/features"> Features </Link> }
             item3={ <Link to="/demo"> Demo </Link> }
-            item3={ <Link to="/support"> Support </Link> }
+            item4={ <Link to="/support"> Support </Link> }
         />
     </div>
   )

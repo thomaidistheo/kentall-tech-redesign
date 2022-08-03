@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../../components/Footer/Footer'
 import HeroImg from '../../components/HeroImg/HeroImg'
 import Subtitle from '../../components/Subtitle/Subtitle'
 // import SlickSlider from '../../components/Slider/SlickSlider'
@@ -39,8 +38,7 @@ export default function Homepage() {
           button="#"
         />
       </div>
-     
-      <Footer />
+
     </div>
   )
 }

@@ -1,6 +1,8 @@
 @import '../../imports';
 
 .footer-cont {
+    position: absolute;
+    width: 100vw;
     background-color: $col-dark-200;
     color: $primary-white;
 
