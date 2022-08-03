@@ -22,7 +22,7 @@ body {
       background-image: none; 
       background-position: right;
   }
-}
+}   
 
 a {
   text-decoration: none;
@@ -38,4 +38,11 @@ li {
 @keyframes underline-text {
   from {width: 0%;}
   to {width: 100%;}
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

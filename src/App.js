@@ -17,22 +17,23 @@ function App() {
   return (
     <div className="App">
 
-      <Router>
+      <Router className="router">
+        <div>
+          <div className='header'>
+            <Preheader />
+            <Header />
+          </div>
 
-        <div className='header'>
-          <Preheader />
-          <Header />
+          <div className="app-content">
+            <Routes> 
+              <Route path="/" element={<Homepage />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </div>
         </div>
 
-
-        <div className="app-content">
-        <Routes> 
-          <Route path="/" element={<Homepage />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/*" elemenet={<ErrorPage />} />
-        </Routes>
-        </div>
         
         <div className="footer">
           <Footer />
