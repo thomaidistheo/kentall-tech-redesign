@@ -104,6 +104,12 @@
   color: #FCFCFC;
 }
 
+.text-normal {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
 .text-medium {
   font-size: 18px;
   line-height: 20px;
@@ -148,6 +154,44 @@ body {
   width: 100vw;
   background-color: #313131;
   color: #FCFCFC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 64px 128px;
+}
+
+@media (max-width: 512px) {
+  .footer-cont {
+    padding: 32px 32px;
+  }
+}
+
+@media (max-width: 1286px) {
+  .footer-cont {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer-cont .widget-seperator {
+  height: 70px;
+  width: 2px;
+  background-color: #464646;
+  margin: 0 64px;
+}
+
+@media (max-width: 1286px) {
+  .footer-cont .widget-seperator {
+    height: 2px;
+    width: 170px;
+    margin: 32px 0;
+  }
 }
 /*# sourceMappingURL=footer.css.map */

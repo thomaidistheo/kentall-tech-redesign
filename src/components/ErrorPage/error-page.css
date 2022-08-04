@@ -150,95 +150,34 @@ body {
   margin: 4px 0 16px 0;
 }
 
-@-webkit-keyframes underline-link {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes underline-link {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-.page-title {
-  color: #0F233B;
-}
-
-.contact-info,
-.contact-text {
-  padding: 0 128px;
-  font-size: 24px;
-  line-height: 26px;
-  color: #0F233B;
-}
-
-@media (max-width: 780px) {
-  .contact-info,
-  .contact-text {
-    padding: 0 32px;
-    font-size: 16px;
-    line-height: 18px;
-  }
-}
-
-.contact-text {
-  margin-bottom: 64px;
-}
-
-.contact-info ul li {
-  color: #0F233B;
-}
-
-.contact-info ul li a {
+.error-page-cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 64px 32px;
 }
 
-.contact-info ul li a:first-child {
-  margin-bottom: 24px;
+.error-page-cont h1 {
+  color: #9C1A1A;
+  margin-bottom: 64px;
+  text-align: center;
 }
 
-.contact-info ul li a .icon {
-  margin-right: 16px;
-  width: 24px;
-  height: 24px;
+.error-page-cont .error-suggestion {
+  background-color: #ECECEC;
+  padding-bottom: 64px;
+  margin-top: 64px;
+  -webkit-box-shadow: 10px 10px 0px #9c1a1a;
+          box-shadow: 10px 10px 0px #9c1a1a;
 }
-
-.contact-info ul li a .link-text {
-  position: relative;
-}
-
-.contact-info ul li a .link-text::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #9C1A1A;
-}
-
-.contact-info ul li a .link-text::after:hover {
-  -webkit-animation: underline-link 500ms ease-in-out;
-          animation: underline-link 500ms ease-in-out;
-}
-/*# sourceMappingURL=contact.css.map */
+/*# sourceMappingURL=error-page.css.map */

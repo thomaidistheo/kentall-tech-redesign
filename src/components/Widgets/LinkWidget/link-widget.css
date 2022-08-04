@@ -104,6 +104,12 @@
   color: #FCFCFC;
 }
 
+.text-normal {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
 .text-medium {
   font-size: 18px;
   line-height: 20px;
@@ -152,22 +158,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 256px;
+  width: 256px;
+  padding-bottom: 16px;
 }
 
 .link-widget-cont .widget-title {
-  margin-bottom: 32px;
   text-transform: uppercase;
-  position: relative;
+  margin-bottom: 32px;
 }
 
-.link-widget-cont .widget-title::after {
-  content: '';
-  position: absolute;
-  top: 28px;
-  left: 0;
+.link-widget-cont .widget-title .seperator {
+  margin-top: 4px;
   height: 2px;
-  width: 256px;
+  width: 100%;
   background-color: #9C1A1A;
 }
 

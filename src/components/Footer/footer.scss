@@ -5,5 +5,32 @@
     background-color: $col-dark-200;
     color: $primary-white;
 
+    display: flex;
+    flex-wrap: no-wrap;
+    align-items: center;
+
+
     padding: 64px 128px;
+
+    @media (max-width: 512px) {
+        padding: 32px 32px;
+    } 
+
+    @media (max-width: 1286px) {
+        flex-direction: column;
+        
+    }
+
+    .widget-seperator {
+        height: 70px;
+        width: 2px;
+        background-color: $col-dark-100;
+        margin: 0 64px;
+
+        @media (max-width: 1286px) {
+            height: 2px;
+            width: 170px;
+            margin: 32px 0;
+        }
+    }
 }

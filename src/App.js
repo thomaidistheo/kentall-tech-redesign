@@ -9,7 +9,7 @@ import Header from '../src/components/Header/Header';
 import Homepage from './Pages/Homepage/Homepage'
 import Contact from './Pages/Contact/Contact';
 import About from './Pages/About/About';
-import ErrorPage from './ErrorPage';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 import Footer from './components/Footer/Footer'
 
 function App() {
@@ -17,14 +17,14 @@ function App() {
   return (
     <div className="App">
 
-      <Router className="router">
+      <Router>
         <div>
-          <div className='header'>
+          <div>
             <Preheader />
             <Header />
           </div>
 
-          <div className="app-content">
+          <div>
             <Routes> 
               <Route path="/" element={<Homepage />} />
               <Route path="/contact" element={<Contact />} />
@@ -35,7 +35,7 @@ function App() {
         </div>
 
         
-        <div className="footer">
+        <div>
           <Footer />
         </div>
 

@@ -1,11 +1,9 @@
 @import '../../../imports';
 
-.link-widget-cont {
+.contact-widget-cont {
     display: flex;
     flex-direction: column; 
     width: 256px;
-    // this is need to accommodate the height difference because of the space between the contact items in the contact widget
-    padding-bottom: 16px;
 
     .widget-title {
         text-transform: uppercase;
@@ -20,13 +18,29 @@
     }
 
     ul {
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
         li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            span svg {
+                margin-right: 4px;
+            }
+
             &:not(:last-child) {
                 margin-bottom: 4px;
             }
 
             &:hover {
                 opacity: 0.7;
+            }
+
+            &.title:hover {
+                opacity: 1;
             }
         }
     }

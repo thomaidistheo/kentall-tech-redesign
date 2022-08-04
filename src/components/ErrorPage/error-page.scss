@@ -1,0 +1,23 @@
+@import '../../imports';
+
+.error-page-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 32px;
+
+    h1 {
+        color: $primary-red;
+        margin-bottom: 64px;
+        text-align: center;
+    }
+
+    .error-suggestion {
+        background-color: $col-gray-200;
+
+        padding-bottom: 64px;
+        margin-top: 64px;
+        box-shadow: 10px 10px 0px rgba(#9C1A1A, 1);
+    }
+}

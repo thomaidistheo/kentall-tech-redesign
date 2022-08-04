@@ -8,6 +8,7 @@ export default function LinkWidget({ title, item1, item2, item3, item4}) {
     <div className='link-widget-cont'>
         <div className='widget-title text-medium'> 
           { title }
+          <div className='seperator'></div>
         </div>
 
         <ul>

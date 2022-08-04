@@ -150,54 +150,34 @@ body {
   margin: 4px 0 16px 0;
 }
 
-@-webkit-keyframes underline-link {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
+.contact-widget-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 256px;
 }
 
-@keyframes underline-link {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
+.contact-widget-cont .widget-title {
+  text-transform: uppercase;
+  margin-bottom: 32px;
 }
 
-.page-title {
-  color: #0F233B;
+.contact-widget-cont .widget-title .seperator {
+  margin-top: 4px;
+  height: 2px;
+  width: 100%;
+  background-color: #9C1A1A;
 }
 
-.contact-info,
-.contact-text {
-  padding: 0 128px;
-  font-size: 24px;
-  line-height: 26px;
-  color: #0F233B;
+.contact-widget-cont ul:not(:last-child) {
+  margin-bottom: 16px;
 }
 
-@media (max-width: 780px) {
-  .contact-info,
-  .contact-text {
-    padding: 0 32px;
-    font-size: 16px;
-    line-height: 18px;
-  }
-}
-
-.contact-text {
-  margin-bottom: 64px;
-}
-
-.contact-info ul li {
-  color: #0F233B;
-}
-
-.contact-info ul li a {
+.contact-widget-cont ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,37 +188,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
-.contact-info ul li a:first-child {
-  margin-bottom: 24px;
+.contact-widget-cont ul li span svg {
+  margin-right: 4px;
 }
 
-.contact-info ul li a .icon {
-  margin-right: 16px;
-  width: 24px;
-  height: 24px;
+.contact-widget-cont ul li:not(:last-child) {
+  margin-bottom: 4px;
 }
 
-.contact-info ul li a .link-text {
-  position: relative;
+.contact-widget-cont ul li:hover {
+  opacity: 0.7;
 }
 
-.contact-info ul li a .link-text::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #9C1A1A;
+.contact-widget-cont ul li.title:hover {
+  opacity: 1;
 }
-
-.contact-info ul li a .link-text::after:hover {
-  -webkit-animation: underline-link 500ms ease-in-out;
-          animation: underline-link 500ms ease-in-out;
-}
-/*# sourceMappingURL=contact.css.map */
+/*# sourceMappingURL=contact-widget.css.map */
