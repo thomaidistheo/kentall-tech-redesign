@@ -6,6 +6,15 @@
     align-items: center;
     justify-content: center;
     gap: 16px; 
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+        transition: all 250ms ease-in-out;
+        .circle {
+            background-color: $primary-red;
+            transition: all 250ms ease-in-out;
+        }
+    }
 
     .circle {
         height: 100px;
@@ -37,5 +46,6 @@
     .feature-desc {
         text-align: center;
         max-width: 256px;
+        min-height: 100px;
     }
 }

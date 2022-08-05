@@ -163,7 +163,14 @@ body {
 }
 
 .spacer {
-  margin-top: 64px;
-  margin-bottom: 64px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+@media (max-width: 680px) {
+  .spacer {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 /*# sourceMappingURL=spacer.css.map */

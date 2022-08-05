@@ -1,6 +1,11 @@
 @import '../../imports';
 
 .spacer {
-    margin-top: 64px;
-    margin-bottom: 64px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    @media (max-width: 680px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 }

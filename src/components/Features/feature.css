@@ -177,6 +177,19 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 16px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.feature:hover {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.feature:hover .circle {
+  background-color: #9C1A1A;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 .feature .circle {
@@ -214,5 +227,6 @@ body {
 .feature .feature-desc {
   text-align: center;
   max-width: 256px;
+  min-height: 100px;
 }
 /*# sourceMappingURL=feature.css.map */

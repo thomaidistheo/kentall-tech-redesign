@@ -4,6 +4,7 @@ import Subtitle from '../../components/Subtitle/Subtitle'
 // import SlickSlider from '../../components/Slider/SlickSlider'
 import Card from '../../components/Cards/Card'
 import Feature from '../../components/Features/Feature'
+import PlatformCTASection from '../../components/Platform CTA Section/PlatformaCTASection'
 
 // Cards Photos
 import motoCard from '../../assets/moto-card.png'
@@ -11,6 +12,10 @@ import boatCard from '../../assets/boat-card.png'
 import carCard from '../../assets/car-card.png'
 
 // Features Icons
+import { ReactComponent as FeatureOne } from '../../assets/icons/map-pin.svg'
+import { ReactComponent as FeatureTwo } from '../../assets/icons/report.svg'
+import { ReactComponent as FeatureThree } from '../../assets/icons/bell-ringing.svg'
+import { ReactComponent as FeatureFour } from '../../assets/icons/device-desktop-analytics.svg'
 
 import './homepage.css'
 import Spacer from '../../components/Spacer/Spacer'
@@ -48,7 +53,7 @@ export default function Homepage() {
 
       {/*  Features Section */}
       <div className="features-section">
-        <p className="text-big">Features</p>
+        <p className="text-bigger">Features</p>
         <span className="title-underline"></span>
 
         <div className="features-desc">
@@ -58,15 +63,38 @@ export default function Homepage() {
 
         <div className="features-cont">
           <div className="feature-row">
-            <Feature />
-            <Feature />
+            <Feature 
+              icon= {<FeatureOne />}  
+              title="Fleet Management"
+              desc="Manage your fleet from one account, or create sub user accounts for clients and personnel with ease" 
+            />
+            <Feature 
+              icon= {<FeatureTwo />}
+              title="Summary Reports"
+              desc="Schedule automated Weekly Summary Reports for your assets to monitor the trips of the week" 
+            />
           </div>
           <div className="feature-row">
-            <Feature />
-            <Feature />
+          <Feature 
+              icon= {<FeatureThree />}
+              title="Alerts"
+              desc="Get notifications from your assets about: Engine ON, driving away or even speeding and more!" 
+            />
+            <Feature 
+              icon= {<FeatureFour />}
+              title="Live View"
+              desc="Track your assets' position live on the map using our Tracking Platform" 
+            />
           </div>
 
         </div>
+      </div>
+
+      <Spacer />
+
+      {/* Platform CTA Section */}  
+      <div className='platform-cta-section'>
+        <PlatformCTASection />
       </div>
 
       <Spacer />

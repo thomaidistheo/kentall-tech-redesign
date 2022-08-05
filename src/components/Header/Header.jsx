@@ -41,9 +41,11 @@ export default function Header() {
                     <NavLink to="/about">About</NavLink>
                 </li>
                 <li>    
+                <a href="https://www.kentalltrack.com/">
                     <button className="btn btn-primary-red">
                         Live Tracking
                     </button>
+                    </a>
                 </li>
             </ul>
 

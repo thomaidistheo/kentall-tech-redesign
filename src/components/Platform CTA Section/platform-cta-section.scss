@@ -1,0 +1,59 @@
+@import '../../imports';
+
+.platform-cta {
+    background-color: $col-gray-400;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 64px;
+
+    padding: 64px 64px;
+
+    @media (max-width: 980px) {
+        flex-direction: column;
+        padding: 64px 32px;
+    }
+
+    @media (max-width: 680px) {
+        flex-direction: column;
+        padding: 32px 32px;
+    }
+
+    .img-cont {
+        max-width: 600px;
+
+        img {
+            height: auto;
+            width: 500px;
+            max-width: 100%;
+        }
+    }
+
+    .desc {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 16px;
+
+        @media (max-width: 980px) {
+            align-items: center;
+        }
+
+        p {
+            max-width: 700px;
+            line-height: 32px;
+            color: $primary-blue;
+
+            @media (max-width: 980px) {
+                text-align: center;
+            }
+            
+            .highlight {
+                color: $primary-red;
+            }
+        }
+    }
+}

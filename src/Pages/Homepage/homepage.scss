@@ -45,13 +45,13 @@
         padding: 0px 32px;
     }
 
-    p.text-big {
-        margin-bottom: 8px;
+    p.text-bigger {
+        margin-bottom: 16px;
     }
 
     .title-underline {
         height: 2px;
-        width: 32px;
+        width: 64px;
         background-color: $primary-red;
         margin-bottom: 32px;
     }
@@ -67,20 +67,24 @@
     .features-cont {
         display: flex;
         flex-direction: row;
-        gap: 32px;
+        gap: 64px;
+
+        @media (max-width: 680px) {
+            gap: 64px;
+        }
 
         .feature-row {
             display: flex;
-            gap: 32px;
+            gap: 64px;
 
             @media (max-width: 680px) {
+                gap: 64px;
                 flex-direction: column;
             }
         }
     
         @media (max-width: 980px) {
             flex-direction: column;
-            padding: 64px 16px;
         }
     }
 }

@@ -1,1 +1,254 @@
-/* No CSS *//*# sourceMappingURL=platform-cta-section.css.map */
+@-webkit-keyframes btn-fill-in {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes btn-fill-in {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.btn {
+  border: none;
+  background: none;
+  padding: 16px 32px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+}
+
+.btn:hover::before, .btn:active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-name: btn-fill-in;
+          animation-name: btn-fill-in;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+}
+
+.btn-primary-black {
+  background-color: #1E1E1E;
+  color: #FCFCFC;
+}
+
+.btn-primary-black:hover::before {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-primary-white {
+  background-color: #FCFCFC;
+  color: #1E1E1E;
+}
+
+.btn-primary-white:hover::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary-red {
+  background-color: #9C1A1A;
+  color: #FCFCFC;
+}
+
+.btn-primary-red:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary-blue {
+  background-color: #0F233B;
+  color: #FCFCFC;
+}
+
+.btn-primary-blue:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary-black {
+  background: transparent;
+  border: 2px solid #1E1E1E;
+  color: #FCFCFC;
+}
+
+.btn-secondary-white {
+  background: transparent;
+  border: 2px solid #FCFCFC;
+  color: #1E1E1E;
+}
+
+.btn-secondary-red {
+  background: transparent;
+  border: 2px solid primary-red;
+  color: #FCFCFC;
+}
+
+.btn-secondary-blue {
+  background: transparent;
+  border: 2px solid #0F233B;
+  color: #0F233B;
+}
+
+.btn-secondary-blue:hover::before {
+  background-color: #0F233B;
+  color: #FCFCFC;
+}
+
+.text-small {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.text-normal {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.text-medium {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.text-big {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.text-bigger {
+  font-size: 46px;
+  line-height: 48px;
+  font-weight: 600;
+}
+
+.text-huge {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 600;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #D6D6D6;
+}
+
+*::-moz-selection {
+  background-color: #9C1A1A;
+  color: #FCFCFC;
+}
+
+*::selection {
+  background-color: #9C1A1A;
+  color: #FCFCFC;
+}
+
+.full-divider {
+  height: 4px;
+  width: 100%;
+  background-color: #9C1A1A;
+  margin: 4px 0 16px 0;
+}
+
+.platform-cta {
+  background-color: #D6D6D6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 64px;
+  padding: 64px 64px;
+}
+
+@media (max-width: 980px) {
+  .platform-cta {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 64px 32px;
+  }
+}
+
+@media (max-width: 680px) {
+  .platform-cta {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 32px 32px;
+  }
+}
+
+.platform-cta .img-cont {
+  max-width: 600px;
+}
+
+.platform-cta .img-cont img {
+  height: auto;
+  width: 500px;
+  max-width: 100%;
+}
+
+.platform-cta .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+}
+
+@media (max-width: 980px) {
+  .platform-cta .desc {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.platform-cta .desc p {
+  max-width: 700px;
+  line-height: 32px;
+  color: #0F233B;
+}
+
+@media (max-width: 980px) {
+  .platform-cta .desc p {
+    text-align: center;
+  }
+}
+
+.platform-cta .desc p .highlight {
+  color: #9C1A1A;
+}
+/*# sourceMappingURL=platform-cta-section.css.map */
