@@ -32,3 +32,27 @@
         padding: 64px 16px;
     }
 }
+
+.features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p.text-big {
+        margin-bottom: 8px;
+    }
+
+    .title-underline {
+        height: 2px;
+        width: 32px;
+        background-color: $primary-red;
+        margin-bottom: 32px;
+    }
+
+    .features-cont {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+}

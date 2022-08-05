@@ -1,3 +1,9 @@
+.text-small {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
 .text-normal {
     font-size: 16px;
     line-height: 18px;
@@ -10,10 +16,10 @@
     font-weight: 400;
 }
 
-.text-huge {
-    font-size: 64px;
-    line-height: 72px;
-    font-weight: 600;
+.text-big {
+    font-size: 24px; 
+    line-height: 26px;
+    font-weight: 400;
 }
 
 .text-bigger {
@@ -21,3 +27,9 @@
     line-height: 48px;
     font-weight: 600;
 } 
+
+.text-huge {
+    font-size: 64px;
+    line-height: 72px;
+    font-weight: 600;
+}

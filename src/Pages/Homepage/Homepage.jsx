@@ -3,12 +3,17 @@ import HeroImg from '../../components/HeroImg/HeroImg'
 import Subtitle from '../../components/Subtitle/Subtitle'
 // import SlickSlider from '../../components/Slider/SlickSlider'
 import Card from '../../components/Cards/Card'
+import Feature from '../../components/Features/Feature'
 
+// Cards Photos
 import motoCard from '../../assets/moto-card.png'
 import boatCard from '../../assets/boat-card.png'
 import carCard from '../../assets/car-card.png'
 
+// Features Icons
+
 import './homepage.css'
+import Spacer from '../../components/Spacer/Spacer'
 
 export default function Homepage() {
   return (
@@ -16,7 +21,7 @@ export default function Homepage() {
       <HeroImg />
       <Subtitle />
 
-      {/* category cards */}
+      {/* Category Cards Section */}
       {/* <SlickSlider /> */}
       <div className="card-cont">
         <Card 
@@ -38,6 +43,23 @@ export default function Homepage() {
           button="#"
         />
       </div>
+
+      <Spacer />
+
+      {/*  Features Section */}
+      <div className="features-section">
+        <p className="text-big">Features</p>
+        <span className="title-underline"></span>
+
+        <div className="features-cont">
+          <Feature />
+          <Feature />
+          <Feature />
+          <Feature />
+        </div>
+      </div>
+
+      <Spacer />
 
     </div>
   )

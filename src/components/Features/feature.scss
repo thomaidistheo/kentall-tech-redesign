@@ -1,0 +1,41 @@
+@import '../../imports';
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px; 
+
+    .circle {
+        height: 100px;
+        width: 100px;
+        background-color: $primary-blue;
+        border-radius: 50%;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        svg {
+            color: white;
+            height: 32px;
+            width: 32px;
+        }
+    }
+
+    .feature-title {
+        text-align: center;
+    }
+
+    .seperator {
+        width: 64px;
+        height: 1px;
+        background-color: $primary-blue;
+    }
+
+    .feature-desc {
+        text-align: center;
+        max-width: 256px;
+    }
+}

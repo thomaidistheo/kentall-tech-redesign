@@ -162,7 +162,7 @@ body {
   margin: 4px 0 16px 0;
 }
 
-.error-page-cont {
+.feature {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,20 +176,43 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 64px 32px;
+  gap: 16px;
 }
 
-.error-page-cont h1 {
-  color: #9C1A1A;
-  margin-bottom: 64px;
+.feature .circle {
+  height: 100px;
+  width: 100px;
+  background-color: #0F233B;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feature .circle svg {
+  color: white;
+  height: 32px;
+  width: 32px;
+}
+
+.feature .feature-title {
   text-align: center;
 }
 
-.error-page-cont .error-suggestion {
-  background-color: #ECECEC;
-  padding-bottom: 64px;
-  margin-top: 64px;
-  -webkit-box-shadow: 10px 10px 0px #9c1a1a;
-          box-shadow: 10px 10px 0px #9c1a1a;
+.feature .seperator {
+  width: 64px;
+  height: 1px;
+  background-color: #0F233B;
 }
-/*# sourceMappingURL=error-page.css.map */
+
+.feature .feature-desc {
+  text-align: center;
+  max-width: 256px;
+}
+/*# sourceMappingURL=feature.css.map */

@@ -162,34 +162,8 @@ body {
   margin: 4px 0 16px 0;
 }
 
-.error-page-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 64px 32px;
-}
-
-.error-page-cont h1 {
-  color: #9C1A1A;
-  margin-bottom: 64px;
-  text-align: center;
-}
-
-.error-page-cont .error-suggestion {
-  background-color: #ECECEC;
-  padding-bottom: 64px;
+.spacer {
   margin-top: 64px;
-  -webkit-box-shadow: 10px 10px 0px #9c1a1a;
-          box-shadow: 10px 10px 0px #9c1a1a;
+  margin-bottom: 64px;
 }
-/*# sourceMappingURL=error-page.css.map */
+/*# sourceMappingURL=spacer.css.map */

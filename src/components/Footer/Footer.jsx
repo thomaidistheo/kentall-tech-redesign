@@ -39,7 +39,7 @@ export default function Footer() {
           item4={ <Link to="/support"> Support </Link> }
           />
       </li>
-
     </ul>
   )
 }
+ 
