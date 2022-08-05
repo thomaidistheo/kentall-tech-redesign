@@ -51,11 +51,21 @@ export default function Homepage() {
         <p className="text-big">Features</p>
         <span className="title-underline"></span>
 
+        <div className="features-desc">
+          <p>Kentall Tech offers 2 year Warranty on all devices with experienced technical support.</p>
+          <p>Our goal is to achieve the best customer experience on every level</p>
+        </div>
+
         <div className="features-cont">
-          <Feature />
-          <Feature />
-          <Feature />
-          <Feature />
+          <div className="feature-row">
+            <Feature />
+            <Feature />
+          </div>
+          <div className="feature-row">
+            <Feature />
+            <Feature />
+          </div>
+
         </div>
       </div>
 

@@ -39,6 +39,12 @@
     align-items: center;
     justify-content: center;
 
+    padding: 0 64px;
+
+    @media (max-width: 1280px) {
+        padding: 0px 32px;
+    }
+
     p.text-big {
         margin-bottom: 8px;
     }
@@ -50,9 +56,31 @@
         margin-bottom: 32px;
     }
 
+    .features-desc {
+        margin-bottom: 64px;
+
+        p {
+            text-align: center;
+        }
+    }
+
     .features-cont {
         display: flex;
         flex-direction: row;
         gap: 32px;
+
+        .feature-row {
+            display: flex;
+            gap: 32px;
+
+            @media (max-width: 680px) {
+                flex-direction: column;
+            }
+        }
+    
+        @media (max-width: 980px) {
+            flex-direction: column;
+            padding: 64px 16px;
+        }
     }
 }
