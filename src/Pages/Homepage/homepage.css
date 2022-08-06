@@ -142,7 +142,7 @@
 
 body {
   overflow-x: hidden;
-  background-color: #D6D6D6;
+  background-color: #ECECEC;
 }
 
 *::-moz-selection {
@@ -191,7 +191,7 @@ body {
 }
 
 .card-cont {
-  background-color: #D6D6D6;
+  background-color: #ECECEC;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,7 +204,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 32px;
-  padding: 64px 64px;
+  padding: 128px 64px;
 }
 
 @media (max-width: 1280px) {
@@ -236,12 +236,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 64px;
+  background-color: #FCFCFC;
+  padding: 128px 64px;
 }
 
 @media (max-width: 1280px) {
   .features-section {
-    padding: 0px 32px;
+    padding: 64px 32px;
   }
 }
 

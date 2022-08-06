@@ -142,7 +142,7 @@
 
 body {
   overflow-x: hidden;
-  background-color: #D6D6D6;
+  background-color: #ECECEC;
 }
 
 *::-moz-selection {
@@ -222,6 +222,10 @@ body {
   height: 100%;
   overflow: hidden;
   z-index: 1;
+}
+
+.hero-image__boat img {
+  height: 100%;
 }
 
 @media (max-width: 660px) {

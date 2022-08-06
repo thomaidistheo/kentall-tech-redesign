@@ -13,14 +13,14 @@
 }
 
 .card-cont {
-    background-color: $col-gray-400;
+    background-color: $col-gray-200;
     display: flex;
     flex-wrap: no-wrap;
     align-items: center;
     justify-content: center;
     gap: 32px;
 
-    padding: 64px 64px;
+    padding: 128px 64px;
 
     @media (max-width: 1280px) {
         padding: 64px 32px;
@@ -39,10 +39,12 @@
     align-items: center;
     justify-content: center;
 
-    padding: 0 64px;
+    background-color: $primary-white;
+
+    padding: 128px 64px;
 
     @media (max-width: 1280px) {
-        padding: 0px 32px;
+        padding: 64px 32px;
     }
 
     p.text-bigger {

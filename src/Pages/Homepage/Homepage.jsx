@@ -4,7 +4,7 @@ import Subtitle from '../../components/Subtitle/Subtitle'
 // import SlickSlider from '../../components/Slider/SlickSlider'
 import Card from '../../components/Cards/Card'
 import Feature from '../../components/Features/Feature'
-import PlatformCTASection from '../../components/Platform CTA Section/PlatformaCTASection'
+import PlatformCTASection from '../../components/Platform CTA Section/PlatformCTASection'
 
 // Cards Photos
 import motoCard from '../../assets/moto-card.png'
@@ -18,7 +18,8 @@ import { ReactComponent as FeatureThree } from '../../assets/icons/bell-ringing.
 import { ReactComponent as FeatureFour } from '../../assets/icons/device-desktop-analytics.svg'
 
 import './homepage.css'
-import Spacer from '../../components/Spacer/Spacer'
+// import Spacer from '../../components/Spacer/Spacer'
+import ContactCTASection from '../../components/Contact CTA Section/ContactCTASection'
 
 export default function Homepage() {
   return (
@@ -49,11 +50,9 @@ export default function Homepage() {
         />
       </div>
 
-      <Spacer />
-
       {/*  Features Section */}
       <div className="features-section">
-        <p className="text-bigger">Features</p>
+        <p className="text-big">Features</p>
         <span className="title-underline"></span>
 
         <div className="features-desc">
@@ -90,14 +89,14 @@ export default function Homepage() {
         </div>
       </div>
 
-      <Spacer />
-
       {/* Platform CTA Section */}  
       <div className='platform-cta-section'>
         <PlatformCTASection />
       </div>
 
-      <Spacer />
+
+      {/* Contact CTA Section */}
+      <ContactCTASection />
 
     </div>
   )

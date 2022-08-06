@@ -142,7 +142,7 @@
 
 body {
   overflow-x: hidden;
-  background-color: #D6D6D6;
+  background-color: #ECECEC;
 }
 
 *::-moz-selection {
@@ -176,7 +176,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 64px 32px;
+  padding-top: 64px;
 }
 
 .error-page-cont h1 {

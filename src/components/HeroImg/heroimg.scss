@@ -47,6 +47,10 @@
         overflow: hidden;
         z-index: 1;
 
+        img {
+            height: 100%;
+        }
+
         @media (max-width: 660px) {
             right: -150px;
             opacity: 0.5;

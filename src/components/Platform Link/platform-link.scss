@@ -1,0 +1,48 @@
+@import '../../imports';
+
+.platform-link-cont {
+    max-width: 512px;
+    max-height: 512px;
+
+    padding: 128px 128px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    background-color: $col-gray-100;
+
+    box-shadow: -15px 15px 0 rgba(0, 0, 0, 0.2);
+    transition: all 250ms ease-in-out;
+
+    position: relative;
+
+    @media (max-width: 980px) {
+        max-width: 512px;
+        padding: 32px 32px;
+    }
+
+    p.text-medium {
+        width: 100%;
+        background-color: $primary-blue;
+        color: $primary-white;
+
+        position: absolute;
+        top: 0;
+        padding: 16px;
+    }
+
+    img.link-img {
+        max-width: 157px;
+    }
+
+    &:hover {
+
+        img.device-img {
+            transition: all 250ms ease-in-out;
+            transform: scale(1.2);
+        }
+    }
+}

@@ -9,7 +9,8 @@ import Header from '../src/components/Header/Header';
 import Homepage from './Pages/Homepage/Homepage'
 import Contact from './Pages/Contact/Contact';
 import About from './Pages/About/About';
-import ErrorPage from './components/ErrorPage/ErrorPage';
+import PlatformLinks from './Pages/Platform Links/PlatformLinks';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import Footer from './components/Footer/Footer'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
               <Route path="/" element={<Homepage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/about" element={<About />} />
+              <Route path="/platform-links" element={<PlatformLinks />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>

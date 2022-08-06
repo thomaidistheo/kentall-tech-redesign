@@ -2,7 +2,7 @@ import React from 'react'
 
 import './pagetitle.css'
 
-export default function ({ title }) {
+export default function PageTitle({ title }) {
   
     return (
         <>

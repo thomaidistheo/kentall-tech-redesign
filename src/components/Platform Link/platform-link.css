@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @-webkit-keyframes btn-fill-in {
   from {
     width: 0%;
@@ -7,6 +6,7 @@
     width: 100%;
   }
 }
+
 @keyframes btn-fill-in {
   from {
     width: 0%;
@@ -104,61 +104,68 @@
   color: #FCFCFC;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.text-small {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
-html {
-  font-family: 'Roboto', sans-serif;
+.text-normal {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.text-medium {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.text-big {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.text-bigger {
+  font-size: 46px;
+  line-height: 48px;
+  font-weight: 600;
+}
+
+.text-huge {
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 600;
 }
 
 body {
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  overflow-x: hidden;
+  background-color: #ECECEC;
 }
 
-@media (max-width: 1140px) {
-  body {
-    background-image: none;
-    background-position: right;
-  }
+*::-moz-selection {
+  background-color: #9C1A1A;
+  color: #FCFCFC;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+*::selection {
+  background-color: #9C1A1A;
+  color: #FCFCFC;
 }
 
-ul,
-li {
-  text-decoration: none;
-  list-style: none;
+.full-divider {
+  height: 4px;
+  width: 100%;
+  background-color: #9C1A1A;
+  margin: 4px 0 16px 0;
 }
 
-@-webkit-keyframes underline-text {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes underline-text {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-.App {
-  height: 100vh;
+.platform-link-cont {
+  max-width: 512px;
+  max-height: 512px;
+  padding: 128px 128px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,8 +173,45 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 32px;
+  background-color: #F8F8F8;
+  -webkit-box-shadow: -15px 15px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: -15px 15px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  position: relative;
 }
-/*# sourceMappingURL=App.css.map */
+
+@media (max-width: 980px) {
+  .platform-link-cont {
+    max-width: 512px;
+    padding: 32px 32px;
+  }
+}
+
+.platform-link-cont p.text-medium {
+  width: 100%;
+  background-color: #0F233B;
+  color: #FCFCFC;
+  position: absolute;
+  top: 0;
+  padding: 16px;
+}
+
+.platform-link-cont img.link-img {
+  max-width: 157px;
+}
+
+.platform-link-cont:hover img.device-img {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+/*# sourceMappingURL=platform-link.css.map */

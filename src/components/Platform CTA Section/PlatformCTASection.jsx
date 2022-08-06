@@ -9,7 +9,7 @@ function PlatformaCTASection() {
   return (
     <div className="platform-cta">
       <div className="img-cont">
-        <img src={laptopAndPhoneImg}></img>
+        <img alt="devices" src={laptopAndPhoneImg}></img>
       </div>
 
         <div className="desc">
