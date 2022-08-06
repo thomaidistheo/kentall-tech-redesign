@@ -1,0 +1,13 @@
+@import '../../../imports';
+
+.paragraph-title {
+    color: $primary-red;
+}
+
+.paragraph-title-underline {
+    width: 256px;
+    height: 2px;
+    background-color: $primary-blue;
+    margin-top: 8px;
+    margin-bottom: 32px;
+}

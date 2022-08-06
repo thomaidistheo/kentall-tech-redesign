@@ -201,8 +201,36 @@ body {
           align-items: center;
 }
 
+.preheader ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .preheader ul li:first-child {
   margin-right: 64px;
+}
+
+@media (max-width: 780px) {
+  .preheader ul li .second-phoneno {
+    display: none;
+  }
+}
+
+.preheader ul li .space {
+  margin: 0 8px;
+}
+
+@media (max-width: 780px) {
+  .preheader ul li .space {
+    display: none;
+  }
 }
 
 .preheader ul li a {

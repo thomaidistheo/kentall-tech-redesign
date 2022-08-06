@@ -184,12 +184,4 @@ body {
   margin-bottom: 64px;
   text-align: center;
 }
-
-.error-page-cont .error-suggestion {
-  background-color: #ECECEC;
-  padding-bottom: 64px;
-  margin-top: 64px;
-  -webkit-box-shadow: 10px 10px 0px #9c1a1a;
-          box-shadow: 10px 10px 0px #9c1a1a;
-}
 /*# sourceMappingURL=error-page.css.map */

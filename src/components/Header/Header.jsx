@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
-import logo from '../../assets/logo_hor.png'
+import logo from '../../assets/kentall-tech_logo_hor.png'
 // import hamMenu from '../../assets/icons/Hamburger_Menu.png'
 import { ReactComponent as HamMenu } from '../../assets/icons/Hamburger_Menu.svg'
 import { ReactComponent as HamMenuClose } from '../../assets/icons/Hamburger_Menu_Close.svg'

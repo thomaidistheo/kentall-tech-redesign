@@ -11,7 +11,7 @@ export default function HeroImg() {
         <div className='hero-image__text'>
             Fleet Management Solutions
             <Link to="/about" className='btn btn-primary-red'>
-                    Learn More
+                Learn More
             </Link>
         </div>
 

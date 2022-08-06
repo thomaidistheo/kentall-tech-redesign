@@ -10,9 +10,13 @@ export default function Preheader() {
     <div className="preheader">
       <ul>
         <li>
-          <a href="tel:6948465991">
+          <a href="tel:2170001200">
             <span className='preheader-icon'><IconTel /></span>
-            <span className="link-text preheader-text">6948465991</span>
+            <span className="link-text preheader-text">2170001200</span>
+          </a>
+          <span className='space'>-</span>
+          <a classname="second-phoneno" href="tel:2107663471">
+            <span className="link-text preheader-text">2107663471</span>
           </a>
         </li>
         <li>

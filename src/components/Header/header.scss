@@ -26,9 +26,25 @@
         align-items: center;
 
         li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:first-child {
                 margin-right: 64px;
+            }
+
+            .second-phoneno {
+                @media (max-width: 780px) {
+                    display: none;
+                }
+            }
+
+            .space {
+                margin: 0 8px;
+                @media (max-width: 780px) {
+                    display: none;
+                }
             }
 
             a {

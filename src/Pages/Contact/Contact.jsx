@@ -6,30 +6,36 @@ import './contact.css'
 import { ReactComponent as IconMail } from '../../assets/icons/mail-icon.svg'
 import { ReactComponent as IconTel } from '../../assets/icons/phone-icon.svg'
 
-export default function Contact() {
+export default function Contact({ desc }) {
 
   // const handleSubmit = () => {
   //   console.log('form submitted')
   // }
 
   return (
-    <>
+    <div className='contact-cont'>
       <PageTitle title='Contact us' />
 
+      
       <p className="contact-text">
-        We take your needs for security seriously and would like to help you find the best solution<br/>for your personal asset or fleet.</p>
-
+        We take your needs for security seriously and would like to help you find the best solution
+        for your personal asset or fleet.
+      </p>
       <div className="contact-info">
         <ul>
           <li>
-            <a href="tel:6948465991">
               <span className='icon'><IconTel /></span>
-              <span className="link-text">6948465991</span>
+            <a href="tel:2170001200">
+              <span className="link-text">2170001200</span>
+            </a>
+            <span className='tel-space'>-</span>
+            <a href="tel:2107663471">
+              <span className="link-text">2107663471</span>
             </a>
           </li>
           <li>
-            <a href="mailto:info@kentall-tech.com">
               <span className='icon'><IconMail /></span>
+            <a href="mailto:info@kentall-tech.com">
               <span className="link-text">info@kentall-tech.com</span>
             </a>
           </li>
@@ -89,7 +95,7 @@ export default function Contact() {
         </div>
 
       </form> */}
-  </>
+  </div>
     
   )
 }

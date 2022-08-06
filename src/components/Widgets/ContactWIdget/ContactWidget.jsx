@@ -2,7 +2,7 @@ import React from 'react'
 
 import './contact-widget.css'
 
-function ContactWidget( { email, phone}) {
+function ContactWidget( { email, phone, phone2}) {
 
   return (
         <div className='contact-widget-cont'>
@@ -30,6 +30,7 @@ function ContactWidget( { email, phone}) {
                 Phone
             </li>
             <li className="text-normal"><a href={'tel:'+ phone}>{phone}</a></li>
+            <li className="text-normal"><a href={'tel:'+ phone2}>{phone2}</a></li>
         </ul>
     </div>
   )

@@ -13,7 +13,8 @@ export default function Footer() {
       <li className='footer-widget'>
         <ContactWidget 
           email='info@kentall-tech.com'
-          phone='6948465991'
+          phone='2170001200'
+          phone2='2107663471'
         />
       </li>
 
