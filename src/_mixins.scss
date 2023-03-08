@@ -1,0 +1,37 @@
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexRowCenter {
+    @include flexCenter();
+    flex-direction: row;
+}
+
+@mixin flexRowCenterReverse {
+    @include flexCenter();
+    flex-direction: row-reverse;
+}
+
+@mixin flexColCenter {
+    @include flexCenter();
+    flex-direction: column;
+}
+
+@mixin flexColCenterReverse {
+    @include flexCenter();
+    flex-direction: column-reverse;
+}
+
+@mixin textMedium {
+    font-size: 24px;
+}
+
+@mixin textBig {
+    font-size: 32px;
+}
+
+@mixin textBigger {
+    font-size: 64px;
+}

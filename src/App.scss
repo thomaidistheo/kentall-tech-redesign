@@ -47,3 +47,7 @@ li {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.landing-page {
+  @include flexColCenter;
+}

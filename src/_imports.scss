@@ -1,6 +1,7 @@
 @import './buttons';
 @import './colors';
 @import './typography';
+@import './mixins';
 
 body {
     overflow-x: hidden;
@@ -17,4 +18,8 @@ body {
     width: 100%;
     background-color: $primary-red;
     margin: 4px 0 16px 0;
+}
+
+.landing-page {
+    @include flexColCenter;
 }

@@ -172,7 +172,7 @@
             cursor: pointer;
             
             &.pressed {
-                transform: rotate(45deg);
+                transform: rotate(90deg);
                 transition: transform 300ms ease-in-out;
             }
         }

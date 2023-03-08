@@ -1,12 +1,3 @@
-@-webkit-keyframes btn-fill-in {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 @keyframes btn-fill-in {
   from {
     width: 0%;
@@ -15,7 +6,6 @@
     width: 100%;
   }
 }
-
 .btn {
   border: none;
   background: none;
@@ -25,25 +15,21 @@
   line-height: 24px;
   position: relative;
 }
-
 .btn:hover::before, .btn:active::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-animation-name: btn-fill-in;
-          animation-name: btn-fill-in;
-  -webkit-animation-duration: 200ms;
-          animation-duration: 200ms;
+  animation-name: btn-fill-in;
+  animation-duration: 200ms;
 }
 
 .btn-primary-black {
   background-color: #1E1E1E;
   color: #FCFCFC;
 }
-
 .btn-primary-black:hover::before {
   background-color: rgba(255, 255, 255, 0.05);
 }
@@ -52,7 +38,6 @@
   background-color: #FCFCFC;
   color: #1E1E1E;
 }
-
 .btn-primary-white:hover::before {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -61,7 +46,6 @@
   background-color: #9C1A1A;
   color: #FCFCFC;
 }
-
 .btn-primary-red:hover::before {
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -70,7 +54,6 @@
   background-color: #0F233B;
   color: #FCFCFC;
 }
-
 .btn-primary-blue:hover::before {
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -98,7 +81,6 @@
   border: 2px solid #0F233B;
   color: #0F233B;
 }
-
 .btn-secondary-blue:hover::before {
   background-color: #0F233B;
   color: #FCFCFC;
@@ -162,94 +144,65 @@ body {
   margin: 4px 0 16px 0;
 }
 
-@-webkit-keyframes move-up {
-  to {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @keyframes move-up {
   to {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 }
-
-@-webkit-keyframes move-down {
-  to {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-}
-
 @keyframes move-down {
   to {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    transform: translateY(10px);
   }
 }
-
 .card {
   max-width: 550px;
   position: relative;
   border-left: 10px solid #0F233B;
-  -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
-
 .card:hover {
   border-left: 10px solid #9C1A1A;
 }
-
 .card .inner {
   margin: 0 auto;
   height: inherit;
   background-color: #FCFCFC;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   padding: 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-
 .card .inner .image {
   width: 100%;
   height: 300px;
   margin-bottom: 16px;
   opacity: 0.85;
 }
-
 .card .inner .title {
   color: #0F233B;
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 16px;
 }
-
 .card .inner .text {
   color: #0F233B;
   margin-bottom: 32px;
   font-size: 14px;
 }
-
 .card .inner .btn {
   opacity: 0.9;
 }
-
 .card .square {
   width: 450px;
   height: 450px;
@@ -257,16 +210,12 @@ body {
   position: absolute;
   animation: move-up 2s ease-in inifnite alternate-reverse;
 }
-
 .card .square:nth-child(1) {
   top: -40px;
   left: -40px;
 }
-
 .card .square:nth-child(2) {
   bottom: -55px;
   right: -55px;
-  -webkit-animation-name: move-down;
-          animation-name: move-down;
-}
-/*# sourceMappingURL=card.css.map */
+  animation-name: move-down;
+}/*# sourceMappingURL=card.css.map */

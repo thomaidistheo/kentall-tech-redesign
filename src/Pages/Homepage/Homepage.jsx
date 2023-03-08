@@ -26,7 +26,6 @@ export default function Homepage() {
     <div>     
       <HeroImg />
       <Subtitle />
-      <p>test</p>
       {/* Category Cards Section */}
       {/* <SlickSlider /> */}
       <div className="card-cont">
@@ -39,7 +38,7 @@ export default function Homepage() {
         <Card 
           image={boatCard}
           title="Yachting" 
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+          text="Our advanced web platform offers comprehensive Fleet Management solutions for Yachts and Sailboats, providing real-time information, trip reports, movement alerts and of course top-notch customer support"
           button="#"
         />
         <Card 
