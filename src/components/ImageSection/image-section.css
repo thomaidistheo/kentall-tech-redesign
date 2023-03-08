@@ -162,7 +162,8 @@ body {
   margin: 4px 0 16px 0;
 }
 
-.paragraph-content {
-  margin-bottom: 64px;
+.img-section {
+  width: auto;
+  height: 100%;
 }
-/*# sourceMappingURL=paragraph-body.css.map */
+/*# sourceMappingURL=image-section.css.map */

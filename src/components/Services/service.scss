@@ -1,0 +1,61 @@
+.service-card {
+    background-color: $primary-white;
+    padding: 64px;
+    max-width: 1512px;
+    margin-bottom: 64px;
+    box-shadow: 10px 10px 0 $primary-red;
+
+    @media (max-width: 768px) {
+        padding: 32px 32px;
+    }
+
+    @media (max-width: 512px) {
+        padding: 32px 16px;
+    }
+
+    &__content {
+        @include flexRowCenter;
+        gap: 128px;
+
+        @media (max-width: 1412px) {
+            @include flexColCenterReverse;
+            gap: 64px;
+        }
+
+        .card-text {
+            max-width: 512px;
+
+            &__title {
+                color: $primary-red;
+                @include textBigger;
+                margin-bottom: 64px;
+
+                @media (max-width: 1412px) {
+                    margin-bottom: 32px;
+                }
+        
+                @media (max-width: 768px) {
+                    @include textBig;
+                }
+            }
+
+            &__desc {
+                @include textMedium;
+            }
+        }
+
+        .card-img {
+            max-width: 436px;
+
+            @media (max-width: 1412px) {
+                max-width: 438px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+    }
+}

@@ -15,7 +15,7 @@ export default function Preheader() {
             <span className="link-text preheader-text">2170001200</span>
           </a>
           <span className='space'>-</span>
-          <a classname="second-phoneno" href="tel:2107663471">
+          <a className="second-phoneno" href="tel:2107663471">
             <span className="link-text preheader-text">2107663471</span>
           </a>
         </li>

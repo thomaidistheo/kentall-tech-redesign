@@ -162,7 +162,125 @@ body {
   margin: 4px 0 16px 0;
 }
 
-.paragraph-content {
+.landing-page {
+  padding: 0 128px;
+  margin: 128px 0;
+}
+
+@media (max-width: 780px) {
+  .landing-page {
+    padding: 0 32px;
+    margin: 64px 0;
+  }
+}
+
+@media (max-width: 512px) {
+  .landing-page {
+    padding: 0 16px;
+  }
+}
+
+.service-card {
+  background-color: #FCFCFC;
+  padding: 64px;
+  max-width: 1512px;
+  margin-bottom: 64px;
+  -webkit-box-shadow: 10px 10px 0 #9C1A1A;
+          box-shadow: 10px 10px 0 #9C1A1A;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    padding: 32px 32px;
+  }
+}
+
+@media (max-width: 512px) {
+  .service-card {
+    padding: 32px 16px;
+  }
+}
+
+.service-card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 128px;
+}
+
+@media (max-width: 1412px) {
+  .service-card__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 64px;
+  }
+}
+
+.service-card__content .card-text {
+  max-width: 512px;
+}
+
+.service-card__content .card-text__title {
+  color: #9C1A1A;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 600;
   margin-bottom: 64px;
 }
-/*# sourceMappingURL=paragraph-body.css.map */
+
+@media (max-width: 1412px) {
+  .service-card__content .card-text__title {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card__content .card-text__title {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 400;
+  }
+}
+
+.service-card__content .card-text__desc {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.service-card__content .card-img {
+  max-width: 436px;
+}
+
+@media (max-width: 1412px) {
+  .service-card__content .card-img {
+    max-width: 438px;
+  }
+}
+
+.service-card__content .card-img img {
+  width: 100%;
+  height: auto;
+}
+/*# sourceMappingURL=service.css.map */
