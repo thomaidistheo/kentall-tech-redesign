@@ -26,7 +26,7 @@ export default function Homepage() {
     <div>     
       <HeroImg />
       <Subtitle />
-
+      <p>test</p>
       {/* Category Cards Section */}
       {/* <SlickSlider /> */}
       <div className="card-cont">
