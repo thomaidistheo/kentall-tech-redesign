@@ -35,10 +35,10 @@ export default function Header() {
             </div>
             <ul className="nav-items">
                 <li className="link-text">
-                    <NavLink to="/contact" >Contact</NavLink>
+                    <NavLink to="/about">About</NavLink>
                 </li>
                 <li className="link-text">
-                    <NavLink to="/about">About</NavLink>
+                    <NavLink to="/contact" >Contact</NavLink>
                 </li>
                 <li>    
                 <a href="https://www.kentalltrack.com/">
@@ -57,11 +57,11 @@ export default function Header() {
         {mobileMenu ? (
             <div className="mobile-nav">
                 <ul className="nav-items">
-                    <li className="link-text"> 
-                        <Link to="/contact">Contact</Link> 
-                    </li>
                     <li className="link-text">
                         <Link to="/about">About</Link>
+                    </li>
+                    <li className="link-text"> 
+                        <Link to="/contact">Contact</Link> 
                     </li>
                     <li>    
                         <a href="https://www.kentalltrack.com/">
