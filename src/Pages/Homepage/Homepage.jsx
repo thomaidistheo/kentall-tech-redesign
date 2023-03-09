@@ -32,7 +32,7 @@ export default function Homepage() {
         <Card 
           image={motoCard}
           title="Moto" 
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+          text="Our GPS tracking solution for motorcycles offers real-time location tracking, geofencing alerts, theft prevention, trip history, and maintenance notifications. Easy-to-use and accessible from any device, enjoy your ride without worries."
           button="#"
         />
         <Card 
@@ -44,7 +44,7 @@ export default function Homepage() {
         <Card 
           image={carCard}
           title="Car" 
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+          text="Our platform helps you monitor your car's movement 24/7, allowing you to track its location in real-time and receive alerts in case of any unauthorized access or theft attempts while providing peace of mind."
           button="#"
         />
       </div>
