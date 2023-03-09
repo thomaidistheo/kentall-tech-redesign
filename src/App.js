@@ -22,8 +22,8 @@ function App() {
       <Router>
         <div>
           <div>
-            <Preheader />
-            <Header />
+      <Preheader />
+          <Header />
           </div>
 
           <div>

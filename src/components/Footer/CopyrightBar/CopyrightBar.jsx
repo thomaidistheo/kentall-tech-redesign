@@ -6,7 +6,7 @@ function CopyrightBar() {
     let currentYear = new Date().getFullYear();
 
     return (
-        <div class="copyright-bar">
+        <div className="copyright-bar">
             Copyright © {currentYear} Thomaidis Theodoros Georgios | Kentall Tech Greece - All rights reserved
         </div>
     )

@@ -8,7 +8,7 @@
 .contact-cont {
     background-color: $col-gray-100;
 
-    padding: 64px 0;
+    padding: 32px 0;
     box-shadow: 10px 10px 0px rgba(#9C1A1A, 1);
     max-width: 1460px;
     margin: 0 auto;
@@ -51,6 +51,9 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
             
             &:not(:last-child) {
                 margin-bottom: 32px;
