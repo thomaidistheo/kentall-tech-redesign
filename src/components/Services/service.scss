@@ -1,5 +1,9 @@
 @import '../../imports';
 
+.service-cards-cont {
+    width: 100%;
+}
+
 .service-card {
     background-color: $primary-white;
     padding: 64px;
@@ -17,7 +21,7 @@
 
     &__content {
         @include flexRowCenter;
-        gap: 128px;
+        // gap: 380px;
 
         @media (max-width: 1412px) {
             @include flexColCenterReverse;
@@ -29,7 +33,7 @@
 
             &__title {
                 color: $primary-red;
-                @include textBigger;
+                @include textBig;
                 margin-bottom: 64px;
                 @include flexColStart();
 

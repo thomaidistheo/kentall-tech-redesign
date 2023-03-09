@@ -145,11 +145,18 @@ body {
 }
 
 .landing-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 32px;
+  margin: 0 auto;
+  max-width: 1460px;
+}
+@media (max-width: 1512px) {
+  .landing-page {
+    padding: 0 32px;
+  }
+}
+@media (max-width: 512px) {
+  .landing-page {
+    padding: 0 16px;
+  }
 }
 
 .subtitle-cont {

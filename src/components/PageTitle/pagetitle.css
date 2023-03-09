@@ -1,17 +1,19 @@
 .page-title {
-  margin-bottom: 16px;
-  padding: 0 128px;
   padding-top: 64px;
-}
-@media (max-width: 780px) {
-  .page-title {
-    padding: 0 32px !important;
-  }
+  max-width: 1460px;
+  margin: 0 auto;
+  margin-bottom: 16px;
 }
 @media (max-width: 660px) {
   .page-title {
     font-size: 32px !important;
     line-height: 38px !important;
     margin-top: 32px;
+  }
+}
+@media (max-width: 512px) {
+  .page-title {
+    padding-top: 16px;
+    margin-top: 0;
   }
 }/*# sourceMappingURL=pagetitle.css.map */

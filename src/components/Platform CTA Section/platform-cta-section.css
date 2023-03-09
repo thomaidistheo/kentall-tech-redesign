@@ -145,15 +145,22 @@ body {
 }
 
 .landing-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 32px;
+  margin: 0 auto;
+  max-width: 1460px;
+}
+@media (max-width: 1512px) {
+  .landing-page {
+    padding: 0 32px;
+  }
+}
+@media (max-width: 512px) {
+  .landing-page {
+    padding: 0 16px;
+  }
 }
 
 .platform-cta {
-  background-color: #ECECEC;
+  background-color: #D6D6D6;
   display: flex;
   flex-direction: row;
   align-items: center;

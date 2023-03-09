@@ -8,11 +8,12 @@
 .contact-cont {
     background-color: $col-gray-100;
 
-    padding-bottom: 64px;
+    padding: 64px 0;
     box-shadow: 10px 10px 0px rgba(#9C1A1A, 1);
-    max-width: 1080px;
+    max-width: 1460px;
     margin: 0 auto;
-    margin-top: 64px;
+
+    margin-bottom: 64px;
 }
 
 .page-title {

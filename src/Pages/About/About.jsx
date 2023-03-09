@@ -7,8 +7,8 @@ export default function About() {
 
   return (
     <div>
-      <PageTitle title="About Kental Tech Ltd." />
         <div className="landing-page">
+          <PageTitle title="About Kental Tech Ltd." />
           <Services />
         </div>
     </div>

@@ -145,11 +145,18 @@ body {
 }
 
 .landing-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 32px;
+  margin: 0 auto;
+  max-width: 1460px;
+}
+@media (max-width: 1512px) {
+  .landing-page {
+    padding: 0 32px;
+  }
+}
+@media (max-width: 512px) {
+  .landing-page {
+    padding: 0 16px;
+  }
 }
 
 @keyframes underline-link {
@@ -162,11 +169,11 @@ body {
 }
 .contact-cont {
   background-color: #F8F8F8;
-  padding-bottom: 64px;
+  padding: 64px 0;
   box-shadow: 10px 10px 0px #9c1a1a;
-  max-width: 1080px;
+  max-width: 1460px;
   margin: 0 auto;
-  margin-top: 64px;
+  margin-bottom: 64px;
 }
 
 .page-title {
