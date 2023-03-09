@@ -5,11 +5,11 @@
     background-color: $primary-red;
     color: $primary-white;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    padding: 16px 0px;
 
-    padding: 16px 128px;
+    @media (max-width: 1512px) {
+        padding: 16px 16px;
+    }
 
     @media (max-width: 1120px) {
         justify-content: space-around;
@@ -17,8 +17,18 @@
 
     @media (max-width: 780px) {
         padding: 16px 0;
-
         justify-content: space-around;
+    }
+
+    &__content {
+        @include flexRowCenter;
+        justify-content: flex-end;
+        max-width: 1460px;
+        margin: 0 auto;
+
+        @media (max-width: 780px) {
+            justify-content: center;
+        }
     }
 
     ul {
@@ -85,6 +95,7 @@
     top: 0;
     z-index: 999;
     background-color: $primary-blue;
+    border-bottom: 4px solid #1b3351;
 }
 
 .navigation {
