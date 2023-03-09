@@ -50,7 +50,7 @@ export default function Homepage() {
       </div>
 
       {/*  Features Section */}
-      <div className="features-section">
+      <div className="features-section" id="features">
         <p className="text-big">Features</p>
         <span className="title-underline"></span>
 

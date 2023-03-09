@@ -10,9 +10,9 @@ export default function HeroImg() {
     <div className='hero-image' id='hero-image'>
         <div className='hero-image__text'>
             Fleet Management Solutions
-            <Link to="/about" className='btn btn-primary-red'>
+            <a href="#features" className='btn btn-primary-red'>
                 Learn More
-            </Link>
+            </a>
         </div>
 
         <div className="hero-image__boat">
