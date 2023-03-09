@@ -162,7 +162,7 @@ body {
 .platform-link-cont {
   max-width: 512px;
   max-height: 512px;
-  padding: 128px 128px;
+  padding: 64px 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
