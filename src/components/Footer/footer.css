@@ -149,11 +149,12 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 32px;
 }
 
 .footer-cont {
   width: 100vw;
-  background-color: #313131;
+  background-color: #252525;
   color: #FCFCFC;
   display: flex;
   flex-wrap: no-wrap;

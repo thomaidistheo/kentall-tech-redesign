@@ -33,7 +33,7 @@ export default function Service({ title, description, photo}) {
       <div className='service-card'> 
           <div className="service-card__content">
               <div className="card-text">    
-                  <div className="card-text__title">Software [Tracking Platform]</div>
+                  <div className="card-text__title">Software <span class="card-text__subtitle">[Tracking Platform]</span></div>
                   <div className="card-text__desc">
                     Our Tracking Platform has been built around the most important needs for both personal use and business use.
                     <br/><br/>

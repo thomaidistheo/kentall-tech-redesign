@@ -22,4 +22,5 @@ body {
 
 .landing-page {
     @include flexColCenter;
+    padding: 0 32px;
 }

@@ -31,6 +31,7 @@
                 color: $primary-red;
                 @include textBigger;
                 margin-bottom: 64px;
+                @include flexColStart();
 
                 @media (max-width: 1412px) {
                     margin-bottom: 32px;
@@ -38,6 +39,10 @@
         
                 @media (max-width: 768px) {
                     @include textBig;
+                }
+
+                .card-text__subtitle {
+                    font-size: 32px;
                 }
             }
 

@@ -4,7 +4,7 @@ import './contact-widget.css'
 
 function ContactWidget( { email, phone, phone2}) {
 
-  return (
+    return (
         <div className='contact-widget-cont'>
         
         <div className='widget-title'>
@@ -23,14 +23,16 @@ function ContactWidget( { email, phone, phone2}) {
         </ul>
 
         <ul>
-        <li className="text-normal title">
+            <li className="text-normal title">
                 <span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path></svg>
                 </span>
                 Phone
             </li>
-            <li className="text-normal"><a href={'tel:'+ phone}>{phone}</a></li>
-            <li className="text-normal"><a href={'tel:'+ phone2}>{phone2}</a></li>
+            <li className="text-normal phonelist">
+                <a href={'tel:'+ phone}>{phone}</a>
+                <a href={'tel:'+ phone2}>{phone2}</a>
+            </li>
         </ul>
     </div>
   )

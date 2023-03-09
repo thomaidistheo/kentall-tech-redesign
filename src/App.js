@@ -12,6 +12,7 @@ import About from './Pages/About/About';
 import PlatformLinks from './Pages/Platform Links/PlatformLinks';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import Footer from './components/Footer/Footer'
+import CopyrightBar from './components/Footer/CopyrightBar/CopyrightBar';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
         
         <div>
           <Footer />
+          <CopyrightBar />
         </div>
 
       </Router>

@@ -149,6 +149,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 32px;
 }
 
 .contact-widget-cont {
@@ -185,4 +186,8 @@ body {
 }
 .contact-widget-cont ul li.title:hover {
   opacity: 1;
+}
+.contact-widget-cont ul li.phonelist {
+  display: flex;
+  gap: 24px;
 }/*# sourceMappingURL=contact-widget.css.map */

@@ -42,6 +42,11 @@
             &.title:hover {
                 opacity: 1;
             }
+
+            &.phonelist {
+                display: flex;
+                gap: 24px;
+            }
         }
     }
 }

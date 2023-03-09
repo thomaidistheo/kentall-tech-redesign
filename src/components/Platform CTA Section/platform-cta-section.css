@@ -149,10 +149,11 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 32px;
 }
 
 .platform-cta {
-  background-color: #D6D6D6;
+  background-color: #ECECEC;
   display: flex;
   flex-direction: row;
   align-items: center;
