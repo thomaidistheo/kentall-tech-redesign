@@ -21,6 +21,7 @@
 
     &__content {
         @include flexRowCenter;
+        justify-content: space-around;
         // gap: 380px;
 
         @media (max-width: 1412px) {

@@ -186,6 +186,10 @@ body {
   font-size: 24px;
   line-height: 26px;
   color: #0F233B;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
 }
 @media (max-width: 780px) {
   .contact-info,
@@ -212,7 +216,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
 }
 .contact-info ul li:not(:last-child) {
   margin-bottom: 32px;

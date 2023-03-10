@@ -21,10 +21,8 @@ function App() {
 
       <Router>
         <div>
-          <div>
-      <Preheader />
+          <Preheader />
           <Header />
-          </div>
 
           <div>
             <Routes> 
@@ -37,7 +35,6 @@ function App() {
           </div>
         </div>
 
-        
         <div>
           <Footer />
           <CopyrightBar />

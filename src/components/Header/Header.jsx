@@ -20,11 +20,12 @@ export default function Header() {
             mobileBtn.current.classList.remove('pressed')
         } else {
             setMobileMenu(true)
+
             mobileBtn.current.classList.add('pressed')
         }
     }
 
-  return (
+return (
     <div className="navigation-cont">
         <div className="navigation">
             <div className="logo">
@@ -58,10 +59,10 @@ export default function Header() {
             <div className="mobile-nav">
                 <ul className="nav-items">
                     <li className="link-text">
-                        <Link to="/about">About</Link>
+                        <Link to="/about" onClick={() => {handleMobileMenu()}}>About</Link>
                     </li>
                     <li className="link-text"> 
-                        <Link to="/contact">Contact</Link> 
+                        <Link to="/contact" onClick={() => {handleMobileMenu()}}>Contact</Link> 
                     </li>
                     <li>    
                         <a href="https://www.kentalltrack.com/">

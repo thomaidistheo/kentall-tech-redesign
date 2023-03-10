@@ -24,7 +24,7 @@ export default function Contact({ desc }) {
         </p>
         <div className="contact-info">
           <ul>
-            <li>
+            {/* <li>
                 <span className='icon'><IconTel /></span>
               <a href="tel:2170001200">
                 <span className="link-text">2170001200</span>
@@ -33,7 +33,7 @@ export default function Contact({ desc }) {
               <a href="tel:2107663471">
                 <span className="link-text">2107663471</span>
               </a>
-            </li>
+            </li> */}
             <li>
                 <span className='icon'><IconMail /></span>
               <a href="mailto:info@kentall-tech.com">

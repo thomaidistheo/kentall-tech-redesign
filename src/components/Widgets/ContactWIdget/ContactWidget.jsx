@@ -36,7 +36,7 @@ function ContactWidget( { email, phone, phone2}) {
             <li className="text-normal"><a href={'mailto:'+ email}>{email}</a></li>
         </ul>
 
-        <ul>
+        {/* <ul>
             <li className="text-normal title">
                 <span>
                     <svg
@@ -58,9 +58,11 @@ function ContactWidget( { email, phone, phone2}) {
             </li>
             <li className="text-normal phonelist">
                 <a href={'tel:'+ phone}>{phone}</a>
+            </li>
+            <li>
                 <a href={'tel:'+ phone2}>{phone2}</a>
             </li>
-        </ul>
+        </ul> */}
     </div>
   )
 }

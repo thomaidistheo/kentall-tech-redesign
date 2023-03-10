@@ -4,6 +4,17 @@
     justify-content: center;
 }
 
+@mixin flexStart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@mixin flexRowStart {
+    @include flexStart();
+    flex-direction: row;
+}
+
 @mixin flexRowCenter {
     @include flexCenter();
     flex-direction: row;

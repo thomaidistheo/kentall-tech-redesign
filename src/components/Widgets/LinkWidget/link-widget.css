@@ -168,6 +168,7 @@ body {
 .link-widget-cont .widget-title {
   text-transform: uppercase;
   margin-bottom: 32px;
+  color: #D6D6D6;
 }
 .link-widget-cont .widget-title .seperator {
   margin-top: 4px;
@@ -175,9 +176,12 @@ body {
   width: 100%;
   background-color: #9C1A1A;
 }
+.link-widget-cont ul li {
+  color: #9F9F9F;
+}
 .link-widget-cont ul li:not(:last-child) {
   margin-bottom: 4px;
 }
 .link-widget-cont ul li:hover {
-  opacity: 0.7;
+  color: #D6D6D6;
 }/*# sourceMappingURL=link-widget.css.map */

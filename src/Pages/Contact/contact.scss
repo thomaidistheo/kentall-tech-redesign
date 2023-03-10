@@ -26,6 +26,7 @@
     font-size: 24px;
     line-height: 26px;
     color: $primary-blue;
+    @include flexRowStart();
 
     @media (max-width: 780px) {
         padding: 0 32px;
@@ -53,7 +54,6 @@
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 16px;
             
             &:not(:last-child) {
                 margin-bottom: 32px;

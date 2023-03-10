@@ -185,6 +185,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  justify-content: space-around;
 }
 @media (max-width: 1412px) {
   .service-card__content {
