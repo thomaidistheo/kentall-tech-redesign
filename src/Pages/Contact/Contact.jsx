@@ -4,7 +4,7 @@ import PageTitle from '../../components/PageTitle/PageTitle'
 import './contact.css'
 
 import { ReactComponent as IconMail } from '../../assets/icons/mail-icon.svg'
-import { ReactComponent as IconTel } from '../../assets/icons/phone-icon.svg'
+// import { ReactComponent as IconTel } from '../../assets/icons/phone-icon.svg'
 
 export default function Contact({ desc }) {
 
