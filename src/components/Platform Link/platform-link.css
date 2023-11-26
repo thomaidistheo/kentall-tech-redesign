@@ -146,7 +146,7 @@ body {
 
 .landing-page {
   margin: 0 auto;
-  max-width: 1460px;
+  max-width: 1288px;
 }
 @media (max-width: 1512px) {
   .landing-page {
@@ -160,8 +160,7 @@ body {
 }
 
 .platform-link-cont {
-  max-width: 512px;
-  max-height: 512px;
+  max-width: 360px;
   padding: 64px 64px;
   display: flex;
   flex-direction: column;
@@ -175,7 +174,7 @@ body {
 }
 @media (max-width: 980px) {
   .platform-link-cont {
-    max-width: 512px;
+    max-width: 300px;
     padding: 32px 32px;
   }
 }
@@ -190,7 +189,10 @@ body {
 .platform-link-cont img.link-img {
   max-width: 157px;
 }
+.platform-link-cont img.device-img {
+  max-width: 300px;
+}
 .platform-link-cont:hover img.device-img {
   transition: all 250ms ease-in-out;
-  transform: scale(1.2);
+  transform: scale(1.05);
 }/*# sourceMappingURL=platform-link.css.map */

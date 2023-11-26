@@ -23,7 +23,7 @@
     &__content {
         @include flexRowCenter;
         justify-content: flex-end;
-        max-width: 1460px;
+        max-width: 1288px;
         margin: 0 auto;
 
         @media (max-width: 780px) {
@@ -102,7 +102,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1460px;
+    max-width: 1288px;
 
     padding: 16px 0;
     margin: 0 auto;

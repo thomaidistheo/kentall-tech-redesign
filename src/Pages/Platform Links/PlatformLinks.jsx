@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react';
 import PlatformLink from '../../components/Platform Link/PlatformLink'
 import PageTitle from '../../components/PageTitle/PageTitle'
 
@@ -15,9 +15,6 @@ import appStore from '../../assets/appstore.png'
 import playStore from '../../assets/playstore.png'
 
 function PlatformLinks() {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
   return (
     <div className="landing-page">
       <PageTitle title='Available on PC, iOS and Android' />

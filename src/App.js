@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -9,6 +10,8 @@ import Header from '../src/components/Header/Header';
 import Homepage from './Pages/Homepage/Homepage'
 import Contact from './Pages/Contact/Contact';
 import About from './Pages/About/About';
+import PDPBoat from './Pages/ProductPages/PDPBoat/PDPBoat';
+import PDPMoto from './Pages/ProductPages/PDPMoto/PDPMoto';
 import PlatformLinks from './Pages/Platform Links/PlatformLinks';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import Footer from './components/Footer/Footer'
@@ -30,6 +33,8 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/about" element={<About />} />
               <Route path="/platform-links" element={<PlatformLinks />} />
+              <Route path="/product-boat" element={<PDPBoat />} />
+              <Route path="/product-moto" element={<PDPMoto />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>
@@ -39,11 +44,7 @@ function App() {
           <Footer />
           <CopyrightBar />
         </div>
-
       </Router>
-
-
-
     </div>
   );
 }

@@ -146,7 +146,7 @@ body {
 
 .landing-page {
   margin: 0 auto;
-  max-width: 1460px;
+  max-width: 1288px;
 }
 @media (max-width: 1512px) {
   .landing-page {
@@ -186,7 +186,7 @@ body {
   justify-content: center;
   flex-direction: row;
   justify-content: flex-end;
-  max-width: 1460px;
+  max-width: 1288px;
   margin: 0 auto;
 }
 @media (max-width: 780px) {
@@ -260,7 +260,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1460px;
+  max-width: 1288px;
   padding: 16px 0;
   margin: 0 auto;
 }

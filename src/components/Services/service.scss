@@ -7,7 +7,7 @@
 .service-card {
     background-color: $primary-white;
     padding: 64px;
-    max-width: 1512px;
+    max-width: 1288px;
     margin-bottom: 64px;
     box-shadow: 10px 10px 0 $primary-red;
 
@@ -24,7 +24,7 @@
         justify-content: space-around;
         // gap: 380px;
 
-        @media (max-width: 1412px) {
+        @media (max-width: 1288px) {
             @include flexColCenterReverse;
             gap: 64px;
         }
@@ -34,8 +34,8 @@
 
             &__title {
                 color: $primary-red;
-                @include textBig;
-                margin-bottom: 64px;
+                @include textMedium;
+                margin-bottom: 32px;
                 @include flexColStart();
 
                 @media (max-width: 1412px) {
@@ -43,24 +43,24 @@
                 }
         
                 @media (max-width: 768px) {
-                    @include textBig;
+                    @include textMedium;
                 }
 
                 .card-text__subtitle {
-                    font-size: 32px;
+                    font-size: 24px;
                 }
             }
 
             &__desc {
-                @include textMedium;
+                font-size: 16px;
             }
         }
 
         .card-img {
-            max-width: 436px;
+            max-width: 312px;
 
-            @media (max-width: 1412px) {
-                max-width: 438px;
+            @media (max-width: 1288px) {
+                max-width: 268px;
             }
 
             img {

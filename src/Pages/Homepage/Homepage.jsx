@@ -21,6 +21,7 @@ import './homepage.css'
 // import Spacer from '../../components/Spacer/Spacer'
 import ContactCTASection from '../../components/Contact CTA Section/ContactCTASection'
 
+
 export default function Homepage() {
   return (
     <div>     
@@ -33,19 +34,22 @@ export default function Homepage() {
           image={motoCard}
           title="Moto" 
           text="Our GPS tracking solution for motorcycles offers real-time location tracking, geofencing alerts, theft prevention, trip history, and maintenance notifications. Easy-to-use and accessible from any device, enjoy your ride without worries."
-          button="#"
+          buttonLink="/product-moto"
+          buttonText="Learn More"
         />
         <Card 
           image={boatCard}
           title="Yachting" 
           text="Our advanced web platform offers comprehensive Fleet Management solutions for Yachts and Sailboats, providing real-time information, trip reports, movement alerts and of course top-notch customer support"
-          button="#"
+          buttonLink="/product-boat"
+          buttonText="Learn More"
         />
         <Card 
           image={carCard}
           title="Car" 
           text="Our platform helps you monitor your car's movement 24/7, allowing you to track its location in real-time and receive alerts in case of any unauthorized access or theft attempts while providing peace of mind."
-          button="#"
+          buttonLink="#"
+          buttonText="Learn More"
         />
       </div>
 

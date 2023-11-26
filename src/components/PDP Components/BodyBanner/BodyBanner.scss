@@ -1,0 +1,31 @@
+.body-banner {
+    margin: 0 auto;
+    max-width: 1288px;
+    width: 100%;
+
+    &__desktop {
+        width: 100%;
+        height: auto;
+    }
+
+    &__mobile {
+        display: none;
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 1288px) {
+        padding: 0 16px;
+    }
+    
+    @media (max-width: 820px) {
+
+        &__desktop {
+            display: none;
+        }
+
+        &__mobile {
+            display: block;
+        }
+    }
+}

@@ -25,7 +25,7 @@ export default function Service({ title, description, photo}) {
                   </div>
               </div>
               <div className="card-img">
-                <img src={imageOne} alt="Unavailable"/>
+                <img src={imageOne} alt="Unavailable" />
               </div>
           </div>
       </div>

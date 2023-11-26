@@ -36,6 +36,12 @@ return (
             </div>
             <ul className="nav-items">
                 <li className="link-text">
+                    <NavLink to="/guides">Guides</NavLink>
+                </li>
+                <li className="link-text">
+                    <NavLink to="/platform-links">Download</NavLink>
+                </li>
+                <li className="link-text">
                     <NavLink to="/about">About</NavLink>
                 </li>
                 <li className="link-text">

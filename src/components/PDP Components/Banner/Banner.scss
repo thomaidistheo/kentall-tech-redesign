@@ -1,0 +1,72 @@
+@import '../../../imports';
+
+.hero-banner-cont {
+    width: 100%;
+    max-width: 1920px;
+    max-height: 624px;
+    margin: 0 auto;
+    margin-bottom: 64px;
+    position: relative;
+    z-index: 1;
+
+
+    img {
+        width: 100%;
+        max-height: 624px;
+        object-fit: cover;
+
+        &.mob {
+            display: none;
+        }
+    }
+
+    .product-page-hero {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        width: 100%;
+
+        &__title {
+            font-size: 32px;
+            line-height: 36px;
+            font-weight: 600;
+            color: $col-dark-200;
+
+            @media (max-width: 820px) {
+                font-size: 24px;
+                padding: 0 16px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 820px) {
+            top: 64px;
+
+            a {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 780px) {
+        max-height: 624px;
+
+        img {
+            &.desk {
+                display: none;
+            }
+            &.mob {
+                display: block;
+            }
+
+        }
+    }
+
+}

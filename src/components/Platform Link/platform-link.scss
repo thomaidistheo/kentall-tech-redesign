@@ -1,8 +1,7 @@
 @import '../../imports';
 
 .platform-link-cont {
-    max-width: 512px;
-    max-height: 512px;
+    max-width: 360px;
 
     padding: 64px 64px;
 
@@ -20,7 +19,7 @@
     position: relative;
 
     @media (max-width: 980px) {
-        max-width: 512px;
+        max-width: 300px;
         padding: 32px 32px;
     }
 
@@ -38,11 +37,15 @@
         max-width: 157px;
     }
 
+    img.device-img {
+        max-width: 300px;
+    }
+
     &:hover {
 
         img.device-img {
             transition: all 250ms ease-in-out;
-            transform: scale(1.2);
+            transform: scale(1.05);
         }
     }
 }

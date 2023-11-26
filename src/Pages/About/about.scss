@@ -1,0 +1,42 @@
+@import '../../imports';
+
+.about-banner {
+    @include flexRowCenter;
+    gap: 32px;
+    background-color: $primary-blue; 
+    margin-bottom: 64px;
+
+    .img-cont {
+        max-width: 320px;
+        max-height: 280px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .text-cont {
+        color: $primary-white;
+        border-left: 4px solid $primary-red;
+        padding-left: 32px;
+        @include flexColCenter;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    @media (max-width: 820px) {
+        @include flexColCenter;
+        padding: 0 16px 32px 16px;
+        gap: 0;
+        margin-bottom: 32px;
+
+        .text-cont {
+            border-left: none;
+            border-top: 4px solid $primary-red;
+            padding-left: 0;
+            padding-top: 32px;
+            align-items: center;
+        }
+    }
+}

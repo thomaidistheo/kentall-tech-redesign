@@ -146,7 +146,7 @@ body {
 
 .landing-page {
   margin: 0 auto;
-  max-width: 1460px;
+  max-width: 1288px;
 }
 @media (max-width: 1512px) {
   .landing-page {
@@ -166,7 +166,7 @@ body {
 .service-card {
   background-color: #FCFCFC;
   padding: 64px;
-  max-width: 1512px;
+  max-width: 1288px;
   margin-bottom: 64px;
   box-shadow: 10px 10px 0 #9C1A1A;
 }
@@ -187,7 +187,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
-@media (max-width: 1412px) {
+@media (max-width: 1288px) {
   .service-card__content {
     display: flex;
     align-items: center;
@@ -201,8 +201,8 @@ body {
 }
 .service-card__content .card-text__title {
   color: #9C1A1A;
-  font-size: 32px;
-  margin-bottom: 64px;
+  font-size: 24px;
+  margin-bottom: 32px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -214,21 +214,21 @@ body {
 }
 @media (max-width: 768px) {
   .service-card__content .card-text__title {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 .service-card__content .card-text__title .card-text__subtitle {
-  font-size: 32px;
-}
-.service-card__content .card-text__desc {
   font-size: 24px;
 }
-.service-card__content .card-img {
-  max-width: 436px;
+.service-card__content .card-text__desc {
+  font-size: 16px;
 }
-@media (max-width: 1412px) {
+.service-card__content .card-img {
+  max-width: 312px;
+}
+@media (max-width: 1288px) {
   .service-card__content .card-img {
-    max-width: 438px;
+    max-width: 268px;
   }
 }
 .service-card__content .card-img img {

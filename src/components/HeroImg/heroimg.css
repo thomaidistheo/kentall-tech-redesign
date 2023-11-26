@@ -146,7 +146,7 @@ body {
 
 .landing-page {
   margin: 0 auto;
-  max-width: 1460px;
+  max-width: 1288px;
 }
 @media (max-width: 1512px) {
   .landing-page {
@@ -175,7 +175,7 @@ body {
 }
 .hero-image__text {
   width: 100%;
-  max-width: 1460px;
+  max-width: 1288px;
   margin: 0 auto;
   color: #FCFCFC;
   font-size: 64px;

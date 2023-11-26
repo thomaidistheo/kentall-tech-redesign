@@ -16,7 +16,7 @@ function PlatformaCTASection() {
             <p className="text-big">Visit our <span className="highlight">Tracking Platform</span> from your PC or Smartphone device! <a href="https://www.kentalltrack.com>">www.kentalltrack.com</a></p>
 
             <Link to="/platform-links">
-                <button className='btn btn-primary-blue'>Learn More</button>
+                <button className='btn btn-primary-blue'>Download</button>
             </Link>
 
         </div>
