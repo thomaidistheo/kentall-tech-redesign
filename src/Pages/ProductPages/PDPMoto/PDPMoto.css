@@ -162,6 +162,7 @@ body {
 .product-page {
   padding-bottom: 128px;
   color: #252525;
+  overflow: hidden;
 }
 @media (max-width: 820px) {
   .product-page {
@@ -504,6 +505,26 @@ body {
   position: relative;
   max-width: 900px;
 }
+.product-page .trip-history .photo-grid img:nth-child(2) {
+  border-radius: 12px;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
+  margin-left: -128px;
+  max-width: 200px;
+}
+@media (max-width: 920px) {
+  .product-page .trip-history .photo-grid img:nth-child(2) {
+    margin-left: 0;
+    margin-bottom: -200px;
+    margin-right: -256px;
+    max-width: 128px;
+  }
+}
+@media (max-width: 420px) {
+  .product-page .trip-history .photo-grid img:nth-child(2) {
+    max-width: 82px;
+    margin-bottom: -128px;
+  }
+}
 .product-page .trip-reports {
   padding: 0 16px;
   padding-top: 64px;
@@ -539,6 +560,62 @@ body {
   max-width: 800px;
   margin-bottom: 64px;
 }
+.product-page .carousel-section {
+  width: 100%;
+  display: grid;
+  place-content: center;
+  background-color: #0F233B;
+  padding: 64px 16px 128px 16px;
+}
+@media (max-width: 640px) {
+  .product-page .carousel-section {
+    padding: 64px 16px;
+  }
+}
+.product-page .carousel-section .centered-title {
+  color: #FCFCFC;
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+@media (max-width: 640px) {
+  .product-page .carousel-section .centered-title {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+}
+.product-page .carousel-section .carousel-cont {
+  width: 100%;
+  max-width: 1288px;
+  mask: linear-gradient(90deg, transparent, #0F233B 20%, #0F233B 90%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, #0F233B 20%, #0F233B 90%, transparent);
+}
+.product-page .carousel-section .carousel-cont ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+}
+.product-page .carousel-section .carousel-cont ul li {
+  width: 250px;
+}
+.product-page .carousel-section .carousel-cont ul li img {
+  width: 100%;
+  height: auto;
+}
+.product-page .carousel-section .carousel-cont[data-animated] {
+  overflow: hidden;
+}
+.product-page .carousel-section .carousel-cont[data-animated] #list {
+  width: -moz-max-content;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+@keyframes scroll {
+  to {
+    translate: calc(-50% - 5px);
+  }
+}
 .product-page .cta-section {
   padding: 0 16px;
   padding-top: 64px;
@@ -547,6 +624,9 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.product-page .cta-section .centered-title {
+  max-width: 660px;
 }
 .product-page .cta-section .centered-paragraph {
   margin-bottom: 32px;

@@ -5,8 +5,8 @@ import './BodyBanner.css'
 function BodyBanner({ desktop, mobile }) {
     return (
         <div className="body-banner">
-            <img class="body-banner__desktop" src={desktop} alt="banner" />
-            <img class="body-banner__mobile" src={mobile} alt="banner" />
+            <img className="body-banner__desktop" src={desktop} alt="banner" />
+            <img className="body-banner__mobile" src={mobile} alt="banner" />
         </div>
         )
     }   

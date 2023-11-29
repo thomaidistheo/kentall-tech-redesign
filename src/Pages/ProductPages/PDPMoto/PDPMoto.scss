@@ -3,6 +3,7 @@
 .product-page {
     padding-bottom: 128px;
     color: $col-dark-200;
+    overflow: hidden;
 
     @media (max-width: 820px) {
         padding-bottom: 64px;
@@ -371,9 +372,26 @@
                 width: 100%;
                 height: auto;
                 position: relative;
-
                 max-width: 900px;
+                
+                &:nth-child(2) {
+                    border-radius: 12px;
+                    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
+                    margin-left: -128px;
+                    max-width: 200px;
 
+                    @media (max-width: 920px) {
+                        margin-left: 0;
+                        margin-bottom: -200px;
+                        margin-right: -256px;
+                        max-width: 128px;
+                    }
+
+                    @media (max-width: 420px) {
+                        max-width: 82px;
+                        margin-bottom: -128px;
+                    }
+                }
             }
         }
     }
@@ -419,6 +437,70 @@
         }
     }
 
+    .carousel-section {
+        width: 100%;
+        display: grid;
+        place-content: center;
+        background-color: $primary-blue;
+        padding: calc(128px - 64px) 16px 128px 16px;
+
+        @media (max-width: 640px) {
+            padding: 64px 16px;
+        }
+
+        .centered-title {
+            color: $primary-white;
+            margin: 0 auto;
+            margin-bottom: 64px;
+            
+            @media (max-width: 640px) {
+                max-width: 70%;
+                margin: 0 auto;
+                margin-bottom: 32px;
+            }
+        }
+
+        .carousel-cont {
+            width: 100%;
+            max-width: 1288px;
+            mask: linear-gradient(90deg, transparent, $primary-blue 20%, $primary-blue 90%, transparent);
+            -webkit-mask: linear-gradient(90deg, transparent, $primary-blue 20%, $primary-blue 90%, transparent);
+
+            ul {
+                display: flex;
+                gap: 32px;
+                list-style: none;
+                padding: 0;
+
+                li {
+                    width: 250px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            
+        }
+
+        .carousel-cont[data-animated]{
+            overflow: hidden;
+        }
+        
+        .carousel-cont[data-animated] #list{
+            width: max-content;
+            animation: scroll 20s linear infinite;
+        }
+        
+        @keyframes scroll{
+            to{
+                translate: calc(-50% - 5px);
+            }
+        }
+    }
+
     .cta-section {
         padding: 0 16px;
         padding-top: 64px;
@@ -428,6 +510,9 @@
         justify-content: center;
         flex-direction: column;
 
+        .centered-title {
+            max-width: 660px;
+        }
 
         .centered-paragraph {
             margin-bottom: 32px;

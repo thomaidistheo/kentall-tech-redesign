@@ -378,7 +378,10 @@
         justify-content: center;
         flex-direction: column;
 
-
+        .centered-title {
+            max-width: 660px;
+        }
+        
         .centered-paragraph {
             margin-bottom: 32px;
         }

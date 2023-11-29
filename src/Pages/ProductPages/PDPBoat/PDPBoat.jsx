@@ -71,13 +71,6 @@ function PDPBoat() {
                     </div>
                 </div>
 
-                {/* <div className="img-grid">
-                    <div className="big-img"></div>
-                    <div className="small-img-col">
-                        <div class="image-one"></div>
-                        <div class="image-two"></div>
-                    </div>
-                </div> */}
                 <BodyBanner desktop={bodyBannerOneDesk} mobile={bodyBannerOneMob} /> 
                 <Spacer />
                 <div className="section">
@@ -95,7 +88,7 @@ function PDPBoat() {
                 </div>
 
                 <div className="image-container">
-                    <img class="screenshot" src={fleetMap} alt="browser window with whole fleet" />
+                    <img className="screenshot" src={fleetMap} alt="browser window with whole fleet" />
                     <div className="section big-features">
 
                         <div className="features-title">
@@ -143,8 +136,8 @@ function PDPBoat() {
                     <div className="map">
 
                         <ImgComparisonSlider hover="hover">
-                            <img slot="first" class="compareImg" src={mapBefore} alt="map style 1" />
-                            <img slot="second" class="compareImg" src={mapAfter} alt="map style 2" />
+                            <img slot="first" className="compareImg" src={mapBefore} alt="map style 1" />
+                            <img slot="second" className="compareImg" src={mapAfter} alt="map style 2" />
                         </ImgComparisonSlider>
                     </div>
                     

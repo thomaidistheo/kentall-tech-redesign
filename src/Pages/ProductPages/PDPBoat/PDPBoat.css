@@ -506,6 +506,9 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+.product-page .cta-section .centered-title {
+  max-width: 660px;
+}
 .product-page .cta-section .centered-paragraph {
   margin-bottom: 32px;
 }/*# sourceMappingURL=PDPBoat.css.map */

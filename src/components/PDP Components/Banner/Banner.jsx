@@ -3,7 +3,7 @@ import './Banner.css'
 
 function Banner({ imageDesk, imageMob }) {
     return (
-        <div class="hero-banner-cont">
+        <div className="hero-banner-cont">
             <img className="desk" src={imageDesk} alt="header of a sailboat" />
             <img className="mob" src={imageMob} alt="header of a sailboat" />
             <div className="product-page-hero">

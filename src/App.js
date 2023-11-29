@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  useLocation
 } from "react-router-dom"
 import Preheader from '../src/components/Header/Preheader';
 import Header from '../src/components/Header/Header';
@@ -17,12 +18,23 @@ import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import Footer from './components/Footer/Footer'
 import CopyrightBar from './components/Footer/CopyrightBar/CopyrightBar';
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
 
   return (
     <div className="App">
 
       <Router>
+        <ScrollToTop />
         <div>
           <Preheader />
           <Header />

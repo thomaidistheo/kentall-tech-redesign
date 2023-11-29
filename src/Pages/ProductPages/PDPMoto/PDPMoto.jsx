@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Banner from '../../../components/PDP Components/Banner/Banner'
 import Spacer from '../../../components/Spacer/Spacer'
 import FeatureStrip from '../../../components/PDP Components/Feature Strip/FeatureStrip'
@@ -28,11 +29,97 @@ import tripHistoryImg2 from '../../../assets/Product Pages/moto-demos/IMG_1067.p
 import mobileNotificationImg1 from '../../../assets/Product Pages/mobile_notif_1.png'
 import mobileNotificationImg2 from '../../../assets/Product Pages/mobile_notif_2.png'
 
+import carouselPhoto1 from '../../../assets/Product Pages/moto-demos/IMG_1065.png'
+import carouselPhoto2 from '../../../assets/Product Pages/moto-demos/IMG_1066.png'
+import carouselPhoto3 from '../../../assets/Product Pages/moto-demos/IMG_1067.png'
+import carouselPhoto4 from '../../../assets/Product Pages/moto-demos/IMG_1068.png'
+import carouselPhoto5 from '../../../assets/Product Pages/moto-demos/IMG_1069.png'
+import carouselPhoto6 from '../../../assets/Product Pages/moto-demos/IMG_1070.png'
+import carouselPhoto7 from '../../../assets/Product Pages/moto-demos/IMG_1071.png'
+
+
 function PDPMoto() {
+
+    const [photos, setPhotos] = useState([
+        carouselPhoto1,
+        carouselPhoto2,
+        carouselPhoto3,
+        // carouselPhoto4,
+        carouselPhoto5,
+        carouselPhoto6,
+        carouselPhoto7,
+    ]);
+
+    const listRef = useRef(null);
+    const isDragging = useRef(false);
+    const startPosition = useRef(0);
+    const currentTranslate = useRef(0);
+    
+    useEffect(() => {
+        const list = listRef.current;
+        const listContent = Array.from(list.children);
+
+        listContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute('aria-hidden', true);
+            list.appendChild(duplicatedItem);
+        });
+
+        const handleMouseDown = (event) => {
+            isDragging.current = true;
+            startPosition.current = event.clientX - currentTranslate.current;
+        };
+
+        const handleMouseMove = (event) => {
+            if (isDragging.current) {
+            const newPosition = event.clientX - startPosition.current;
+            list.style.transform = `translateX(${newPosition}px)`;
+            currentTranslate.current = newPosition;
+            }
+        };
+
+        const handleTouchStart = (event) => {
+            isDragging.current = true;
+            startPosition.current = event.touches[0].clientX - currentTranslate.current;
+        };
+        
+        const handleTouchMove = (event) => {
+            if (isDragging.current) {
+                const newPosition = event.touches[0].clientX - startPosition.current;
+                list.style.transform = `translateX(${newPosition}px)`;
+                currentTranslate.current = newPosition;
+            }
+        };
+    
+        const handleTouchEnd = () => {
+            isDragging.current = false;
+        };
+
+        const handleMouseUp = () => {
+            isDragging.current = false;
+        };
+
+        list.addEventListener('mousedown', handleMouseDown);
+        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('mouseup', handleMouseUp);
+
+        list.addEventListener('touchstart', handleTouchStart);
+        window.addEventListener('touchmove', handleTouchMove);
+        window.addEventListener('touchend', handleTouchEnd);
+
+        return () => {
+            list.removeEventListener('mousedown', handleMouseDown);
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mouseup', handleMouseUp);
+
+            list.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchmove', handleTouchMove);
+            window.removeEventListener('touchend', handleTouchEnd);
+        };
+    }, []);
 
     return (
         <div className="product-page">    
-            {/* {window.scrollTo(0, 0)} */}
             <Banner 
                 imageDesk={boatImg_desk}
                 imageMob={boatImg_mob}
@@ -67,8 +154,8 @@ function PDPMoto() {
                 {/* <div className="img-grid">
                     <div className="big-img"></div>
                     <div className="small-img-col">
-                        <div class="image-one"></div>
-                        <div class="image-two"></div>
+                        <div className="image-one"></div>
+                        <div className="image-two"></div>
                     </div>
                 </div> */}
                 <BodyBanner desktop={bodyBannerOneDesk} mobile={bodyBannerOneMob} /> 
@@ -88,7 +175,7 @@ function PDPMoto() {
                 </div>
 
                 <div className="image-container">  
-                    <img class="screenshot" src={fleetMap} alt="browser window with whole fleet" />
+                    <img className="screenshot" src={fleetMap} alt="browser window with whole fleet" />
                     <div className="section big-features">
 
                         <div className="features-title">
@@ -136,8 +223,8 @@ function PDPMoto() {
                     <div className="map">
 
                         <ImgComparisonSlider hover="hover">
-                            <img slot="first" class="compareImg" src={mapBefore} alt="map style 1" />
-                            <img slot="second" class="compareImg" src={mapAfter} alt="map style 2" />
+                            <img slot="first" className="compareImg" src={mapBefore} alt="map style 1" />
+                            <img slot="second" className="compareImg" src={mapAfter} alt="map style 2" />
                         </ImgComparisonSlider>
                     </div>
                     
@@ -148,6 +235,7 @@ function PDPMoto() {
                     <img className="overlay-img" src={tripReportImg} alt="Trip Report Doc" />
                 </div> */}
                 <Spacer />
+
                 <div className="mobile-notifications">
                     <div className="centered-title">
                         Set up alerts for specific locations and other triggers
@@ -174,10 +262,29 @@ function PDPMoto() {
                     Valuable information is shown for each step of the trip, like speed, coordinates and engine status*.
                     </div>
                     <div className="photo-grid">
-                        <img class="big-img" src={tripHistoryImg1} alt="Trip History 1" />
-                        <img class="small-img" src={tripHistoryImg2} alt="Trip History 2" />
+                        <img className="big-img" src={tripHistoryImg1} alt="Trip History 1" />
+                        <img className="small-img" src={tripHistoryImg2} alt="Trip History 2" />
                     </div>
                 </div>
+
+                <Spacer />
+
+                <div className="carousel-section">
+                    <div className="centered-title">
+                        Full Fledged Mobile Web App
+                    </div>
+                    <div className="carousel-cont" data-animated>
+                        <ul ref={listRef} id="list">
+                            {photos.map((photo, index) => (
+                            <li key={index}>
+                                <img src={photo} alt={`carousel mobile ${index + 1}`} draggable="false"/>
+                            </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+
+                <Spacer />
                 
                 <div className="cta-section">
                     <div className="centered-title">
