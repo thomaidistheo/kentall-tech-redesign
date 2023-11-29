@@ -53,7 +53,7 @@ function App() {
         </div>
 
         <div>
-          <Footer />
+          {/* <Footer /> */}
           <CopyrightBar />
         </div>
       </Router>
