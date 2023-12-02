@@ -48,7 +48,7 @@ export default function Homepage() {
           image={carCard}
           title="Car" 
           text="Our platform helps you monitor your car's movement 24/7, allowing you to track its location in real-time and receive alerts in case of any unauthorized access or theft attempts while providing peace of mind."
-          buttonLink="#"
+          buttonLink="#/product-car"
           buttonText="Learn More"
         />
       </div>
