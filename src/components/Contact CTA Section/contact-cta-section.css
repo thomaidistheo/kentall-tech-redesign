@@ -180,6 +180,8 @@ body {
   align-items: flex-start;
   justify-content: center;
   gap: 16px;
+  width: 100%;
+  max-width: 1288px;
   color: #FCFCFC;
 }
 .contact-cta-cont .contact-cta-desc .seperator {
