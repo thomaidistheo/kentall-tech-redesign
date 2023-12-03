@@ -7,8 +7,8 @@ import BodyBanner from '../../../components/PDP Components/BodyBanner/BodyBanner
 
 import './PDPMoto.css'
 
-import boatImg_mob from '../../../assets/Product Pages/pdp_boat_banner-mob.png'
-import boatImg_desk from '../../../assets/Product Pages/pdp_boat_banner.png'
+import motoImg_mob from '../../../assets/Product Pages/pdp_moto_banner-mob.png'
+import motoImg_desk from '../../../assets/Product Pages/pdp_moto_banner.png'
 import devices from '../../../assets/laptop-phone-v3.png'
 import featureOneImg from '../../../assets/icons/dashboard.png'
 import featureTwoImg from '../../../assets/icons/live-map.png'
@@ -121,8 +121,8 @@ function PDPMoto() {
     return (
         <div className="product-page">    
             <Banner 
-                imageDesk={boatImg_desk}
-                imageMob={boatImg_mob}
+                imageDesk={motoImg_desk}
+                imageMob={motoImg_mob}
             />
             <div className="demo-carousel"></div>
             <div className="device-showcase" id="sectionOne">
@@ -292,7 +292,7 @@ function PDPMoto() {
                     </div>
                     <div className="centered-paragraph">
                     Our Advanced Tracking Platform is compatible with <br/>
-                    90% of the tracking devicesthat are currently in the market.<br/>
+                    95% of the tracking devicesthat are currently in the market.<br/>
                     Feel free to contact us to learn more and arrange a meeting.
                     </div>
                     <a href="mailto:info@kentall-tech.com" className='btn btn-primary-black'>Contact us</a>

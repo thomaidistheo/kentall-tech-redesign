@@ -7,7 +7,7 @@ function Banner({ imageDesk, imageMob }) {
             <img className="desk" src={imageDesk} alt="header of a sailboat" />
             <img className="mob" src={imageMob} alt="header of a sailboat" />
             <div className="product-page-hero">
-                <div className="product-page-hero__title">Professional Fleet Management</div>
+                <div className="product-page-hero__title">Professional Asset Tracking</div>
                 <a href='#sectionOne' className="btn btn-primary-black">Start Now</a>
             </div>
 

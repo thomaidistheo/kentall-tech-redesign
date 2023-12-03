@@ -193,7 +193,7 @@ function PDPBoat() {
                     </div>
                     <div className="centered-paragraph">
                     Our Advanced Tracking Platform is compatible with <br/>
-                    90% of the tracking devicesthat are currently in the market.<br/>
+                    95% of the tracking devicesthat are currently in the market.<br/>
                     Feel free to contact us to learn more and arrange a meeting.
                     </div>
                     <a href="mailto:info@kentall-tech.com" className='btn btn-primary-black'>Contact us</a>
