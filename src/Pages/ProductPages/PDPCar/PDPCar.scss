@@ -1,0 +1,522 @@
+@import '../../../imports';
+
+.product-page {
+    padding-bottom: 128px;
+    color: $col-dark-200;
+    overflow: hidden;
+
+    @media (max-width: 820px) {
+        padding-bottom: 64px;
+    }
+
+    .device-showcase {
+        max-width: 614px;
+        margin: 0 auto;
+        margin-top: -264px;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 64px;
+    
+        img {
+            width: 100%;
+            height: auto;
+        }
+    
+        @media (max-width: 1280px) {
+            padding: 0 16px;
+            margin-top: -128px;
+        }
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .features-title {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+    
+    .subtitle {
+        max-width: 678px;
+        font-size: 24px;
+        line-height: 28px;
+        margin: 0 auto;
+        margin-bottom: 64px;
+        text-align: center;
+    
+        @media (max-width: 1280px) {
+            padding: 0 16px;
+        }
+
+    }
+
+    .centered-title {
+        max-width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 32px;
+
+    }
+
+    .centered-paragraph {
+        max-width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    
+    .section {
+        max-width: 1288px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        &--title {
+            font-size: 24px;
+            line-height: 28px;
+            width: 100%;
+    
+            margin-bottom: 32px;
+            position: relative;
+            border-bottom: 2px solid $col-dark-200;
+        }
+    
+        &--text {
+            font-size: 16px;
+        }
+
+        
+    
+        @media (max-width: 1280px) {
+            padding: 0 16px;
+        }
+    }
+    
+    .image-container {
+        margin: 0 auto;
+        max-width: 1288px;
+        margin-bottom: 64px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: row;
+        gap: 128px;
+
+        @media (max-width: 1288px) {
+            padding: 0 16px;
+            gap: 64px;
+        }
+
+        @media (max-width: 820px) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .screenshot {
+            width: 70%;
+            height: 100%;
+
+            @media (max-width: 820px) {
+                width: 100%;
+            }
+        }
+
+        .section.big-features {
+            width: 30%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 24px;
+
+            @media (max-width: 820px) {
+                width: 100%;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .feature {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: flex-start;
+                min-width: 256px;
+    
+                &--icon {
+                    max-width: 64px;
+                    max-height: 64px;
+                
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                &--text {
+                    width: 128px;
+                }
+
+                @media (max-width: 820px) {
+                    min-width: unset;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                    &--icon {
+                        max-width: 64px;
+                        max-height: 64px;
+                    }
+
+                    &--text {
+                        width: auto;
+                        text-align: center;
+                        font-size: 14px;
+                    }
+                }
+            }
+    
+        }
+
+
+    }
+
+    .img-grid {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin: 0 auto;
+        max-width: 1288px;
+        height: 456px;
+    
+        .big-img {
+            background-color: $col-gray-400;
+            background-image: url('../../../assets/Product Pages/trip-report.png');
+            background-position: left bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 50%;
+        }
+    
+        .small-img-col {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+    
+            .image-one {
+                background-color: $col-gray-400;
+                background-image: url('../../../assets/Product Pages/map-view.png');
+                background-position: left bottom;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 70%;
+                width: 100%;
+            }
+    
+            .image-two {
+                background-color: $col-gray-400;
+                background-image: url('../../../assets/Product Pages/satellite-view.png');
+                background-position: left center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 30%;
+                width: 100%;
+            }
+        }
+    
+        @media (max-width: 1288px) {
+            padding: 0 16px;
+        }
+
+        @media (max-width: 512px) {
+            flex-direction: column;
+
+            .big-img {
+                width: 100%;
+            }
+
+            .small-img-col {
+                width: 100%;
+            }
+        }
+    }
+
+    .map-showcase {
+        width: 100%;
+        height: 100%;
+        background-color: $primary-blue;
+        @include flexColCenter;
+        padding: 32px 32px;
+        margin-bottom: 164px;
+
+        .centered-title {
+            color: $primary-white;
+        }
+
+        .slider {
+            width: 100%;
+            height: auto;
+        }
+
+        .map {
+            margin-bottom: 64px;
+
+            @media (max-width: 767px) {
+                margin-bottom: 64px;
+            }
+
+            .compareImg {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .overlay-img {
+            width: 100%;
+            max-width: 820px;
+            height: auto;
+            margin-bottom: -124px;
+        }
+    }
+
+    .mobile-notifications {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 16px;
+        padding: 32px 16px;
+        background-color: $primary-blue;
+        color: $primary-white;
+
+        .centered-paragraph {
+            max-width: 550px;
+        }
+
+        .photo-grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 32px;
+            max-width: 550px;
+            padding: 0 32px;
+
+            @media (max-width: 920px) {
+                flex-direction: column-reverse;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                transition: all 150ms ease-in-out;
+
+                &:hover {
+                    transform: translateY(-10px);
+                }
+
+                &:nth-child(2) {
+                    margin-top: -16px; 
+                }
+            }
+        }
+    }
+
+    .trip-history {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 16px;
+        padding-bottom: 32px;
+
+        .photo-grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 64px;
+            margin-top: 32px;
+
+            @media (max-width: 1288px) {
+                gap: 16px;
+            }
+
+            @media (max-width: 920px) {
+                flex-direction: column-reverse;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                position: relative;
+                max-width: 900px;
+                
+                &:nth-child(2) {
+                    border-radius: 12px;
+                    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
+                    margin-left: -128px;
+                    max-width: 200px;
+
+                    @media (max-width: 920px) {
+                        margin-left: 0;
+                        margin-bottom: -200px;
+                        margin-right: -256px;
+                        max-width: 128px;
+                    }
+
+                    @media (max-width: 420px) {
+                        max-width: 82px;
+                        margin-bottom: -128px;
+                    }
+                }
+            }
+        }
+    }
+
+    .trip-reports {
+        padding: 0 16px;
+        padding-top: 64px;
+        background-color: $primary-white;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .centered-paragraph {
+            margin-bottom: 32px;
+        }
+
+        .trip-report-img {
+            margin-bottom: 32px;
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+        }
+
+
+        .trip-report-desc {
+            background-color: $primary-blue;
+            box-shadow: -6px 7px 0 rgba(59, 73, 90, 0.8);
+            max-width: 740px;
+            color: $primary-white;
+            padding: 32px;
+            font-weight: 200;
+            z-index: 5;
+        }
+
+        .trip-zone-img {
+            margin-top: -64px;
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            margin-bottom: 64px;
+        }
+    }
+
+    .carousel-section {
+        width: 100%;
+        display: grid;
+        place-content: center;
+        background-color: $primary-blue;
+        padding: calc(128px - 64px) 16px 128px 16px;
+
+        @media (max-width: 640px) {
+            padding: 64px 16px;
+        }
+
+        .centered-title {
+            color: $primary-white;
+            margin: 0 auto;
+            margin-bottom: 64px;
+            
+            @media (max-width: 640px) {
+                max-width: 70%;
+                margin: 0 auto;
+                margin-bottom: 32px;
+            }
+        }
+
+        .carousel-cont {
+            width: 100%;
+            max-width: 1288px;
+            mask: linear-gradient(90deg, transparent, $primary-blue 20%, $primary-blue 90%, transparent);
+            -webkit-mask: linear-gradient(90deg, transparent, $primary-blue 20%, $primary-blue 90%, transparent);
+
+            ul {
+                display: flex;
+                gap: 32px;
+                list-style: none;
+                padding: 0;
+
+                li {
+                    width: 250px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            
+        }
+
+        .carousel-cont[data-animated]{
+            overflow: hidden;
+        }
+        
+        .carousel-cont[data-animated] #list{
+            width: max-content;
+            animation: scroll 20s linear infinite;
+        }
+        
+        @keyframes scroll{
+            to{
+                translate: calc(-50% - 5px);
+            }
+        }
+    }
+
+    .cta-section {
+        padding: 0 16px;
+        padding-top: 64px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .centered-title {
+            max-width: 660px;
+        }
+
+        .centered-paragraph {
+            margin-bottom: 32px;
+        }
+    }
+}
+

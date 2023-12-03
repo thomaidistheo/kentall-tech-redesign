@@ -5,10 +5,10 @@ import Spacer from '../../../components/Spacer/Spacer'
 import FeatureStrip from '../../../components/PDP Components/Feature Strip/FeatureStrip'
 import BodyBanner from '../../../components/PDP Components/BodyBanner/BodyBanner'
 
-import './PDPMoto.css'
+import './PDPCar.css'
 
-import motoImg_mob from '../../../assets/Product Pages/pdp_moto_banner-mob.png'
-import motoImg_desk from '../../../assets/Product Pages/pdp_moto_banner.png'
+import carImg_mob from '../../../assets/Product Pages/pdp_car_banner-mob.png'
+import carImg_desk from '../../../assets/Product Pages/pdp_car_banner.png'
 import devices from '../../../assets/laptop-phone-v3.png'
 import featureOneImg from '../../../assets/icons/dashboard.png'
 import featureTwoImg from '../../../assets/icons/live-map.png'
@@ -22,12 +22,12 @@ import iconStationaryAsset from '../../../assets/icons/stationary-asset.png'
 import iconLastActiveAsset from '../../../assets/icons/last-active.png'
 import iconDisconnectedAsset from '../../../assets/icons/disconnected-cloud.png'
 
-import bodyBannerOneDesk from '../../../assets/Product Pages/pdp_moto_mid-banner.png'
-import bodyBannerOneMob from '../../../assets/Product Pages/pdp_moto_mid-banner-mob.png'
+import bodyBannerOneDesk from '../../../assets/Product Pages/pdp_car_mid-banner.png'
+import bodyBannerOneMob from '../../../assets/Product Pages/pdp_car_mid-banner-mob.png'
 import tripHistoryImg1 from '../../../assets/Product Pages/moto_trip.png'
 import tripHistoryImg2 from '../../../assets/Product Pages/moto-demos/IMG_1067.png'
-import mobileNotificationImg1 from '../../../assets/Product Pages/mobile_notif_1.png'
-import mobileNotificationImg2 from '../../../assets/Product Pages/mobile_notif_2.png'
+import mobileNotificationImg1 from '../../../assets/Product Pages/mobile_notif_1_car.png'
+import mobileNotificationImg2 from '../../../assets/Product Pages/mobile_notif_2_car.png'
 
 import carouselPhoto1 from '../../../assets/Product Pages/moto-demos/IMG_1065.png'
 import carouselPhoto2 from '../../../assets/Product Pages/moto-demos/IMG_1066.png'
@@ -121,8 +121,8 @@ function PDPMoto() {
     return (
         <div className="product-page">    
             <Banner 
-                imageDesk={motoImg_desk}
-                imageMob={motoImg_mob}
+                imageDesk={carImg_desk}
+                imageMob={carImg_mob}
             />
             <div className="demo-carousel"></div>
             <div className="device-showcase" id="sectionOne">
