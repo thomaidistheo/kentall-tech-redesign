@@ -2,7 +2,7 @@ import React from 'react'
 
 import './contact-widget.css'
 
-function ContactWidget( { email, phone, phone2}) {
+function ContactWidget( { email, phone }) {
 
     return (
         <div className='contact-widget-cont'>

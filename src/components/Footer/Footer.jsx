@@ -14,7 +14,6 @@ export default function Footer() {
         <ContactWidget 
           email='info@kentall-tech.com'
           phone='2170001200'
-          phone2='2107663471'
         />
       </li>
 
