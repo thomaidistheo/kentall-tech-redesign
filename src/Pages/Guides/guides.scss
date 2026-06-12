@@ -150,14 +150,29 @@
             }
         }
 
-        img {
+        // clickable image wrapper, opens the lightbox
+        .figure-zoom-btn {
             display: block;
-            border: 1px solid $col-gray-400;
+            padding: 0;
+            border: none;
+            background: none;
+            cursor: zoom-in;
 
             // single image fills the column; multiple share the row
             flex: 1 1 0;
             min-width: 0;
-            max-width: 100%;
+
+            transition: opacity $transition-fast;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        img {
+            display: block;
+            border: 1px solid $col-gray-400;
+            width: 100%;
             height: auto;
         }
 
@@ -200,5 +215,70 @@
             color: $primary-red;
             font-weight: 600;
         }
+    }
+}
+
+// Image lightbox: fixed overlay above the sticky header (z-index 999)
+.guides-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    padding: 24px;
+    background-color: rgba($primary-black, 0.88);
+
+    .lightbox-toolbar {
+        display: flex;
+        gap: 16px;
+    }
+
+    .lightbox-btn {
+        padding: 10px 20px;
+        border: 2px solid $primary-white;
+        background: none;
+        color: $primary-white;
+
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: background-color $transition-fast;
+
+        &:hover {
+            background-color: rgba($primary-white, 0.15);
+        }
+    }
+
+    .lightbox-body {
+        max-width: 92vw;
+        max-height: 78vh;
+        overflow: auto;
+        border: 1px solid $col-gray-800;
+
+        img {
+            display: block;
+            max-width: 92vw;
+            max-height: 78vh;
+            cursor: zoom-in;
+        }
+
+        // zoomed: natural size, pan by scrolling
+        &.zoomed img {
+            max-width: none;
+            max-height: none;
+            cursor: zoom-out;
+        }
+    }
+
+    .lightbox-caption {
+        color: $col-gray-400;
+        text-align: center;
+        max-width: 720px;
     }
 }

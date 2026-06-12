@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 
 import PageTitle from '../../components/PageTitle/PageTitle'
@@ -20,6 +20,32 @@ const renderListItem = (item) => {
 function Guides() {
     const { slug } = useParams()
     const article = findGuide(slug) || allGuides[0]
+
+    // Lightbox: { src, caption } or null
+    const [lightbox, setLightbox] = useState(null)
+    const [zoomed, setZoomed] = useState(false)
+
+    const openLightbox = (src, caption) => {
+        setLightbox({ src, caption })
+        setZoomed(false)
+    }
+    const closeLightbox = () => setLightbox(null)
+
+    // Close on Escape and lock page scroll while the lightbox is open
+    useEffect(() => {
+        if (!lightbox) return
+
+        const onKeyDown = (e) => {
+            if (e.key === 'Escape') closeLightbox()
+        }
+        window.addEventListener('keydown', onKeyDown)
+        document.body.style.overflowY = 'hidden'
+
+        return () => {
+            window.removeEventListener('keydown', onKeyDown)
+            document.body.style.overflowY = ''
+        }
+    }, [lightbox])
 
     return (
         <div className='landing-page'>
@@ -67,7 +93,15 @@ function Guides() {
                                     {srcs.length > 0 ? (
                                         <div className='figure-row'>
                                             {srcs.map((s, n) => (
-                                                <img src={s} alt={block.caption} key={n} />
+                                                <button
+                                                    type='button'
+                                                    className='figure-zoom-btn'
+                                                    aria-label={`Enlarge image: ${block.caption}`}
+                                                    onClick={() => openLightbox(s, block.caption)}
+                                                    key={n}
+                                                >
+                                                    <img src={s} alt={block.caption} />
+                                                </button>
                                             ))}
                                         </div>
                                     ) : (
@@ -96,6 +130,49 @@ function Guides() {
                     </div>
                 </article>
             </div>
+
+            {lightbox && (
+                <div
+                    className='guides-lightbox'
+                    role='dialog'
+                    aria-modal='true'
+                    aria-label={lightbox.caption}
+                    onClick={closeLightbox}
+                >
+                    <div className='lightbox-toolbar' onClick={(e) => e.stopPropagation()}>
+                        <button
+                            type='button'
+                            className='lightbox-btn'
+                            onClick={() => setZoomed(!zoomed)}
+                        >
+                            {zoomed ? '− Zoom out' : '+ Zoom in'}
+                        </button>
+                        <button
+                            type='button'
+                            className='lightbox-btn'
+                            aria-label='Close'
+                            onClick={closeLightbox}
+                        >
+                            ✕ Close
+                        </button>
+                    </div>
+
+                    <div className={`lightbox-body${zoomed ? ' zoomed' : ''}`}>
+                        <img
+                            src={lightbox.src}
+                            alt={lightbox.caption}
+                            onClick={(e) => {
+                                e.stopPropagation()
+                                setZoomed(!zoomed)
+                            }}
+                        />
+                    </div>
+
+                    <div className='lightbox-caption text-small' onClick={(e) => e.stopPropagation()}>
+                        {lightbox.caption}
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
