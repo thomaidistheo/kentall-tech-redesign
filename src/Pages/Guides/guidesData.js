@@ -20,7 +20,7 @@
 //  #3  Map View: right-edge toolbar close-up (ruler, geo-zones, search, map type)
 //  #4  Map View: on-screen alerts window in the bottom-right corner
 //  #5  Asset Info: the asset information panel (speed, status, battery...)
-//  #6  Asset Info: the per-asset quick tools strip (Trail, Trip, StreetView...)
+//  #6  Asset Info: the quick tools in the asset tooltip (Trail, Trip, StreetView...)
 //  #7  Trip Replay: a replayed trip drawn point by point on the map
 //  #8  Trip Replay: multiple assets replayed together
 //  #9  Trip Info: trip list for a day with stats (distance, duration, speeds)
@@ -98,7 +98,7 @@ export const guideCategories = [
                         ],
                     },
                     { img: 5, caption: 'The asset information panel' },
-                    'Next to the panel you will find the per-asset quick tools, top to bottom:',
+                    'These quick tools are available in the asset tooltip that opens on the map when you select an asset, top to bottom:',
                     {
                         list: [
                             'Trail: shows the “tail” of the asset’s recent route',
@@ -108,7 +108,7 @@ export const guideCategories = [
                             'Zoom: zooms the map in, centered on the selected asset',
                         ],
                     },
-                    { img: 6, caption: 'The per-asset quick tools' },
+                    { img: 6, caption: 'The quick tools in the asset tooltip' },
                 ],
             },
         ],
