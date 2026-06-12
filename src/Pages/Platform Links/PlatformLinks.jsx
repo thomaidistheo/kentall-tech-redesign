@@ -7,10 +7,8 @@ import './platform-links.scss'
 // device images
 import laptop from '../../assets/laptop.png'
 import iphone from '../../assets/iphone.png'
-// import android from '../../assets/iphone.png'
 
-// button images 
-import webLink from '../../assets/weblink.png'
+// store badges
 import appStore from '../../assets/appstore.png'
 import playStore from '../../assets/playstore.png'
 
@@ -19,25 +17,42 @@ function PlatformLinks() {
     <div className="landing-page">
       <PageTitle title='Available on PC, iOS and Android' />
 
+      <p className='platform-links-intro text-medium'>
+        The Kentall tracking platform runs in any modern browser — no installation needed.
+        Native mobile apps are on the way.
+      </p>
+
       <div className='platform-links-cont'>
-          <PlatformLink 
+          <PlatformLink
               photo={laptop}
-              device="PC - Browser"
-              linkImg={webLink}
+              device="Web Platform"
+              desc="Full platform access from any browser, on PC or Mac."
+              ctaLabel="Open Web Platform"
               webLink="https://www.kentalltrack.com"
           />
-          <PlatformLink 
+          <PlatformLink
               photo={iphone}
               device="iPhone / iPad"
+              desc="Native iOS app with live map and push notifications."
               linkImg={appStore}
               webLink=""
           />
-          <PlatformLink 
+          <PlatformLink
               photo={iphone}
               device="Android"
+              desc="Native Android app with live map and push notifications."
               linkImg={playStore}
               webLink=""
           />
+      </div>
+
+      <div className='platform-links-help'>
+        <p className='text-medium'>
+          Need help setting up your device or account?
+        </p>
+        <a href="mailto:info@kentall-tech.com">
+          <button className='btn btn-secondary-blue'>Contact us</button>
+        </a>
       </div>
     </div>
   )

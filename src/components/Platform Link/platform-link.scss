@@ -1,51 +1,90 @@
 @import '../../imports';
 
 .platform-link-cont {
-    max-width: 360px;
-
-    padding: 64px 64px;
+    width: 340px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 32px;
+    gap: 24px;
+
+    padding-bottom: 40px;
 
     background-color: $col-gray-100;
-
-    box-shadow: -15px 15px 0 rgba($primary-black, 0.2);
-    transition: all $transition-base;
-
-    position: relative;
+    border: 1px solid $col-gray-400;
+    box-shadow: -8px 8px 0 rgba($primary-black, 0.15);
+    transition: transform $transition-base, box-shadow $transition-base;
 
     @media (max-width: 980px) {
-        max-width: 300px;
-        padding: 32px 32px;
+        width: 300px;
     }
 
-    p.text-medium {
+    .device-name {
         width: 100%;
+        box-sizing: border-box;
+        padding: 16px;
+
         background-color: $primary-blue;
         color: $primary-white;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.5px;
 
-        position: absolute;
-        top: 0;
-        padding: 16px;
+        border-bottom: 4px solid $primary-red;
+    }
+
+    img.device-img {
+        max-width: 240px;
+        padding: 16px 32px 0;
+    }
+
+    .device-desc {
+        text-align: center;
+        color: $col-dark-100;
+        padding: 0 32px;
+        margin: 0;
+        min-height: 48px;
+    }
+
+    .device-action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 56px;
     }
 
     img.link-img {
         max-width: 157px;
+        display: block;
     }
 
-    img.device-img {
-        max-width: 300px;
+    .coming-soon {
+        display: inline-block;
+        padding: 12px 24px;
+
+        border: 2px solid $col-gray-800;
+        color: $col-gray-800;
+
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
     }
 
     &:hover {
+        transform: translate(4px, -4px);
+        box-shadow: -12px 12px 0 rgba($primary-blue, 0.85);
+    }
 
-        img.device-img {
-            transition: all $transition-base;
-            transform: scale(1.05);
+    &.unavailable {
+        img.device-img,
+        .device-desc {
+            opacity: 0.55;
+        }
+
+        &:hover {
+            transform: none;
+            box-shadow: -8px 8px 0 rgba($primary-black, 0.15);
         }
     }
 }
