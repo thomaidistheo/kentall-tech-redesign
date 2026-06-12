@@ -65,11 +65,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={roboto.className}>
       <body>
+        {/* .App is flex space-between: exactly two children, so the
+            copyright bar pins to the bottom on short pages */}
         <div className="App">
-          <Preheader />
-          <Header />
-          <div>{children}</div>
-          <CopyrightBar />
+          <div>
+            <Preheader />
+            <Header />
+            <div>{children}</div>
+          </div>
+          <div>
+            <CopyrightBar />
+          </div>
         </div>
 
         <script
