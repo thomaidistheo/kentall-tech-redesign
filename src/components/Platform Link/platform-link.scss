@@ -13,8 +13,8 @@
 
     background-color: $col-gray-100;
 
-    box-shadow: -15px 15px 0 rgba(0, 0, 0, 0.2);
-    transition: all 250ms ease-in-out;
+    box-shadow: -15px 15px 0 rgba($primary-black, 0.2);
+    transition: all $transition-base;
 
     position: relative;
 
@@ -44,7 +44,7 @@
     &:hover {
 
         img.device-img {
-            transition: all 250ms ease-in-out;
+            transition: all $transition-base;
             transform: scale(1.05);
         }
     }

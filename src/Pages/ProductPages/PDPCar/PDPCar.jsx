@@ -144,9 +144,9 @@ function PDPCar() {
                 <div className="section">
                     <div className="centered-title">Professional Web Platform</div>
                     <div className="centered-paragraph">
-                    Have your entire fleet at the tip of your fingers. User our advanced online platform that can be accessed by a laptop, PC, Android and iPhone. The design is crafted to be easy to navigate and to show all the needed information that is needed for your asset or fleet.
+                    Have your entire fleet at the tip of your fingers. Use our advanced online platform that can be accessed by a laptop, PC, Android and iPhone. The design is crafted to be easy to navigate and to show all the needed information that is needed for your asset or fleet.
                         <br/>
-                        Pair the amazing platform experience with one of our KEN-M devices or let us set up your own device. We support 95% of the devices that are currently on the market. That way you can enjoy all the features our platform has to offer without having to install a new device on your boat.
+                        Pair the amazing platform experience with one of our KEN-M devices or let us set up your own device. We support 95% of the devices that are currently on the market. That way you can enjoy all the features our platform has to offer without having to install a new device on your car.
                     </div>
                 </div>
 
@@ -160,9 +160,9 @@ function PDPCar() {
                 <BodyBanner desktop={bodyBannerOneDesk} mobile={bodyBannerOneMob} /> 
                 <Spacer />
                 <div className="section">
-                    <div className="centered-title">See your bike live on the map from your phone or computer</div>
+                    <div className="centered-title">See your car live on the map from your phone or computer</div>
                     <div className="centered-paragraph">
-                        You can check where your bike is at any time through your phone or computer.
+                        You can check where your car is at any time through your phone or computer.
                         <br />
                         Set speed alerts and geo-location alerts based on your preferred regions 
                         <br/> 
@@ -240,7 +240,7 @@ function PDPCar() {
                         Set up alerts for specific locations and other triggers
                     </div>
                     <div className="centered-paragraph">
-                        Get notified when your bike enters or leaves a specific location radius. 
+                        Get notified when your car enters or leaves a specific location radius. 
                         An email with the information of the location will be sent to your phone.
                     </div>
                     <div className="photo-grid">

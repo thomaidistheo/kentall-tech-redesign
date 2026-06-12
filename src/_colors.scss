@@ -15,3 +15,12 @@ $col-gray-800: #9F9F9F;
 // Dark Colors
 $col-dark-100: #464646;
 $col-dark-200: #252525;
+
+// Motion
+$transition-fast: 150ms ease-in-out;
+$transition-base: 250ms ease-in-out;
+
+// Hard-edged offset shadows (brand language: solid offsets, no blur)
+$shadow-red: 10px 10px 0 $primary-red;
+$shadow-blue: -6px 7px 0 rgba($primary-blue, 0.8);
+$shadow-dark: 4px 4px 0 rgba($primary-black, 0.3);

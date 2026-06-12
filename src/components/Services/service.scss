@@ -9,7 +9,7 @@
     padding: 64px;
     max-width: 1288px;
     margin-bottom: 64px;
-    box-shadow: 10px 10px 0 $primary-red;
+    box-shadow: $shadow-red;
 
     @media (max-width: 768px) {
         padding: 32px 32px;

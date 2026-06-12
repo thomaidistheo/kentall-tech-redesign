@@ -63,7 +63,7 @@ function PDPBoat() {
                 <div className="section">
                     <div className="centered-title">Professional Web Platform</div>
                     <div className="centered-paragraph">
-                        Have your entire fleet at the tip of your fingers. User our advanced online platform that can be accessed by a laptop, PC, Android and iPhone. 
+                        Have your entire fleet at the tip of your fingers. Use our advanced online platform that can be accessed by a laptop, PC, Android and iPhone. 
                         <br/>
                         The design is crafted to be easy to navigate and to show all the needed information that is needed for your asset or fleet.
                         <br/><br/>

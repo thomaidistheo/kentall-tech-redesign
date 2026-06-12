@@ -5,7 +5,7 @@ import './platform-cta-section.scss'
 
 import laptopAndPhoneImg from '../../assets/laptop-phone.png'
 
-function PlatformaCTASection() {
+function PlatformCTASection() {
   return (
     <div className="platform-cta">
       <div className="img-cont">
@@ -13,7 +13,7 @@ function PlatformaCTASection() {
       </div>
 
         <div className="desc">
-            <p className="text-big">Visit our <span className="highlight">Tracking Platform</span> from your PC or Smartphone device! <a href="https://www.kentalltrack.com>">www.kentalltrack.com</a></p>
+            <p className="text-big">Visit our <span className="highlight">Tracking Platform</span> from your PC or Smartphone device! <a href="https://www.kentalltrack.com">www.kentalltrack.com</a></p>
 
             <Link to="/platform-links">
                 <button className='btn btn-primary-blue'>Download</button>
@@ -24,4 +24,4 @@ function PlatformaCTASection() {
   )
 }
 
-export default PlatformaCTASection
+export default PlatformCTASection

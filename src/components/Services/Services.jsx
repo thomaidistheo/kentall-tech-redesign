@@ -6,7 +6,7 @@ import imageOne from '../../assets/ourProductsCardImage.svg'
 import imageTwo from '../../assets/SoftwareSolutions.svg'
 import imageThree from '../../assets/hardwareDevices.svg'
 
-export default function Service({ title, description, photo}) {
+export default function Service() {
   return (
     <div className="service-cards-cont">
       <div className='service-card'> 
@@ -25,7 +25,7 @@ export default function Service({ title, description, photo}) {
                   </div>
               </div>
               <div className="card-img">
-                <img src={imageOne} alt="Unavailable" />
+                <img src={imageOne} alt="Kentall tracking products" />
               </div>
           </div>
       </div>
@@ -45,7 +45,7 @@ export default function Service({ title, description, photo}) {
                   </div>
               </div>
               <div className="card-img">
-                <img src={imageTwo} alt="Unavailable"/>
+                <img src={imageTwo} alt="Software solutions illustration"/>
               </div>
           </div>
       </div>
@@ -63,7 +63,7 @@ export default function Service({ title, description, photo}) {
                   </div>
               </div>
               <div className="card-img">
-                <img src={imageThree} alt="Unavailable"/>
+                <img src={imageThree} alt="Hardware tracking devices"/>
               </div>
           </div>
       </div>

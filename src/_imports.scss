@@ -1,5 +1,5 @@
-@import './buttons';
 @import './colors';
+@import './buttons';
 @import './typography';
 @import './mixins';
 
@@ -11,6 +11,13 @@ body {
 *::selection {
     background-color: $primary-red;
     color: $primary-white;
+}
+
+// Hard-edged focus ring for keyboard navigation (brand red, square)
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid $primary-red;
+    outline-offset: 2px;
 }
 
 .full-divider {

@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 import logo from '../../assets/kentall-tech_logo_hor.png'
-// import hamMenu from '../../assets/icons/Hamburger_Menu.png'
 import HamMenu from '../../assets/icons/Hamburger_Menu.svg?react'
 import HamMenuClose from '../../assets/icons/Hamburger_Menu_Close.svg?react'
 
@@ -11,18 +10,10 @@ import './header.scss'
 
 export default function Header() {
 
-    const mobileBtn = useRef("")
     const [mobileMenu, setMobileMenu] = useState(false)
 
     let handleMobileMenu = () => {
-        if (mobileMenu) {
-            setMobileMenu(false)
-            mobileBtn.current.classList.remove('pressed')
-        } else {
-            setMobileMenu(true)
-
-            mobileBtn.current.classList.add('pressed')
-        }
+        setMobileMenu(!mobileMenu)
     }
 
 return (
@@ -56,9 +47,15 @@ return (
                 </li>
             </ul>
 
-            <div className="mobile-nav-btn" ref={mobileBtn} onClick={() => {handleMobileMenu()}}>
+            <button
+                type="button"
+                className={`mobile-nav-btn${mobileMenu ? ' pressed' : ''}`}
+                aria-label={mobileMenu ? 'Close navigation menu' : 'Open navigation menu'}
+                aria-expanded={mobileMenu}
+                onClick={handleMobileMenu}
+            >
                 {!mobileMenu ? <HamMenu /> : <HamMenuClose />}
-            </div>
+            </button>
         </div>
 
         {mobileMenu ? (

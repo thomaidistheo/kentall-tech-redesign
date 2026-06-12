@@ -352,7 +352,7 @@
 
         .trip-report-desc {
             background-color: $primary-blue;
-            box-shadow: -6px 7px 0 rgba(59, 73, 90, 0.8);
+            box-shadow: $shadow-blue;
             max-width: 740px;
             color: $primary-white;
             padding: 32px;

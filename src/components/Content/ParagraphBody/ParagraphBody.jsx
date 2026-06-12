@@ -15,5 +15,5 @@ export default function ParagraphBody({ content, width }) {
 
 ParagraphBody.propTypes = {
   content: PropTypes.string,
-  maxWidth: PropTypes.number,
+  width: PropTypes.number,
 }

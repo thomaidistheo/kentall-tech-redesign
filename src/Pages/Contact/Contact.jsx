@@ -9,7 +9,6 @@ import IconMail from '../../assets/icons/mail-icon.svg?react'
 export default function Contact({ desc }) {
 
   // const handleSubmit = () => {
-  //   console.log('form submitted')
   // }
 
   return (

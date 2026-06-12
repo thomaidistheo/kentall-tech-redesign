@@ -112,7 +112,7 @@
     } 
 
     &.scrolled {
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 0 rgba($primary-black, 0.2);
     }
 
     // Logo Image
@@ -165,6 +165,10 @@
 
     .mobile-nav-btn {
         display: none;
+        // it is a <button>: strip default chrome
+        background: none;
+        border: none;
+        padding: 0;
     }
 
     // Media Queries
@@ -187,12 +191,12 @@
             color: rgba($primary-white, 0.7);
             top: 50;
             left: 16px;
-            transition: transform 200ms ease-in-out;
+            transition: transform $transition-base;
             cursor: pointer;
             
             &.pressed {
                 transform: rotate(90deg);
-                transition: transform 300ms ease-in-out;
+                transition: transform $transition-base;
             }
         }
     }
