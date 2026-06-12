@@ -1,4 +1,4 @@
-@import '../../imports';
+@use '../../imports' as *;
 
 .contact-cta-cont {
     background-color: $primary-red;

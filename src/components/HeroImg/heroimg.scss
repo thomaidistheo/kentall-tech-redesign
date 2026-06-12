@@ -1,4 +1,4 @@
-@import '../../imports';
+@use '../../imports' as *;
 
 .hero-image {
     background-color: $primary-blue;

@@ -1,41 +1,10 @@
-@import './colors';
-@import './buttons';
-@import './typography';
-@import './mixins';
+// Design tokens for component stylesheets.
+// Components do `@use '../../imports' as *;` and get the color/motion/
+// shadow variables and the flex/text mixins, with no CSS emitted.
+//
+// Global CSS (body, ::selection, focus ring, .full-divider,
+// .landing-page) and the button/typography utility classes live in
+// App.scss, which is loaded once by App.jsx.
 
-body {
-    overflow-x: hidden;
-    background-color: $col-gray-200;
-}
-
-*::selection {
-    background-color: $primary-red;
-    color: $primary-white;
-}
-
-// Hard-edged focus ring for keyboard navigation (brand red, square)
-a:focus-visible,
-button:focus-visible {
-    outline: 2px solid $primary-red;
-    outline-offset: 2px;
-}
-
-.full-divider {
-    height: 4px;
-    width: 100%;
-    background-color: $primary-red;
-    margin: 4px 0 16px 0;
-}
-
-.landing-page {
-    margin: 0 auto;
-    max-width: 1288px;
-
-    @media (max-width: 1512px) {
-        padding: 0 32px
-    }
-
-    @media (max-width: 512px) {
-        padding: 0 16px;
-    }
-}
+@forward './colors';
+@forward './mixins';

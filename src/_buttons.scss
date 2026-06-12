@@ -1,4 +1,4 @@
-@import "colors.scss";
+@use './colors' as *;
 
 @keyframes btn-fill-in{
     from { width: 0% }

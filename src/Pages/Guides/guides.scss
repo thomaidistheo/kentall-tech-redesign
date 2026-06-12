@@ -1,4 +1,4 @@
-@import '../../imports';
+@use '../../imports' as *;
 
 .guides-layout {
     display: flex;
@@ -117,6 +117,8 @@
         max-width: 720px;
 
         li {
+            // override the global `li { list-style: none }` reset
+            list-style: square;
             margin-bottom: 8px;
 
             &::marker {

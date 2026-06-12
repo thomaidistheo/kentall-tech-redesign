@@ -18,7 +18,7 @@ function PlatformLinks() {
       <PageTitle title='Available on PC, iOS and Android' />
 
       <p className='platform-links-intro text-medium'>
-        The Kentall tracking platform runs in any modern browser — no installation needed.
+        The Kentall tracking platform runs in any modern browser, no installation needed.
         Prefer an app? Get it on the App Store or Google Play.
       </p>
 
