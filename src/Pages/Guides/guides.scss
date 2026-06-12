@@ -109,6 +109,22 @@
         max-width: 720px;
     }
 
+    .guides-list {
+        list-style: square;
+        color: $col-dark-100;
+        margin: 0 0 16px;
+        padding-left: 24px;
+        max-width: 720px;
+
+        li {
+            margin-bottom: 8px;
+
+            &::marker {
+                color: $primary-red;
+            }
+        }
+    }
+
     .guides-help {
         margin-top: 40px;
         padding-top: 24px;

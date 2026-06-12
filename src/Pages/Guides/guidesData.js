@@ -1,6 +1,10 @@
 // Wiki content for the /guides page.
-// Each article: slug (used in the URL), title, and an array of paragraphs.
-// Edit or extend the copy freely — the layout adapts automatically.
+// Each article: slug (used in the URL), title, and an array of blocks.
+// A block is either a string (rendered as a paragraph) or { list: [...] }
+// (rendered as a bullet list). Edit or extend freely — the layout adapts.
+//
+// Content translated/adapted from the Kentall Tech fleet-management
+// brochure (GR).
 
 export const guideCategories = [
     {
@@ -9,28 +13,58 @@ export const guideCategories = [
             {
                 slug: 'login',
                 title: 'Login',
-                paragraphs: [
-                    'The Kentall tracking platform is available at www.kentalltrack.com from any modern browser, and through the GPS Monitor Plus app on iOS and Android.',
-                    'Log in with the username and password you received when your account was created. If you have not received credentials yet, contact us at info@kentall-tech.com and we will set up your account.',
-                    'If you forget your password, use the "Forgot password" option on the login screen to receive a reset link by email.',
+                blocks: [
+                    'The Kentall tracking platform is hosted in the cloud and is available at www.kentalltrack.com from any modern browser, on PC or smartphone — there is nothing to install. Native apps are also available on the App Store and Google Play.',
+                    'Log in with the username and password you received when your account was created. Multiple users can be signed in at the same time, and account administrators can create sub-users with their own credentials and access limited to selected groups of vessels or vehicles.',
+                    'Because the platform is cloud hosted, it is upgraded regularly without downtime or any reinstallation on your side — new features appear automatically for all users.',
+                    'If you have not received credentials yet, contact us at info@kentall-tech.com and we will set up your account.',
                 ],
             },
             {
                 slug: 'map-view',
                 title: 'Map View',
-                paragraphs: [
-                    'After logging in you land on the live map. Every asset on your account is shown at its last reported position.',
-                    'The marker color reflects the real-time status of each asset: moving, stationary, last report time, or disconnected.',
-                    'Use the search field to find a specific asset by name, and the layer switch to toggle between the standard map and satellite view.',
+                blocks: [
+                    'As soon as you log in you have access to all of your vessels and vehicles, shown live on the map with their status updated in real time.',
+                    'The toolbar on the right edge of the screen holds the quick map tools:',
+                    {
+                        list: [
+                            'Ruler — measure distances directly on the map',
+                            'Geo-zones — draw geographic boundaries (geofences) around areas you care about',
+                            'Area search — search for places and regions',
+                            'Nearest asset — locate the closest vessel/vehicle to a point',
+                            'Map type — switch between Google Maps street and satellite view, Open Street Maps and more',
+                        ],
+                    },
+                    'If you hold the rights to another map provider, we can integrate it as a third-party map on request.',
+                    'The notifications window sits in the bottom-right corner. When an event you have configured triggers, the window opens automatically with an alarm sound so nothing slips by.',
                 ],
             },
             {
                 slug: 'asset-info',
                 title: 'Asset Info',
-                paragraphs: [
-                    'Select any asset on the map to open its information panel.',
-                    'The panel shows the asset’s current status, speed, ignition state, odometer, and the time of its last report.',
-                    'From here you can jump straight to the asset’s trips, zones, and alerts without leaving the map.',
+                blocks: [
+                    'Click on any vessel or vehicle on the map to open its information panel. Everything you need is available at a glance:',
+                    {
+                        list: [
+                            'Speed (km/h or knots)',
+                            'Status — moving, parked or idle',
+                            'Battery level (where the device supports it)',
+                            'Time of the last reported position',
+                            'Current location',
+                            'Latitude and longitude',
+                            'Odometer',
+                        ],
+                    },
+                    'Next to the panel you will find the per-asset quick tools, top to bottom:',
+                    {
+                        list: [
+                            'Trail — shows the “tail” of the asset’s recent route',
+                            'Trip — takes you to the asset’s trip history page',
+                            'StreetView — opens Street View at the asset’s current location',
+                            'Directions — Google Maps directions to the vessel/vehicle',
+                            'Zoom — zooms the map in, centered on the selected asset',
+                        ],
+                    },
                 ],
             },
         ],
@@ -41,19 +75,19 @@ export const guideCategories = [
             {
                 slug: 'trip-replay',
                 title: 'Trip Replay',
-                paragraphs: [
-                    'Trip Replay lets you view your assets’ past trips for up to 6 months.',
-                    'Select an asset, pick a date, and choose a trip from the list to draw its full route on the map.',
-                    'This is perfect to confirm the route a client followed or to inspect whether the asset has been close to dangerous zones.',
+                blocks: [
+                    'Every vessel and vehicle can replay its past trips — for a day, a week, a month, or any period between two dates — with up to 6 months of trip history.',
+                    'Each trip is replayed from start to stop, drawn point by point on the map. You can replay a single asset or display the trips of multiple vessels/vehicles together.',
+                    'This is perfect to confirm the route a client followed, or to inspect whether an asset has been close to dangerous zones.',
                 ],
             },
             {
                 slug: 'trip-info',
                 title: 'Trip Info',
-                paragraphs: [
-                    'Every step of a trip records detailed telemetry: speed, coordinates, and engine status.',
-                    'Open a trip to see its distance, duration, average and maximum speed, and any speed limit violations.',
-                    'Use the timeline slider to move through the trip point by point and inspect the recorded values at each position.',
+                blocks: [
+                    'Open any trip to inspect its details: distance travelled, duration, average and maximum speed, and any speed limit violations.',
+                    'Every recorded point of the trip carries its telemetry — speed, coordinates, and engine status — so you can move through the route step by step and see exactly what was recorded at each position.',
+                    'Trips are listed per day with their start/stop times and locations, giving you a quick picture of each day’s activity for every asset.',
                 ],
             },
         ],
@@ -64,18 +98,25 @@ export const guideCategories = [
             {
                 slug: 'trip-reports',
                 title: 'Trip Reports',
-                paragraphs: [
-                    'Schedule automated Weekly Summary Reports for your assets to monitor the trips of the week.',
-                    'Reports include every trip with accurate data on the map: speed limit violations, average speed, and trip distance.',
-                    'Reports are delivered to your email automatically — set them up once per asset and stay informed without logging in.',
+                blocks: [
+                    'Every user can set up their own automated reports for any information about their vessels or vehicles. Reports are created from the REPORTS menu and tailored to your needs:',
+                    {
+                        list: [
+                            'Pick the assets and the date range the report covers',
+                            'Schedule the day it is delivered — daily, weekly or monthly',
+                            'Optionally record only a specific time window, e.g. working hours 08:00–18:00',
+                        ],
+                    },
+                    'The Weekly Summary Report gathers all the trips of the week for each vehicle/vessel and is emailed to you automatically as a PDF, ready for archiving. A graphical Trip Listing report is also available, presenting the trips drawn on the map.',
+                    'Weekly movement reports follow the requirements of the Greek regulation ΠΟΛ.1240/2018.',
                 ],
             },
             {
                 slug: 'vat-special-report',
                 title: 'Sailboat/Yacht VAT Special Report',
-                paragraphs: [
-                    'For sailboats and yachts, the platform can produce a special report tailored to VAT documentation requirements.',
-                    'The report records the vessel’s trips with timestamps and positions, providing the supporting evidence typically requested for VAT purposes.',
+                blocks: [
+                    'For sailboats and yachts, the platform produces a special report tailored to VAT documentation requirements, in line with the Greek regulation ΠΟΛ.1240/2018 on movement reports.',
+                    'The report records the vessel’s trips with timestamps and positions, providing the supporting evidence typically requested for VAT purposes, and can be scheduled to arrive by email automatically as a PDF for archiving.',
                     'Contact us at info@kentall-tech.com if you need help configuring the VAT special report for your vessel.',
                 ],
             },

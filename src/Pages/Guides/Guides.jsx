@@ -43,9 +43,17 @@ function Guides() {
                     <h2 className='text-big'>{article.title}</h2>
                     <div className='guides-divider'></div>
 
-                    {article.paragraphs.map((text, i) => (
-                        <p className='text-normal' key={i}>{text}</p>
-                    ))}
+                    {article.blocks.map((block, i) =>
+                        typeof block === 'string' ? (
+                            <p className='text-normal' key={i}>{block}</p>
+                        ) : (
+                            <ul className='guides-list text-normal' key={i}>
+                                {block.list.map((item) => (
+                                    <li key={item}>{item}</li>
+                                ))}
+                            </ul>
+                        )
+                    )}
 
                     <div className='guides-help text-small'>
                         Can’t find what you’re looking for?{' '}
