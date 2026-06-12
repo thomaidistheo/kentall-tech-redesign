@@ -61,10 +61,15 @@ function Guides() {
 
                         if (block.img) {
                             const src = guideImages[block.img]
+                            const srcs = Array.isArray(src) ? src : src ? [src] : []
                             return (
                                 <figure className='guides-figure' key={i}>
-                                    {src ? (
-                                        <img src={src} alt={block.caption} />
+                                    {srcs.length > 0 ? (
+                                        <div className='figure-row'>
+                                            {srcs.map((s, n) => (
+                                                <img src={s} alt={block.caption} key={n} />
+                                            ))}
+                                        </div>
                                     ) : (
                                         <div className='guides-img-placeholder'>
                                             <span className='placeholder-number'>#{block.img}</span>

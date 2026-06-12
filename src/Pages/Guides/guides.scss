@@ -136,10 +136,27 @@
         margin: 24px 0;
         max-width: 720px;
 
+        .figure-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 16px;
+
+            @media (max-width: 820px) {
+                flex-wrap: wrap;
+            }
+        }
+
         img {
-            width: 100%;
             display: block;
             border: 1px solid $col-gray-400;
+
+            // single image fills the column; multiple share the row
+            flex: 1 1 0;
+            min-width: 0;
+            max-width: 100%;
+            height: auto;
         }
 
         figcaption {

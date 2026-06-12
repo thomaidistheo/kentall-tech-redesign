@@ -11,9 +11,8 @@
 // IMAGE SLOTS ---------------------------------------------------------
 // Until a real image is provided, each slot renders as a numbered
 // placeholder. To activate one: import the file and replace its null.
-//
-//   import img1 from '../../assets/guides/01-login-screen.png'
-//   export const guideImages = { 1: img1, ... }
+// A slot can hold a single image or an array of images; arrays render
+// side by side in a horizontal row.
 //
 //  #1  Login: the kentalltrack.com login screen
 //  #2  Map View: live map with the whole fleet visible
@@ -28,16 +27,27 @@
 //  #11 Trip Reports: graphical Trip Listing report on the map
 //  #12 Trip Reports: the "Create a Custom Report" dialog
 //  #13 VAT Report: Sailboat/Yacht VAT special report example
+import img1 from '../../assets/guides/01.jpg'
+import img2a from '../../assets/guides/02-1.jpg'
+import img2b from '../../assets/guides/02-2.jpg'
+import img3a from '../../assets/guides/03-1.jpg'
+import img3b from '../../assets/guides/03-2.jpg'
+import img3c from '../../assets/guides/03-3.jpg'
+import img5 from '../../assets/guides/05.jpg'
+import img7 from '../../assets/guides/07.jpg'
+import img8 from '../../assets/guides/08.jpg'
+import img9 from '../../assets/guides/09.jpg'
+
 export const guideImages = {
-    1: null,
-    2: null,
-    3: null,
+    1: img1,
+    2: [img2a, img2b],
+    3: [img3a, img3b, img3c],
     4: null,
-    5: null,
+    5: img5,
     6: null,
-    7: null,
-    8: null,
-    9: null,
+    7: img7,
+    8: img8,
+    9: img9,
     10: null,
     11: null,
     12: null,
