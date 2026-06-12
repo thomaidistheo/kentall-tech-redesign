@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 
 import PageTitle from '../../components/PageTitle/PageTitle'
-import { guideCategories, allGuides, findGuide } from './guidesData'
+import { guideCategories, allGuides, findGuide, guideImages } from './guidesData'
 
 import './guides.scss'
 
@@ -54,17 +54,36 @@ function Guides() {
                     <h2 className='text-big'>{article.title}</h2>
                     <div className='guides-divider'></div>
 
-                    {article.blocks.map((block, i) =>
-                        typeof block === 'string' ? (
-                            <p className='text-normal' key={i}>{block}</p>
-                        ) : (
+                    {article.blocks.map((block, i) => {
+                        if (typeof block === 'string') {
+                            return <p className='text-normal' key={i}>{block}</p>
+                        }
+
+                        if (block.img) {
+                            const src = guideImages[block.img]
+                            return (
+                                <figure className='guides-figure' key={i}>
+                                    {src ? (
+                                        <img src={src} alt={block.caption} />
+                                    ) : (
+                                        <div className='guides-img-placeholder'>
+                                            <span className='placeholder-number'>#{block.img}</span>
+                                            <span className='placeholder-label text-small'>image placeholder</span>
+                                        </div>
+                                    )}
+                                    <figcaption className='text-small'>{block.caption}</figcaption>
+                                </figure>
+                            )
+                        }
+
+                        return (
                             <ul className='guides-list text-normal' key={i}>
                                 {block.list.map((item) => (
                                     <li key={item}>{renderListItem(item)}</li>
                                 ))}
                             </ul>
                         )
-                    )}
+                    })}
 
                     <div className='guides-help text-small'>
                         Can’t find what you’re looking for?{' '}

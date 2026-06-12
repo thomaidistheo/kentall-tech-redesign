@@ -132,6 +132,45 @@
         }
     }
 
+    .guides-figure {
+        margin: 24px 0;
+        max-width: 720px;
+
+        img {
+            width: 100%;
+            display: block;
+            border: 1px solid $col-gray-400;
+        }
+
+        figcaption {
+            margin-top: 8px;
+            color: $col-gray-800;
+        }
+    }
+
+    .guides-img-placeholder {
+        @include flexColCenter();
+        gap: 8px;
+
+        aspect-ratio: 16 / 9;
+        width: 100%;
+
+        background-color: $col-gray-200;
+        border: 2px dashed $col-gray-400;
+
+        .placeholder-number {
+            font-size: 32px;
+            font-weight: 600;
+            color: $primary-blue;
+        }
+
+        .placeholder-label {
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: $col-gray-800;
+        }
+    }
+
     .guides-help {
         margin-top: 40px;
         padding-top: 24px;
