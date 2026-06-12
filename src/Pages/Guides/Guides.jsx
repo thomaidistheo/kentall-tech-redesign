@@ -6,6 +6,17 @@ import { guideCategories, allGuides, findGuide } from './guidesData'
 
 import './guides.scss'
 
+// "Term: explanation" list items get the term rendered bold
+const renderListItem = (item) => {
+    const idx = item.indexOf(': ')
+    if (idx === -1) return item
+    return (
+        <>
+            <strong>{item.slice(0, idx)}</strong>: {item.slice(idx + 2)}
+        </>
+    )
+}
+
 function Guides() {
     const { slug } = useParams()
     const article = findGuide(slug) || allGuides[0]
@@ -49,7 +60,7 @@ function Guides() {
                         ) : (
                             <ul className='guides-list text-normal' key={i}>
                                 {block.list.map((item) => (
-                                    <li key={item}>{item}</li>
+                                    <li key={item}>{renderListItem(item)}</li>
                                 ))}
                             </ul>
                         )
