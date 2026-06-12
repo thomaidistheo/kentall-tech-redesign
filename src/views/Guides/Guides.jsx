@@ -1,5 +1,8 @@
+'use client'
+
 import React, { useState, useEffect } from 'react'
-import { NavLink, useParams } from 'react-router-dom'
+import Link from 'next/link'
+import Image from 'next/image'
 
 import PageTitle from '../../components/PageTitle/PageTitle'
 import { guideCategories, allGuides, findGuide, guideImages } from './guidesData'
@@ -17,8 +20,7 @@ const renderListItem = (item) => {
     )
 }
 
-function Guides() {
-    const { slug } = useParams()
+function Guides({ slug }) {
     const article = findGuide(slug) || allGuides[0]
 
     // Lightbox: { src, caption } or null
@@ -61,14 +63,14 @@ function Guides() {
                             <ul>
                                 {category.articles.map((a) => (
                                     <li key={a.slug}>
-                                        <NavLink
-                                            to={`/guides/${a.slug}`}
-                                            className={() =>
+                                        <Link
+                                            href={`/guides/${a.slug}`}
+                                            className={
                                                 a.slug === article.slug ? 'active' : ''
                                             }
                                         >
                                             {a.title}
-                                        </NavLink>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -100,7 +102,7 @@ function Guides() {
                                                     onClick={() => openLightbox(s, block.caption)}
                                                     key={n}
                                                 >
-                                                    <img src={s} alt={block.caption} />
+                                                    <Image src={s} alt={block.caption} />
                                                 </button>
                                             ))}
                                         </div>
@@ -158,7 +160,7 @@ function Guides() {
                     </div>
 
                     <div className={`lightbox-body${zoomed ? ' zoomed' : ''}`}>
-                        <img
+                        <Image
                             src={lightbox.src}
                             alt={lightbox.caption}
                             onClick={(e) => {

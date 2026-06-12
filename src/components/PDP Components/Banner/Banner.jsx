@@ -1,13 +1,14 @@
 import React from 'react'
+import Image from 'next/image'
 import './Banner.scss'
 
-function Banner({ imageDesk, imageMob }) {
+function Banner({ imageDesk, imageMob, alt = 'Product banner', title = 'Professional Asset Tracking' }) {
     return (
         <div className="hero-banner-cont">
-            <img className="desk" src={imageDesk} alt="header of a sailboat" />
-            <img className="mob" src={imageMob} alt="header of a sailboat" />
+            <Image className="desk" src={imageDesk} alt={alt} priority sizes="100vw" />
+            <Image className="mob" src={imageMob} alt={alt} priority sizes="100vw" />
             <div className="product-page-hero">
-                <div className="product-page-hero__title">Professional Asset Tracking</div>
+                <h1 className="product-page-hero__title">{title}</h1>
                 <a href='#sectionOne' className="btn btn-primary-black">Start Now</a>
             </div>
 

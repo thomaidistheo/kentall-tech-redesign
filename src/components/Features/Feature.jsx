@@ -9,7 +9,7 @@ function Feature({ icon, title, desc }) {
           {icon}
         </div>
 
-        <p className="feature-title text-medium">{title}</p>
+        <h3 className="feature-title text-medium">{title}</h3>
         <span className="seperator"></span>
         <p className="feature-desc">{desc}</p>
     </div>

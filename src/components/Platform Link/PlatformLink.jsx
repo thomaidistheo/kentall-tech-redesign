@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 import './platform-link.scss'
 
@@ -9,7 +10,7 @@ function PlatformLink({ photo, device, desc, linkImg, webLink, ctaLabel }) {
         <div className={`platform-link-cont${available ? '' : ' unavailable'}`}>
             <div className='device-name text-medium'>{device}</div>
 
-            <img className='device-img' src={photo} alt={device} />
+            <Image className='device-img' src={photo} alt={`The Kentall tracking platform on ${device}`} />
 
             {desc && <p className='device-desc text-normal'>{desc}</p>}
 
@@ -21,7 +22,7 @@ function PlatformLink({ photo, device, desc, linkImg, webLink, ctaLabel }) {
                         </a>
                     ) : (
                         <a href={webLink}>
-                            <img className='link-img' src={linkImg} alt={`Get it for ${device}`} />
+                            <Image className='link-img' src={linkImg} alt={`Get it for ${device}`} />
                         </a>
                     )
                 ) : (

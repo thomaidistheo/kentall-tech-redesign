@@ -1,43 +1,29 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 import '../Cards/card.scss'
-import PropTypes from 'prop-types'
 
 
 
 export default function Card({ title, text, buttonLink, buttonText, image}) {
   return (
-      <div className='card'> 
-          {/* <div className='square'></div> */}
-          {/* <div className='square'></div> */}
+      <div className='card'>
           <div className='inner'>
-              <div 
-                  className="image" 
-                  style={{ 
-                      backgroundImage: `url(${image})`,
-                      // width: 700,
-                      // height: 350,
+              <div
+                  className="image"
+                  style={{
+                      backgroundImage: `url(${image.src})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center'
                     }}
               ></div>
-              <div className='title'>{title}</div>
+              <h2 className='title'>{title}</h2>
               <div className='text'>{text}</div>
-              
-              <Link to={buttonLink} className='btn btn-primary-blue'>
+
+              <Link href={buttonLink} className='btn btn-primary-blue'>
                       {buttonText}
               </Link>
-              {/* <img src={image} /> */}
           </div>
       </div>
   )
-}
-
-Card.propTypes = {
-  title: PropTypes.string,
-  text: PropTypes.string,
-  buttonLink: PropTypes.string,
-  buttonText: PropTypes.string,
-  image: PropTypes.string
 }

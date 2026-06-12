@@ -1,43 +1,35 @@
 import React from 'react'
+import Image from 'next/image'
 
 import './FeatureStrip.scss'
 
-function FeatureStrip({ 
-    featureOne, 
-    featureTwo, 
-    featureThree, 
+function FeatureStrip({
+    featureOne,
+    featureTwo,
+    featureThree,
     featureFour,
     featureOneImg,
     featureTwoImg,
     featureThreeImg,
-    featureFourImg 
+    featureFourImg
 }) {
+    const features = [
+        [featureOne, featureOneImg],
+        [featureTwo, featureTwoImg],
+        [featureThree, featureThreeImg],
+        [featureFour, featureFourImg],
+    ]
+
     return (
         <div className='featurestrip-cont'>
-            <div className="product-feature">
-                <div className="icon">
-                    <img src={featureOneImg} alt="feature icon" />
+            {features.map(([title, img]) => (
+                <div className="product-feature" key={title}>
+                    <div className="icon">
+                        <Image src={img} alt="" />
+                    </div>
+                    <div className='title'>{title}</div>
                 </div>
-                <div className='title'>{featureOne}</div>
-            </div>
-            <div className="product-feature">
-                <div className="icon">
-                    <img src={featureTwoImg} alt="feature icon" />
-                </div>
-                <div className='title'>{featureTwo}</div>
-            </div>
-            <div className="product-feature">
-                <div className="icon">
-                    <img src={featureThreeImg} alt="feature icon" />
-                </div>
-                <div className='title'>{featureThree}</div>
-            </div>
-            <div className="product-feature">
-                <div className="icon">
-                    <img src={featureFourImg} alt="feature icon" />
-                </div>
-                <div className='title'>{featureFour}</div>
-            </div>
+            ))}
         </div>
     )
 }

@@ -1,4 +1,7 @@
+'use client'
+
 import React from 'react'
+import Image from 'next/image'
 import Banner from '../../../components/PDP Components/Banner/Banner'
 import Spacer from '../../../components/Spacer/Spacer'
 import FeatureStrip from '../../../components/PDP Components/Feature Strip/FeatureStrip'
@@ -41,9 +44,11 @@ function PDPBoat() {
             <Banner 
                 imageDesk={boatImg_desk}
                 imageMob={boatImg_mob}
+                alt="Sailboat at sea tracked with KentallTech GPS"
+                title="Boat & Yacht GPS Tracking"
             />
             <div className="device-showcase" id="sectionOne">
-                <img src={devices} alt="service"/>
+                <Image src={devices} alt="The Kentall tracking platform on a laptop and a smartphone"/>
             </div>
             <div className="subtitle" > 
                 Enjoy real-time tracking, customizable reports, and geo-fenced safety alerts, accessible from any web-enabled device. 
@@ -61,7 +66,7 @@ function PDPBoat() {
                 />
 
                 <div className="section">
-                    <div className="centered-title">Professional Web Platform</div>
+                    <h2 className="centered-title">Professional Web Platform</h2>
                     <div className="centered-paragraph">
                         Have your entire fleet at the tip of your fingers. Use our advanced online platform that can be accessed by a laptop, PC, Android and iPhone. 
                         <br/>
@@ -74,7 +79,7 @@ function PDPBoat() {
                 <BodyBanner desktop={bodyBannerOneDesk} mobile={bodyBannerOneMob} /> 
                 <Spacer />
                 <div className="section">
-                    <div className="centered-title">See your whole fleet live on the map</div>
+                    <h2 className="centered-title">See your whole fleet live on the map</h2>
                     <div className="centered-paragraph">
                         You can view your entire fleet at any moment, and also get info about all your assets and their status.
                         <br />
@@ -88,15 +93,15 @@ function PDPBoat() {
                 </div>
 
                 <div className="image-container">
-                    <img className="screenshot" src={fleetMap} alt="browser window with whole fleet" />
+                    <Image className="screenshot" src={fleetMap} alt="Live fleet map showing every boat and its status" />
                     <div className="section big-features">
 
-                        <div className="features-title">
+                        <h3 className="features-title">
                             Real-time status
-                        </div>
+                        </h3>
                         <div className="feature">
                             <div className="feature--icon">
-                                <img src={iconActiveAsset} alt="" />
+                                <Image src={iconActiveAsset} alt="" />
                             </div>
                             <div className="feature--text">
                                 Moving
@@ -104,7 +109,7 @@ function PDPBoat() {
                         </div>
                         <div className="feature">
                             <div className="feature--icon">
-                                <img src={iconStationaryAsset} alt="" />
+                                <Image src={iconStationaryAsset} alt="" />
                             </div>
                             <div className="feature--text">
                                 Stationary
@@ -112,7 +117,7 @@ function PDPBoat() {
                         </div>
                         <div className="feature">
                             <div className="feature--icon">
-                                <img src={iconLastActiveAsset} alt="" />
+                                <Image src={iconLastActiveAsset} alt="" />
                             </div>
                             <div className="feature--text">
                                 Last report
@@ -120,7 +125,7 @@ function PDPBoat() {
                         </div>
                         <div className="feature">
                             <div className="feature--icon">
-                                <img src={iconDisconnectedAsset} alt="" />
+                                <Image src={iconDisconnectedAsset} alt="" />
                             </div>
                             <div className="feature--text">
                                 Disconnected
@@ -130,41 +135,41 @@ function PDPBoat() {
                 </div>
                 
                 <div className="map-showcase">
-                    <div className="centered-title">
+                    <h2 className="centered-title">
                         Select the type of map<br/> you prefer.
-                    </div>
+                    </h2>
                     <div className="map">
 
                         <ImgComparisonSlider hover="hover">
-                            <img slot="first" className="compareImg" src={mapBefore} alt="map style 1" />
-                            <img slot="second" className="compareImg" src={mapAfter} alt="map style 2" />
+                            <img slot="first" className="compareImg" src={mapBefore.src} alt="Street map view of the tracking platform" />
+                            <img slot="second" className="compareImg" src={mapAfter.src} alt="Satellite map view of the tracking platform" />
                         </ImgComparisonSlider>
                     </div>
                     
-                    <div className="centered-title">
+                    <h2 className="centered-title">
                     Get automated <br/> trip reports in your email.
-                    </div>
+                    </h2>
 
-                    <img className="overlay-img" src={tripReportImg} alt="Trip Report Doc" />
+                    <Image className="overlay-img" src={tripReportImg} alt="Automated trip report PDF sent by email" />
                 </div>
 
                 <div className="trip-history">
-                    <div className="centered-title">
+                    <h2 className="centered-title">
                         Trip History
-                    </div>
+                    </h2>
                     <div className="centered-paragraph">
                     With Trip Replay you can view your assets’ past trips for up to 6 months. 
                     This is perfect to confirm the route a client followed or to inspect if the asset has been close to dangerous zones.
                     Valuable information is shown for each step of the trip, like speed, coordinates and engine status*.
                     </div>
                     <div className="photo-grid">
-                        <img src={tripHistoryImg1} alt="Trip History 1" />
-                        <img src={tripHistoryImg2} alt="Trip History 2" />
+                        <Image src={tripHistoryImg1} alt="Trip replay of a boat route on the map" />
+                        <Image src={tripHistoryImg2} alt="Trip history list with speed and duration details" />
                     </div>
                 </div>
 
                 <div className="trip-reports">
-                    <div className="centered-title">Automated Trip Reports</div>
+                    <h2 className="centered-title">Automated Trip Reports</h2>
                     <div className="centered-paragraph">
                         Get a weekly email of your fleet’s trips in a Report specifically designed to be used in compliance with Greek VAT Laws about sailboats and boats.
                         <br/>
@@ -173,7 +178,7 @@ function PDPBoat() {
                         making it easy to submit for VAT purposes.
                     </div>
 
-                    <img className="trip-report-img" src={tripReportImg1} alt="Trip Report Data" />
+                    <Image className="trip-report-img" src={tripReportImg1} alt="Automated VAT trip report with distances and zones" />
 
                     <div className="trip-report-desc">
                         Every island with a major port base is mapped out specifically for this purpose.
@@ -184,13 +189,13 @@ function PDPBoat() {
                         <br/>
                         Therefore the automated trip report calculates all the needed information that would otherwise need to be done by hand using coordinates and estimates.
                     </div>
-                    <img className="trip-zone-img" src={tripZoneImg1} alt="Trip Zones on Map" />
+                    <Image className="trip-zone-img" src={tripZoneImg1} alt="Nautical mile zones mapped around a Greek island port" />
                 </div>
                 
                 <div className="cta-section">
-                    <div className="centered-title">
+                    <h2 className="centered-title">
                         Already have a GPS Tracker device installed? No problem.
-                    </div>
+                    </h2>
                     <div className="centered-paragraph">
                     Our Advanced Tracking Platform is compatible with <br/>
                     95% of the tracking devicesthat are currently in the market.<br/>

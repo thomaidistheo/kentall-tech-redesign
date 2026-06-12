@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-// import FacebookWidget from '../../components/Widgets/FacebookWidget'
+import Link from 'next/link'
 import ContactWidget from '../Widgets/ContactWIdget/ContactWidget'
 
 import LinkWidget from '../Widgets/LinkWidget/LinkWidget'
@@ -11,7 +10,7 @@ export default function Footer() {
   return (
     <ul className='footer-cont'>
       <li className='footer-widget'>
-        <ContactWidget 
+        <ContactWidget
           email='info@kentall-tech.com'
           phone='2170001200'
         />
@@ -20,27 +19,26 @@ export default function Footer() {
       <div className="widget-seperator"></div>
 
       <li className='footer-widget'>
-        <LinkWidget 
+        <LinkWidget
           title="Web Platform"
-          item1={ <Link to="/guides"> Guides </Link> }
-          item2={ <Link to="/features"> Features </Link> }
-          item3={ <Link to="/demo"> Demo </Link> }
-          item4={ <Link to="/support"> Support </Link> }
+          item1={ <Link href="/guides"> Guides </Link> }
+          item2={ <Link href="/features"> Features </Link> }
+          item3={ <Link href="/demo"> Demo </Link> }
+          item4={ <Link href="/support"> Support </Link> }
           />
       </li>
 
       <div className="widget-seperator"></div>
 
       <li className='footer-widget'>
-        <LinkWidget 
+        <LinkWidget
           title="Devices"
-          item1={ <Link to="/our-devices"> Our Devices </Link> }
-          item2={ <Link to="/third-party-compatibility"> Third-Party Compatibility </Link> }
-          item3={ <Link to="/features"> Features </Link> }
-          item4={ <Link to="/support"> Support </Link> }
+          item1={ <Link href="/our-devices"> Our Devices </Link> }
+          item2={ <Link href="/third-party-compatibility"> Third-Party Compatibility </Link> }
+          item3={ <Link href="/features"> Features </Link> }
+          item4={ <Link href="/support"> Support </Link> }
           />
       </li>
     </ul>
   )
 }
- 

@@ -1,14 +1,17 @@
+'use client'
+
 import React from 'react'
+import Image from 'next/image'
 import { useState, useRef, useEffect } from 'react'
 import Banner from '../../../components/PDP Components/Banner/Banner'
 import Spacer from '../../../components/Spacer/Spacer'
 import FeatureStrip from '../../../components/PDP Components/Feature Strip/FeatureStrip'
 import BodyBanner from '../../../components/PDP Components/BodyBanner/BodyBanner'
 
-import './PDPMoto.scss'
+import './PDPCar.scss'
 
-import motoImg_mob from '../../../assets/Product Pages/pdp_moto_banner-mob.png'
-import motoImg_desk from '../../../assets/Product Pages/pdp_moto_banner.png'
+import carImg_mob from '../../../assets/Product Pages/pdp_car_banner-mob.png'
+import carImg_desk from '../../../assets/Product Pages/pdp_car_banner.png'
 import devices from '../../../assets/laptop-phone-v3.png'
 import featureOneImg from '../../../assets/icons/dashboard.png'
 import featureTwoImg from '../../../assets/icons/live-map.png'
@@ -22,12 +25,12 @@ import iconStationaryAsset from '../../../assets/icons/stationary-asset.png'
 import iconLastActiveAsset from '../../../assets/icons/last-active.png'
 import iconDisconnectedAsset from '../../../assets/icons/disconnected-cloud.png'
 
-import bodyBannerOneDesk from '../../../assets/Product Pages/pdp_moto_mid-banner.png'
-import bodyBannerOneMob from '../../../assets/Product Pages/pdp_moto_mid-banner-mob.png'
+import bodyBannerOneDesk from '../../../assets/Product Pages/pdp_car_mid-banner.png'
+import bodyBannerOneMob from '../../../assets/Product Pages/pdp_car_mid-banner-mob.png'
 import tripHistoryImg1 from '../../../assets/Product Pages/moto_trip.png'
 import tripHistoryImg2 from '../../../assets/Product Pages/moto-demos/IMG_1067.png'
-import mobileNotificationImg1 from '../../../assets/Product Pages/mobile_notif_1.png'
-import mobileNotificationImg2 from '../../../assets/Product Pages/mobile_notif_2.png'
+import mobileNotificationImg1 from '../../../assets/Product Pages/mobile_notif_1_car.png'
+import mobileNotificationImg2 from '../../../assets/Product Pages/mobile_notif_2_car.png'
 
 import carouselPhoto1 from '../../../assets/Product Pages/moto-demos/IMG_1065.png'
 import carouselPhoto2 from '../../../assets/Product Pages/moto-demos/IMG_1066.png'
@@ -37,7 +40,7 @@ import carouselPhoto6 from '../../../assets/Product Pages/moto-demos/IMG_1070.pn
 import carouselPhoto7 from '../../../assets/Product Pages/moto-demos/IMG_1071.png'
 
 
-function PDPMoto() {
+function PDPCar() {
 
     const [photos] = useState([
         carouselPhoto1,
@@ -120,12 +123,14 @@ function PDPMoto() {
     return (
         <div className="product-page">    
             <Banner 
-                imageDesk={motoImg_desk}
-                imageMob={motoImg_mob}
+                imageDesk={carImg_desk}
+                imageMob={carImg_mob}
+                alt="Car on the road tracked with KentallTech GPS"
+                title="Car GPS Tracking"
             />
             <div className="demo-carousel"></div>
             <div className="device-showcase" id="sectionOne">
-                <img src={devices} alt="service"/>
+                <Image src={devices} alt="The Kentall tracking platform on a laptop and a smartphone"/>
             </div>
             <div className="subtitle" > 
                 Enjoy real-time tracking, customizable reports, and geo-fenced safety alerts, accessible from any web-enabled device. 
@@ -142,11 +147,11 @@ function PDPMoto() {
                 featureFourImg={featureFourImg}
                 />
                 <div className="section">
-                    <div className="centered-title">Professional Web Platform</div>
+                    <h2 className="centered-title">Professional Web Platform</h2>
                     <div className="centered-paragraph">
                     Have your entire fleet at the tip of your fingers. Use our advanced online platform that can be accessed by a laptop, PC, Android and iPhone. The design is crafted to be easy to navigate and to show all the needed information that is needed for your asset or fleet.
                         <br/>
-                        Pair the amazing platform experience with one of our KEN-M devices or let us set up your own device. We support 95% of the devices that are currently on the market. That way you can enjoy all the features our platform has to offer without having to install a new device on your motorcycle.
+                        Pair the amazing platform experience with one of our KEN-M devices or let us set up your own device. We support 95% of the devices that are currently on the market. That way you can enjoy all the features our platform has to offer without having to install a new device on your car.
                     </div>
                 </div>
 
@@ -160,9 +165,9 @@ function PDPMoto() {
                 <BodyBanner desktop={bodyBannerOneDesk} mobile={bodyBannerOneMob} /> 
                 <Spacer />
                 <div className="section">
-                    <div className="centered-title">See your bike live on the map from your phone or computer</div>
+                    <h2 className="centered-title">See your car live on the map from your phone or computer</h2>
                     <div className="centered-paragraph">
-                        You can check where your bike is at any time through your phone or computer.
+                        You can check where your car is at any time through your phone or computer.
                         <br />
                         Set speed alerts and geo-location alerts based on your preferred regions 
                         <br/> 
@@ -174,15 +179,15 @@ function PDPMoto() {
                 </div>
 
                 <div className="image-container">  
-                    <img className="screenshot" src={fleetMap} alt="browser window with whole fleet" />
+                    <Image className="screenshot" src={fleetMap} alt="Live map showing a tracked car and its status" />
                     <div className="section big-features">
 
-                        <div className="features-title">
+                        <h3 className="features-title">
                             Real-time status
-                        </div>
+                        </h3>
                         <div className="feature">
                             <div className="feature--icon">
-                                <img src={iconActiveAsset} alt="" />
+                                <Image src={iconActiveAsset} alt="" />
                             </div>
                             <div className="feature--text">
                                 Moving
@@ -190,7 +195,7 @@ function PDPMoto() {
                         </div>
                         <div className="feature">
                             <div className="feature--icon">
-                                <img src={iconStationaryAsset} alt="" />
+                                <Image src={iconStationaryAsset} alt="" />
                             </div>
                             <div className="feature--text">
                                 Stationary
@@ -198,7 +203,7 @@ function PDPMoto() {
                         </div>
                         <div className="feature">
                             <div className="feature--icon">
-                                <img src={iconLastActiveAsset} alt="" />
+                                <Image src={iconLastActiveAsset} alt="" />
                             </div>
                             <div className="feature--text">
                                 Last report
@@ -206,7 +211,7 @@ function PDPMoto() {
                         </div>
                         <div className="feature">
                             <div className="feature--icon">
-                                <img src={iconDisconnectedAsset} alt="" />
+                                <Image src={iconDisconnectedAsset} alt="" />
                             </div>
                             <div className="feature--text">
                                 Disconnected
@@ -216,67 +221,67 @@ function PDPMoto() {
                 </div>
                 
                 {/* <div className="map-showcase">
-                    <div className="centered-title">
+                    <h2 className="centered-title">
                         Select the type of map<br/> you prefer.
-                    </div>
+                    </h2>
                     <div className="map">
 
                         <ImgComparisonSlider hover="hover">
-                            <img slot="first" className="compareImg" src={mapBefore} alt="map style 1" />
-                            <img slot="second" className="compareImg" src={mapAfter} alt="map style 2" />
+                            <Image slot="first" className="compareImg" src={mapBefore} alt="map style 1" />
+                            <Image slot="second" className="compareImg" src={mapAfter} alt="map style 2" />
                         </ImgComparisonSlider>
                     </div>
                     
-                    <div className="centered-title">
+                    <h2 className="centered-title">
                     Get automated <br/> trip reports in your email.
-                    </div>
+                    </h2>
 
-                    <img className="overlay-img" src={tripReportImg} alt="Trip Report Doc" />
+                    <Image className="overlay-img" src={tripReportImg} alt="Trip Report Doc" />
                 </div> */}
                 <Spacer />
 
                 <div className="mobile-notifications">
-                    <div className="centered-title">
+                    <h2 className="centered-title">
                         Set up alerts for specific locations and other triggers
-                    </div>
+                    </h2>
                     <div className="centered-paragraph">
-                        Get notified when your bike enters or leaves a specific location radius. 
+                        Get notified when your car enters or leaves a specific location radius. 
                         An email with the information of the location will be sent to your phone.
                     </div>
                     <div className="photo-grid">
-                        <img src={mobileNotificationImg1} alt="Mobile Notification 1" />
-                        <img src={mobileNotificationImg2} alt="Mobile Notification 2" />
+                        <Image src={mobileNotificationImg1} alt="Location alert notification on a smartphone" />
+                        <Image src={mobileNotificationImg2} alt="Email alert with the car location details" />
                     </div>
                 </div>
 
                 <Spacer />
 
                 <div className="trip-history">
-                    <div className="centered-title">
+                    <h2 className="centered-title">
                         Trip History
-                    </div>
+                    </h2>
                     <div className="centered-paragraph">
                     With Trip Replay you can view your assets’ past trips for up to 6 months. 
                     This is perfect to confirm the route a client followed or to inspect if the asset has been close to dangerous zones.
                     Valuable information is shown for each step of the trip, like speed, coordinates and engine status*.
                     </div>
                     <div className="photo-grid">
-                        <img className="big-img" src={tripHistoryImg1} alt="Trip History 1" />
-                        <img className="small-img" src={tripHistoryImg2} alt="Trip History 2" />
+                        <Image className="big-img" src={tripHistoryImg1} alt="Trip replay of a car route on the map" />
+                        <Image className="small-img" src={tripHistoryImg2} alt="Trip history details on the mobile web app" />
                     </div>
                 </div>
 
                 <Spacer />
 
                 <div className="carousel-section">
-                    <div className="centered-title">
+                    <h2 className="centered-title">
                         Full Fledged Mobile Web App
-                    </div>
+                    </h2>
                     <div className="carousel-cont" data-animated>
                         <ul ref={listRef} id="list">
                             {photos.map((photo, index) => (
                             <li key={index}>
-                                <img src={photo} alt={`carousel mobile ${index + 1}`} draggable="false"/>
+                                <Image src={photo} alt={`Mobile web app screen ${index + 1}`} draggable="false"/>
                             </li>
                             ))}
                         </ul>
@@ -286,9 +291,9 @@ function PDPMoto() {
                 <Spacer />
                 
                 <div className="cta-section">
-                    <div className="centered-title">
+                    <h2 className="centered-title">
                         Already have a GPS Tracker device installed? No problem.
-                    </div>
+                    </h2>
                     <div className="centered-paragraph">
                     Our Advanced Tracking Platform is compatible with <br/>
                     95% of the tracking devicesthat are currently in the market.<br/>
@@ -300,4 +305,4 @@ function PDPMoto() {
     )
 }
 
-export default PDPMoto
+export default PDPCar

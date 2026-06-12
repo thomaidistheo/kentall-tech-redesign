@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import Contact from '../Contact/Contact'
 
 import './error-page.scss'
@@ -11,7 +11,7 @@ export default function ErrorPage() {
           This page does not exist.
         </h1>
 
-        <Link to='/' className='btn btn-primary-blue'>
+        <Link href='/' className='btn btn-primary-blue'>
           Return Home
         </Link>
 

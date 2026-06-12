@@ -1,29 +1,20 @@
 import React from 'react';
+import Image from 'next/image'
 import PageTitle from '../../components/PageTitle/PageTitle'
 import Services from '../../components/Services/Services'
-import {
-  useLocation
-} from "react-router-dom"
-import { useEffect } from "react";
 
 import './about.scss'
 
 import laptopMap from '../../assets/laptop.png'
 
 export default function About() {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
   return (
     <div>
         <div className="landing-page">
-          <PageTitle title="About Kental Tech Ltd." />
+          <PageTitle title="About Kentall Tech Ltd." />
           <div className="about-banner">
             <div className="img-cont">
-              <img src={laptopMap} alt="laptop with platform" />
+              <Image src={laptopMap} alt="Laptop showing the Kentall tracking platform" priority />
             </div>
             <div className="text-cont">
               <div>The most advanced Fleet Management</div>

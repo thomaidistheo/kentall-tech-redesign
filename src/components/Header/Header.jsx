@@ -1,5 +1,9 @@
+'use client'
+
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import Link from 'next/link'
+import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 import logo from '../../assets/kentall-tech_logo_hor.png'
 import HamMenu from '../../assets/icons/Hamburger_Menu.svg?react'
@@ -7,6 +11,16 @@ import HamMenuClose from '../../assets/icons/Hamburger_Menu_Close.svg?react'
 
 
 import './header.scss'
+
+function NavItem({ href, children }) {
+    const pathname = usePathname()
+
+    return (
+        <Link href={href} className={pathname === href ? 'active' : ''}>
+            {children}
+        </Link>
+    )
+}
 
 export default function Header() {
 
@@ -20,25 +34,25 @@ return (
     <div className="navigation-cont">
         <div className="navigation">
             <div className="logo">
-                <Link to="/">
-                    <img src={logo} alt="logo" />
+                <Link href="/">
+                    <Image src={logo} alt="KentallTech logo" priority />
                 </Link>
 
             </div>
             <ul className="nav-items">
                 <li className="link-text">
-                    <NavLink to="/guides">Guides</NavLink>
+                    <NavItem href="/guides">Guides</NavItem>
                 </li>
                 <li className="link-text">
-                    <NavLink to="/platform-links">Download</NavLink>
+                    <NavItem href="/platform-links">Download</NavItem>
                 </li>
                 <li className="link-text">
-                    <NavLink to="/about">About</NavLink>
+                    <NavItem href="/about">About</NavItem>
                 </li>
                 <li className="link-text">
-                    <NavLink to="/contact" >Contact</NavLink>
+                    <NavItem href="/contact">Contact</NavItem>
                 </li>
-                <li>    
+                <li>
                 <a href="https://www.kentalltrack.com/">
                     <button className="btn btn-primary-red">
                         Live Tracking
@@ -62,12 +76,12 @@ return (
             <div className="mobile-nav">
                 <ul className="nav-items">
                     <li className="link-text">
-                        <Link to="/about" onClick={() => {handleMobileMenu()}}>About</Link>
+                        <Link href="/about" onClick={() => {handleMobileMenu()}}>About</Link>
                     </li>
-                    <li className="link-text"> 
-                        <Link to="/contact" onClick={() => {handleMobileMenu()}}>Contact</Link> 
+                    <li className="link-text">
+                        <Link href="/contact" onClick={() => {handleMobileMenu()}}>Contact</Link>
                     </li>
-                    <li>    
+                    <li>
                         <a href="https://www.kentalltrack.com/">
                             <button className="btn btn-primary-red">
                                 Live Tracking

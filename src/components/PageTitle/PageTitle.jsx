@@ -6,10 +6,10 @@ export default function PageTitle({ title }) {
   
     return (
         <>
-            <div className='page-title text-bigger'>
+            <h1 className='page-title text-bigger'>
                 {title}
-                <div className="full-divider"></div>
-            </div>
+                <span className="full-divider"></span>
+            </h1>
         </>
      )
 }
