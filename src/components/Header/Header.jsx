@@ -5,9 +5,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+
 import logo from '../../assets/kentall-tech_logo_hor.png'
-import HamMenu from '../../assets/icons/Hamburger_Menu.svg?react'
-import HamMenuClose from '../../assets/icons/Hamburger_Menu_Close.svg?react'
 
 
 import './header.scss'
@@ -68,7 +68,7 @@ return (
                 aria-expanded={mobileMenu}
                 onClick={handleMobileMenu}
             >
-                {!mobileMenu ? <HamMenu /> : <HamMenuClose />}
+                {!mobileMenu ? <Bars3Icon /> : <XMarkIcon />}
             </button>
         </div>
 

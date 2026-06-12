@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@img-comparison-slider/react": "^8.0.0",
     "next": "^15.5.19",
     "react": "^19.2.7",

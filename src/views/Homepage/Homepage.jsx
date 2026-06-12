@@ -12,10 +12,12 @@ import boatCard from '../../assets/boat-card.png'
 import carCard from '../../assets/car-card.png'
 
 // Features Icons
-import FeatureOne from '../../assets/icons/map-pin.svg?react'
-import FeatureTwo from '../../assets/icons/report.svg?react'
-import FeatureThree from '../../assets/icons/bell-ringing.svg?react'
-import FeatureFour from '../../assets/icons/device-desktop-analytics.svg?react'
+import {
+  MapIcon,
+  DocumentChartBarIcon,
+  BellAlertIcon,
+  ComputerDesktopIcon,
+} from '@heroicons/react/24/outline'
 
 import './homepage.scss'
 // import Spacer from '../../components/Spacer/Spacer'
@@ -65,27 +67,27 @@ export default function Homepage() {
 
         <div className="features-cont">
           <div className="feature-row">
-            <Feature 
-              icon= {<FeatureOne />}  
+            <Feature
+              icon= {<MapIcon />}
               title="Fleet Management"
-              desc="Manage your fleet from one account, or create sub user accounts for clients and personnel with ease" 
+              desc="Manage your fleet from one account, or create sub user accounts for clients and personnel with ease"
             />
-            <Feature 
-              icon= {<FeatureTwo />}
+            <Feature
+              icon= {<DocumentChartBarIcon />}
               title="Summary Reports"
-              desc="Schedule automated Weekly Summary Reports for your assets to monitor the trips of the week" 
+              desc="Schedule automated Weekly Summary Reports for your assets to monitor the trips of the week"
             />
           </div>
           <div className="feature-row">
-          <Feature 
-              icon= {<FeatureThree />}
+          <Feature
+              icon= {<BellAlertIcon />}
               title="Alerts"
-              desc="Get notifications from your assets about: Engine ON, driving away or even speeding and more!" 
+              desc="Get notifications from your assets about: Engine ON, driving away or even speeding and more!"
             />
-            <Feature 
-              icon= {<FeatureFour />}
+            <Feature
+              icon= {<ComputerDesktopIcon />}
               title="Live View"
-              desc="Track your assets' position live on the map using our Tracking Platform" 
+              desc="Track your assets' position live on the map using our Tracking Platform"
             />
           </div>
 

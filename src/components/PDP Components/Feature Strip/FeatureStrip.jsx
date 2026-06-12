@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 
 import './FeatureStrip.scss'
 
@@ -8,25 +7,23 @@ function FeatureStrip({
     featureTwo,
     featureThree,
     featureFour,
-    featureOneImg,
-    featureTwoImg,
-    featureThreeImg,
-    featureFourImg
+    featureOneIcon,
+    featureTwoIcon,
+    featureThreeIcon,
+    featureFourIcon
 }) {
     const features = [
-        [featureOne, featureOneImg],
-        [featureTwo, featureTwoImg],
-        [featureThree, featureThreeImg],
-        [featureFour, featureFourImg],
+        [featureOne, featureOneIcon],
+        [featureTwo, featureTwoIcon],
+        [featureThree, featureThreeIcon],
+        [featureFour, featureFourIcon],
     ]
 
     return (
         <div className='featurestrip-cont'>
-            {features.map(([title, img]) => (
+            {features.map(([title, icon]) => (
                 <div className="product-feature" key={title}>
-                    <div className="icon">
-                        <Image src={img} alt="" />
-                    </div>
+                    <div className="icon">{icon}</div>
                     <div className='title'>{title}</div>
                 </div>
             ))}

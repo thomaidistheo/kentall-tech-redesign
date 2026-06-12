@@ -3,8 +3,7 @@ import PageTitle from '../../components/PageTitle/PageTitle'
 
 import './contact.scss'
 
-import IconMail from '../../assets/icons/mail-icon.svg?react'
-// import IconTel from '../../assets/icons/phone-icon.svg?react'
+import { EnvelopeIcon } from '@heroicons/react/24/outline'
 
 export default function Contact({ desc }) {
 
@@ -24,7 +23,7 @@ export default function Contact({ desc }) {
         <div className="contact-info">
           <ul>
             {/* <li>
-                <span className='icon'><IconTel /></span>
+                <span className='icon'><PhoneIcon /></span>
               <a href="tel:2170001200">
                 <span className="link-text">2170001200</span>
               </a>
@@ -34,7 +33,7 @@ export default function Contact({ desc }) {
               </a>
             </li> */}
             <li>
-                <span className='icon'><IconMail /></span>
+                <span className='icon'><EnvelopeIcon /></span>
               <a href="mailto:info@kentall-tech.com">
                 <span className="link-text">info@kentall-tech.com</span>
               </a>

@@ -7,23 +7,21 @@ import Banner from '../../../components/PDP Components/Banner/Banner'
 import Spacer from '../../../components/Spacer/Spacer'
 import FeatureStrip from '../../../components/PDP Components/Feature Strip/FeatureStrip'
 import BodyBanner from '../../../components/PDP Components/BodyBanner/BodyBanner'
+import AssetStatusLegend from '../../../components/PDP Components/AssetStatusLegend/AssetStatusLegend'
+import {
+    ComputerDesktopIcon,
+    MapIcon,
+    ClockIcon,
+    BellAlertIcon,
+} from '@heroicons/react/24/outline'
 
 import './PDPMoto.scss'
 
 import motoImg_mob from '../../../assets/Product Pages/pdp_moto_banner-mob.png'
 import motoImg_desk from '../../../assets/Product Pages/pdp_moto_banner.png'
 import devices from '../../../assets/laptop-phone-v3.png'
-import featureOneImg from '../../../assets/icons/dashboard.png'
-import featureTwoImg from '../../../assets/icons/live-map.png'
-import featureThreeImg from '../../../assets/icons/trip-history.png'
-import featureFourImg from '../../../assets/icons/geo-zones.png'
 
 import fleetMap from '../../../assets/Product Pages/moto-map.png'
-
-import iconActiveAsset from '../../../assets/icons/active-asset.png'
-import iconStationaryAsset from '../../../assets/icons/stationary-asset.png'
-import iconLastActiveAsset from '../../../assets/icons/last-active.png'
-import iconDisconnectedAsset from '../../../assets/icons/disconnected-cloud.png'
 
 import bodyBannerOneDesk from '../../../assets/Product Pages/pdp_moto_mid-banner.png'
 import bodyBannerOneMob from '../../../assets/Product Pages/pdp_moto_mid-banner-mob.png'
@@ -141,10 +139,10 @@ function PDPMoto() {
                 featureThree='6 months trip history'
                 featureFour='location alerts'
 
-                featureOneImg={featureOneImg}
-                featureTwoImg={featureTwoImg}
-                featureThreeImg={featureThreeImg}
-                featureFourImg={featureFourImg}
+                featureOneIcon={<ComputerDesktopIcon />}
+                featureTwoIcon={<MapIcon />}
+                featureThreeIcon={<ClockIcon />}
+                featureFourIcon={<BellAlertIcon />}
                 />
                 <div className="section">
                     <h2 className="centered-title">Professional Web Platform</h2>
@@ -180,44 +178,7 @@ function PDPMoto() {
 
                 <div className="image-container">  
                     <Image className="screenshot" src={fleetMap} alt="Live map showing a tracked motorcycle and its status" />
-                    <div className="section big-features">
-
-                        <h3 className="features-title">
-                            Real-time status
-                        </h3>
-                        <div className="feature">
-                            <div className="feature--icon">
-                                <Image src={iconActiveAsset} alt="" />
-                            </div>
-                            <div className="feature--text">
-                                Moving
-                            </div>
-                        </div>
-                        <div className="feature">
-                            <div className="feature--icon">
-                                <Image src={iconStationaryAsset} alt="" />
-                            </div>
-                            <div className="feature--text">
-                                Stationary
-                            </div>
-                        </div>
-                        <div className="feature">
-                            <div className="feature--icon">
-                                <Image src={iconLastActiveAsset} alt="" />
-                            </div>
-                            <div className="feature--text">
-                                Last report
-                            </div>
-                        </div>
-                        <div className="feature">
-                            <div className="feature--icon">
-                                <Image src={iconDisconnectedAsset} alt="" />
-                            </div>
-                            <div className="feature--text">
-                                Disconnected
-                            </div>
-                        </div>
-                    </div>
+                    <AssetStatusLegend />
                 </div>
                 
                 {/* <div className="map-showcase">

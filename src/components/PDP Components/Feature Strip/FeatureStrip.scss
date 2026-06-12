@@ -51,10 +51,11 @@
         .icon {
             max-width: 64px;
             max-height: 64px;
+            color: $primary-blue;
 
-            img {
-                height: 100%;
-                width: auto;
+            svg {
+                height: 48px;
+                width: 48px;
             }
         }
 
