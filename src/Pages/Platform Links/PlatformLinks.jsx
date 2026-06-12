@@ -19,7 +19,7 @@ function PlatformLinks() {
 
       <p className='platform-links-intro text-medium'>
         The Kentall tracking platform runs in any modern browser — no installation needed.
-        Native mobile apps are on the way.
+        Prefer an app? Get it on the App Store or Google Play.
       </p>
 
       <div className='platform-links-cont'>
@@ -35,14 +35,14 @@ function PlatformLinks() {
               device="iPhone / iPad"
               desc="Native iOS app with live map and push notifications."
               linkImg={appStore}
-              webLink=""
+              webLink="https://apps.apple.com/app/gps-monitor-plus/id1138325623"
           />
           <PlatformLink
               photo={iphone}
               device="Android"
               desc="Native Android app with live map and push notifications."
               linkImg={playStore}
-              webLink=""
+              webLink="https://play.google.com/store/apps/details?id=apps.monitorplus.net"
           />
       </div>
 
