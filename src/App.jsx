@@ -17,6 +17,7 @@ import Homepage from './Pages/Homepage/Homepage'
 import Contact from './Pages/Contact/Contact';
 import About from './Pages/About/About';
 import PlatformLinks from './Pages/Platform Links/PlatformLinks';
+import Guides from './Pages/Guides/Guides';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 // -------------------------- //
 
@@ -52,6 +53,8 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/about" element={<About />} />
               <Route path="/platform-links" element={<PlatformLinks />} />
+              <Route path="/guides" element={<Guides />} />
+              <Route path="/guides/:slug" element={<Guides />} />
               <Route path="/product-boat" element={<PDPBoat />} />
               <Route path="/product-moto" element={<PDPMoto />} />
               <Route path="/product-car" element={<PDPCar />} />
