@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './platform-link.css'
+import './platform-link.scss'
 
 function PlatformLink({ photo, device, linkImg, webLink }) {
   return (

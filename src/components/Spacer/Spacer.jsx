@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './spacer.css'
+import './spacer.scss'
 
 function Spacer() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './FeatureStrip.css'
+import './FeatureStrip.scss'
 
 function FeatureStrip({ 
     featureOne, 

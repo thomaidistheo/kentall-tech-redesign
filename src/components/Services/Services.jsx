@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './service.css'
+import './service.scss'
 
 import imageOne from '../../assets/ourProductsCardImage.svg'
 import imageTwo from '../../assets/SoftwareSolutions.svg'

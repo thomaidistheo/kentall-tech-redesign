@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './image-section.css'
+import './image-section.scss'
 
 function ImageSection({ photo, alt }) {
     return (

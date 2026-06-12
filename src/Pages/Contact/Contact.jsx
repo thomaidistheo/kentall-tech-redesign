@@ -1,10 +1,10 @@
 import React from 'react'
 import PageTitle from '../../components/PageTitle/PageTitle'
 
-import './contact.css'
+import './contact.scss'
 
-import { ReactComponent as IconMail } from '../../assets/icons/mail-icon.svg'
-// import { ReactComponent as IconTel } from '../../assets/icons/phone-icon.svg'
+import IconMail from '../../assets/icons/mail-icon.svg?react'
+// import IconTel from '../../assets/icons/phone-icon.svg?react'
 
 export default function Contact({ desc }) {
 

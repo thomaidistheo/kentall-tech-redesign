@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../CopyrightBar/copyrightbar.css'
+import '../CopyrightBar/copyrightbar.scss'
 
 function CopyrightBar() {
     let currentYear = new Date().getFullYear();

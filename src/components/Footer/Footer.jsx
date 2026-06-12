@@ -5,7 +5,7 @@ import ContactWidget from '../Widgets/ContactWIdget/ContactWidget'
 
 import LinkWidget from '../Widgets/LinkWidget/LinkWidget'
 
-import './footer.css'
+import './footer.scss'
 
 export default function Footer() {
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './paragraph-body.css'
+import './paragraph-body.scss'
 
 export default function ParagraphBody({ content, width }) {
   const style = {

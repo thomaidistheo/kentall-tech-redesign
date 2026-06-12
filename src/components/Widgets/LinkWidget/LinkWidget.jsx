@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './link-widget.css'
+import './link-widget.scss'
 
 export default function LinkWidget({ title, item1, item2, item3, item4}) {
 

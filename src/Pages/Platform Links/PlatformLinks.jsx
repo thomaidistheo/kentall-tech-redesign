@@ -2,7 +2,7 @@ import React from 'react';
 import PlatformLink from '../../components/Platform Link/PlatformLink'
 import PageTitle from '../../components/PageTitle/PageTitle'
 
-import './platform-links.css'
+import './platform-links.scss'
 
 // device images
 import laptop from '../../assets/laptop.png'

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './heroimg.css'
+import './heroimg.scss'
 
 import boat from '../../assets/boat.png'
 

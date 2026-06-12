@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './paragraph-title.css'
+import './paragraph-title.scss'
 
 function ParagraphTitle({ title }) {
   return (

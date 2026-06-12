@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './contact-widget.css'
+import './contact-widget.scss'
 
 function ContactWidget( { email, phone }) {
 

@@ -12,12 +12,12 @@ import boatCard from '../../assets/boat-card.png'
 import carCard from '../../assets/car-card.png'
 
 // Features Icons
-import { ReactComponent as FeatureOne } from '../../assets/icons/map-pin.svg'
-import { ReactComponent as FeatureTwo } from '../../assets/icons/report.svg'
-import { ReactComponent as FeatureThree } from '../../assets/icons/bell-ringing.svg'
-import { ReactComponent as FeatureFour } from '../../assets/icons/device-desktop-analytics.svg'
+import FeatureOne from '../../assets/icons/map-pin.svg?react'
+import FeatureTwo from '../../assets/icons/report.svg?react'
+import FeatureThree from '../../assets/icons/bell-ringing.svg?react'
+import FeatureFour from '../../assets/icons/device-desktop-analytics.svg?react'
 
-import './homepage.css'
+import './homepage.scss'
 // import Spacer from '../../components/Spacer/Spacer'
 import ContactCTASection from '../../components/Contact CTA Section/ContactCTASection'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './contact-cta-section.css'
+import './contact-cta-section.scss'
 
 function ContactCTASection() {
   return (

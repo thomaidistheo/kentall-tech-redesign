@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './pagetitle.css'
+import './pagetitle.scss'
 
 export default function PageTitle({ title }) {
   

@@ -4,7 +4,7 @@ import Spacer from '../../../components/Spacer/Spacer'
 import FeatureStrip from '../../../components/PDP Components/Feature Strip/FeatureStrip'
 import BodyBanner from '../../../components/PDP Components/BodyBanner/BodyBanner'
 
-import './PDPBoat.css'
+import './PDPBoat.scss'
 
 import boatImg_mob from '../../../assets/Product Pages/pdp_boat_banner-mob.png'
 import boatImg_desk from '../../../assets/Product Pages/pdp_boat_banner.png'

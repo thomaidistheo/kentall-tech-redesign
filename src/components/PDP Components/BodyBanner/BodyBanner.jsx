@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './BodyBanner.css'
+import './BodyBanner.scss'
 
 function BodyBanner({ desktop, mobile }) {
     return (

@@ -5,7 +5,7 @@ import Spacer from '../../../components/Spacer/Spacer'
 import FeatureStrip from '../../../components/PDP Components/Feature Strip/FeatureStrip'
 import BodyBanner from '../../../components/PDP Components/BodyBanner/BodyBanner'
 
-import './PDPCar.css'
+import './PDPCar.scss'
 
 import carImg_mob from '../../../assets/Product Pages/pdp_car_banner-mob.png'
 import carImg_desk from '../../../assets/Product Pages/pdp_car_banner.png'
@@ -32,15 +32,14 @@ import mobileNotificationImg2 from '../../../assets/Product Pages/mobile_notif_2
 import carouselPhoto1 from '../../../assets/Product Pages/moto-demos/IMG_1065.png'
 import carouselPhoto2 from '../../../assets/Product Pages/moto-demos/IMG_1066.png'
 import carouselPhoto3 from '../../../assets/Product Pages/moto-demos/IMG_1067.png'
-import carouselPhoto4 from '../../../assets/Product Pages/moto-demos/IMG_1068.png'
 import carouselPhoto5 from '../../../assets/Product Pages/moto-demos/IMG_1069.png'
 import carouselPhoto6 from '../../../assets/Product Pages/moto-demos/IMG_1070.png'
 import carouselPhoto7 from '../../../assets/Product Pages/moto-demos/IMG_1071.png'
 
 
-function PDPMoto() {
+function PDPCar() {
 
-    const [photos, setPhotos] = useState([
+    const [photos] = useState([
         carouselPhoto1,
         carouselPhoto2,
         carouselPhoto3,
@@ -301,4 +300,4 @@ function PDPMoto() {
     )
 }
 
-export default PDPMoto
+export default PDPCar

@@ -6,7 +6,7 @@ import {
 } from "react-router-dom"
 import { useEffect } from "react";
 
-import './about.css'
+import './about.scss'
 
 import laptopMap from '../../assets/laptop.png'
 

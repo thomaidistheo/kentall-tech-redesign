@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './platform-cta-section.css'
+import './platform-cta-section.scss'
 
 import laptopAndPhoneImg from '../../assets/laptop-phone.png'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './feature.css'
+import './feature.scss'
 
 function Feature({ icon, title, desc }) {
   return (

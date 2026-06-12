@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,7 +9,6 @@ import {
 // Global Components --------//
 import Preheader from '../src/components/Header/Preheader';
 import Header from '../src/components/Header/Header';
-import Footer from './components/Footer/Footer'
 import CopyrightBar from './components/Footer/CopyrightBar/CopyrightBar';
 // --------------------------//
 

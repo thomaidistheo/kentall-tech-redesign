@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import '../Cards/card.css'
+import '../Cards/card.scss'
 import PropTypes from 'prop-types'
 
 

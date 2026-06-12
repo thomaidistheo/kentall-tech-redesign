@@ -3,11 +3,11 @@ import { Link, NavLink } from 'react-router-dom'
 
 import logo from '../../assets/kentall-tech_logo_hor.png'
 // import hamMenu from '../../assets/icons/Hamburger_Menu.png'
-import { ReactComponent as HamMenu } from '../../assets/icons/Hamburger_Menu.svg'
-import { ReactComponent as HamMenuClose } from '../../assets/icons/Hamburger_Menu_Close.svg'
+import HamMenu from '../../assets/icons/Hamburger_Menu.svg?react'
+import HamMenuClose from '../../assets/icons/Hamburger_Menu_Close.svg?react'
 
 
-import './header.css'
+import './header.scss'
 
 export default function Header() {
 
