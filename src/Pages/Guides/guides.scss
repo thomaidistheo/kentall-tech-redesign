@@ -17,7 +17,9 @@
 .guides-sidebar {
     flex: 0 0 260px;
     position: sticky;
-    top: 32px;
+    // clear the sticky site header (~114px tall) plus breathing room,
+    // so the whole sidebar stays visible when pinned
+    top: 140px;
 
     display: flex;
     flex-direction: column;
