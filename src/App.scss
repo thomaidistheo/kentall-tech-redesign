@@ -20,7 +20,10 @@ body {
   height: 100vh;
   width: 100%;
 
-  overflow-x: hidden;
+  // `clip` prevents horizontal overflow like `hidden`, but without
+  // turning body into a scroll container, which would break
+  // position: sticky descendants (the guides sidebar)
+  overflow-x: clip;
   background-color: $col-gray-200;
 
   @media (max-width: 1140px) {
