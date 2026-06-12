@@ -34,6 +34,7 @@ import img3a from '../../assets/guides/03-1.jpg'
 import img3b from '../../assets/guides/03-2.jpg'
 import img3c from '../../assets/guides/03-3.jpg'
 import img5 from '../../assets/guides/05.jpg'
+import img6 from '../../assets/guides/06.png'
 import img7 from '../../assets/guides/07.jpg'
 import img8 from '../../assets/guides/08.jpg'
 import img9 from '../../assets/guides/09.jpg'
@@ -44,7 +45,7 @@ export const guideImages = {
     3: [img3a, img3b, img3c],
     4: null,
     5: img5,
-    6: null,
+    6: img6,
     7: img7,
     8: img8,
     9: img9,
