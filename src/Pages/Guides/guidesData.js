@@ -17,7 +17,6 @@
 //  #1  Login: the kentalltrack.com login screen
 //  #2  Map View: live map with the whole fleet visible
 //  #3  Map View: right-edge toolbar close-up (ruler, geo-zones, search, map type)
-//  #4  Map View: on-screen alerts window in the bottom-right corner
 //  #5  Asset Info: the asset information panel (speed, status, battery...)
 //  #6  Asset Info: the quick tools in the asset tooltip (Trail, Trip, StreetView...)
 //  #7  Trip Replay: a replayed trip drawn point by point on the map
@@ -43,7 +42,6 @@ export const guideImages = {
     1: img1,
     2: [img2a, img2b],
     3: [img3a, img3b, img3c],
-    4: null,
     5: img5,
     6: img6,
     7: img7,
@@ -89,7 +87,6 @@ export const guideCategories = [
                     { img: 3, caption: 'The quick map tools on the right edge of the screen' },
                     'If you hold the rights to another map provider, we can integrate it as a third-party map on request.',
                     'The notifications window sits in the bottom-right corner. When an event you have configured triggers, the window opens automatically with an alarm sound so nothing slips by.',
-                    { img: 4, caption: 'On-screen alerts in the bottom-right corner' },
                 ],
             },
             {
