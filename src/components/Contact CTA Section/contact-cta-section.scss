@@ -1,8 +1,8 @@
-@import '../../imports';
+@use '../../imports' as *;
 
 .contact-cta-cont {
     background-color: $primary-red;
-    width: 100vw;
+    width: 100%;
     padding: 64px 64px;
 
     display: flex;

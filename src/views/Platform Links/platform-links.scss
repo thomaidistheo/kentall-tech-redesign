@@ -1,0 +1,47 @@
+@use '../../imports' as *;
+
+.platform-links-intro {
+    max-width: 640px;
+    color: $col-dark-100;
+    margin: 0;
+}
+
+.platform-links-cont {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+
+    padding: 64px 32px;
+}
+
+.platform-links-help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    margin: 0 auto 96px;
+    padding: 48px 32px;
+    max-width: 720px;
+
+    background-color: $primary-blue;
+    box-shadow: $shadow-red;
+
+    p {
+        color: $primary-white;
+        text-align: center;
+        margin: 0;
+    }
+
+    .btn-secondary-blue {
+        border-color: $primary-white;
+        color: $primary-white;
+
+        &:hover::before {
+            background-color: rgba($primary-white, 0.15);
+        }
+    }
+}

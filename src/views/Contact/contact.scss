@@ -1,0 +1,101 @@
+@use '../../imports' as *;
+
+@keyframes underline-link{
+    from { width: 0% }
+    to { width: 100%; }
+}
+
+.contact-cont {
+    background-color: $col-gray-100;
+
+    padding: 32px 0;
+    box-shadow: $shadow-red;
+    max-width: 1460px;
+    margin: 0 auto;
+
+    margin-bottom: 64px;
+}
+
+.page-title {
+    color: $primary-blue;
+}
+
+.contact-info,
+.contact-text {
+    padding: 0 128px;
+    font-size: 24px;
+    line-height: 26px;
+    color: $primary-blue;
+    @include flexRowStart();
+
+    @media (max-width: 780px) {
+        padding: 0 32px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+
+.contact-text {
+    margin-bottom: 64px;
+}
+
+.contact-info {
+    ul {
+        .icon {
+            margin-right: 16px;
+            width: 24px;
+            height: 24px;
+            color: $primary-blue;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        li {
+            color: $primary-blue;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+
+            .tel-space {
+                margin: 0 16px;
+            }
+
+            a {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+
+                &:first-child {
+                    margin-bottom: 24px;
+                }
+
+                .link-text {
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: -4px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $primary-red;
+                        
+                        &:hover {
+                            animation: underline-link 500ms ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

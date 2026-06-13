@@ -1,4 +1,4 @@
-@import '../../../imports';
+@use '../../../imports' as *;
 
 .featurestrip-cont {
     max-width: 1277px;
@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-evenly;
     margin: 0 auto;
-    box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+    box-shadow: $shadow-dark;
     margin-bottom: 128px;
 
     background-color: $primary-white;
@@ -51,10 +51,11 @@
         .icon {
             max-width: 64px;
             max-height: 64px;
+            color: $primary-blue;
 
-            img {
-                height: 100%;
-                width: auto;
+            svg {
+                height: 48px;
+                width: 48px;
             }
         }
 

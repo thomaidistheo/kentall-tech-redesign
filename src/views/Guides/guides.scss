@@ -1,0 +1,284 @@
+@use '../../imports' as *;
+
+.guides-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+
+    padding: 32px 0 96px;
+
+    @media (max-width: 820px) {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+.guides-sidebar {
+    flex: 0 0 260px;
+    position: sticky;
+    // clear the sticky site header (~114px tall) plus breathing room,
+    // so the whole sidebar stays visible when pinned
+    top: 140px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (max-width: 820px) {
+        position: static;
+        flex: none;
+        width: 100%;
+    }
+
+    .guides-category-title {
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+        color: $col-gray-800;
+
+        padding-bottom: 8px;
+        border-bottom: 1px solid $col-gray-400;
+        margin-bottom: 8px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    a {
+        display: block;
+        padding: 10px 12px;
+
+        color: $primary-blue;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 24px;
+
+        border-left: 4px solid transparent;
+        transition: border-color $transition-fast, background-color $transition-fast;
+
+        &:hover {
+            border-left-color: $col-gray-400;
+            background-color: $col-gray-100;
+        }
+
+        &.active {
+            border-left-color: $primary-red;
+            background-color: $col-gray-100;
+            font-weight: 600;
+        }
+    }
+}
+
+.guides-content {
+    flex: 1;
+    min-width: 0;
+
+    background-color: $col-gray-100;
+    border: 1px solid $col-gray-400;
+    box-shadow: -8px 8px 0 rgba($primary-black, 0.15);
+
+    padding: 48px 56px 40px;
+
+    @media (max-width: 820px) {
+        padding: 32px 24px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        margin: 0;
+        color: $primary-blue;
+        font-weight: 600;
+    }
+
+    .guides-divider {
+        height: 4px;
+        width: 64px;
+        background-color: $primary-red;
+        margin: 16px 0 24px;
+    }
+
+    p {
+        color: $col-dark-100;
+        margin: 0 0 16px;
+        max-width: 720px;
+    }
+
+    .guides-list {
+        list-style: square;
+        color: $col-dark-100;
+        margin: 0 0 16px;
+        padding-left: 24px;
+        max-width: 720px;
+
+        li {
+            // override the global `li { list-style: none }` reset
+            list-style: square;
+            margin-bottom: 8px;
+
+            &::marker {
+                color: $primary-red;
+            }
+
+            strong {
+                font-weight: 600;
+                color: $primary-blue;
+            }
+        }
+    }
+
+    .guides-figure {
+        margin: 24px 0;
+        max-width: 720px;
+
+        .figure-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 16px;
+
+            @media (max-width: 820px) {
+                flex-wrap: wrap;
+            }
+        }
+
+        // clickable image wrapper, opens the lightbox
+        .figure-zoom-btn {
+            display: block;
+            padding: 0;
+            border: none;
+            background: none;
+            cursor: zoom-in;
+
+            // single image fills the column; multiple share the row
+            flex: 1 1 0;
+            min-width: 0;
+
+            transition: opacity $transition-fast;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        img {
+            display: block;
+            border: 1px solid $col-gray-400;
+            width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            margin-top: 8px;
+            color: $col-gray-800;
+        }
+    }
+
+    .guides-img-placeholder {
+        @include flexColCenter();
+        gap: 8px;
+
+        aspect-ratio: 16 / 9;
+        width: 100%;
+
+        background-color: $col-gray-200;
+        border: 2px dashed $col-gray-400;
+
+        .placeholder-number {
+            font-size: 32px;
+            font-weight: 600;
+            color: $primary-blue;
+        }
+
+        .placeholder-label {
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: $col-gray-800;
+        }
+    }
+
+    .guides-help {
+        margin-top: 40px;
+        padding-top: 24px;
+        border-top: 1px solid $col-gray-400;
+        color: $col-gray-800;
+
+        a {
+            color: $primary-red;
+            font-weight: 600;
+        }
+    }
+}
+
+// Image lightbox: fixed overlay above the sticky header (z-index 999)
+.guides-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    padding: 24px;
+    background-color: rgba($primary-black, 0.88);
+
+    .lightbox-toolbar {
+        display: flex;
+        gap: 16px;
+    }
+
+    .lightbox-btn {
+        padding: 10px 20px;
+        border: 2px solid $primary-white;
+        background: none;
+        color: $primary-white;
+
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: background-color $transition-fast;
+
+        &:hover {
+            background-color: rgba($primary-white, 0.15);
+        }
+    }
+
+    .lightbox-body {
+        max-width: 92vw;
+        max-height: 78vh;
+        overflow: auto;
+        border: 1px solid $col-gray-800;
+
+        img {
+            display: block;
+            max-width: 92vw;
+            max-height: 78vh;
+            cursor: zoom-in;
+        }
+
+        // zoomed: natural size, pan by scrolling
+        &.zoomed img {
+            max-width: none;
+            max-height: none;
+            cursor: zoom-out;
+        }
+    }
+
+    .lightbox-caption {
+        color: $col-gray-400;
+        text-align: center;
+        max-width: 720px;
+    }
+}

@@ -1,4 +1,4 @@
-@import '../../imports';
+@use '../../imports' as *;
 
 .feature {
     display: flex;
@@ -6,28 +6,29 @@
     align-items: center;
     justify-content: center;
     gap: 16px; 
-    transition: all 250ms ease-in-out;
+    transition: all $transition-base;
 
     &:hover {
-        transition: all 250ms ease-in-out;
+        transition: all $transition-base;
         .circle {
             background-color: $primary-red;
-            transition: all 250ms ease-in-out;
+            transition: all $transition-base;
         }
     }
 
+    // hard-edged square tile (brand: no rounded corners)
     .circle {
         height: 100px;
         width: 100px;
         background-color: $primary-blue;
-        border-radius: 50%;
+        box-shadow: $shadow-dark;
     
         display: flex;
         justify-content: center;
         align-items: center;
     
         svg {
-            color: white;
+            color: $primary-white;
             height: 32px;
             width: 32px;
         }

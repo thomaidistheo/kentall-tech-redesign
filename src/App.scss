@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import "colors";
-@import "buttons";
+// Global stylesheet, loaded once via App.jsx.
+// `buttons` and `typography` are loaded here for their utility classes;
+// component stylesheets pull variables/mixins from `imports` instead.
+@use './colors' as *;
+@use './buttons';
+@use './typography';
 
 * {
   margin: 0;
@@ -9,29 +12,44 @@
 }
 
 html {
-  font-family: 'Roboto', sans-serif; //Raleway
-  // background-color: $primary-white;
-  // scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   background-size: cover;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 
+  // `clip` prevents horizontal overflow like `hidden`, but without
+  // turning body into a scroll container, which would break
+  // position: sticky descendants (the guides sidebar)
+  overflow-x: clip;
+  background-color: $col-gray-200;
 
   @media (max-width: 1140px) {
-      background-image: none; 
+      background-image: none;
       background-position: right;
   }
-}   
+}
+
+*::selection {
+  background-color: $primary-red;
+  color: $primary-white;
+}
+
+// Hard-edged focus ring for keyboard navigation (brand red, square)
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid $primary-red;
+  outline-offset: 2px;
+}
 
 a {
   text-decoration: none;
   color: inherit;
 }
 
-ul, 
+ul,
 li {
   text-decoration: none;
   list-style: none;
@@ -47,4 +65,25 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.full-divider {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: $primary-red;
+  margin: 4px 0 16px 0;
+}
+
+.landing-page {
+  margin: 0 auto;
+  max-width: 1288px;
+
+  @media (max-width: 1512px) {
+      padding: 0 32px
+  }
+
+  @media (max-width: 512px) {
+      padding: 0 16px;
+  }
 }

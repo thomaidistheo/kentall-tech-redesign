@@ -1,4 +1,4 @@
-@import '../../imports';
+@use '../../imports' as *;
 
 @keyframes move-up {
     to {
@@ -18,7 +18,7 @@
     // max-height: 576px;
     position: relative;
     border-left: 10px solid $primary-blue;
-    transition: all 150ms ease-in-out;
+    transition: all $transition-fast;
 
     &:hover {
         border-left: 10px solid $primary-red;
@@ -30,7 +30,7 @@
         min-height: 576px;
         // max-height: 576px;
         background-color: $primary-white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        box-shadow: 6px 6px 0 rgba($primary-black, 0.25);
         backdrop-filter: blur(10px);
         // background-color: rgba($primary-blue, 0.2);
 

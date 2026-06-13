@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KentallTech: Competitor & SEO Analysis</title>
+<style>
+  :root{
+    --red:#e2231a; --ink:#1a1a1f; --muted:#6b7280; --line:#e5e7eb;
+    --bg:#f6f7f9; --card:#fff; --good:#0f9d58; --warn:#f4b400; --bad:#db4437;
+    --us:#e2231a; --shadow:0 1px 3px rgba(0,0,0,.08),0 8px 24px rgba(0,0,0,.05);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Roboto",-apple-system,Segoe UI,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  header.hero{background:linear-gradient(135deg,#1a1a1f,#2d2d3a);color:#fff;padding:54px 0 46px}
+  header.hero h1{font-size:32px;font-weight:800;letter-spacing:-.5px}
+  header.hero h1 span{color:var(--red)}
+  header.hero p{color:#c9ccd6;margin-top:10px;max-width:760px}
+  .meta-row{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px;font-size:13px;color:#9aa0ad}
+  .meta-row b{color:#fff}
+  section{padding:42px 0}
+  h2.sec{font-size:22px;font-weight:800;margin-bottom:6px}
+  h2.sec .k{color:var(--red)}
+  .sub{color:var(--muted);margin-bottom:24px;max-width:780px}
+  /* tabs */
+  .tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 26px;position:sticky;top:0;background:var(--bg);padding:14px 0;z-index:5;border-bottom:1px solid var(--line)}
+  .tab{border:1px solid var(--line);background:#fff;padding:8px 16px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;color:var(--muted)}
+  .tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .panel{display:none}
+  .panel.active{display:block;animation:fade .25s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  /* competitor cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .card.threat-high{border-top:3px solid var(--bad)}
+  .card.threat-med{border-top:3px solid var(--warn)}
+  .card.threat-low{border-top:3px solid var(--good)}
+  .card h3{font-size:18px;font-weight:800;display:flex;align-items:center;gap:8px}
+  .flag{font-size:14px;font-weight:600;color:var(--muted)}
+  .badges{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+  .badge{font-size:11px;font-weight:700;padding:3px 9px;border-radius:6px;background:#eef1f5;color:#444}
+  .badge.t-high{background:#fde7e6;color:#b3261e}
+  .badge.t-med{background:#fdf3da;color:#946200}
+  .badge.t-low{background:#e3f4ea;color:#0a7a42}
+  .card .tagline{font-style:italic;color:#374151;margin:6px 0 12px;font-size:14px}
+  .card dl{font-size:13.5px;margin-top:auto}
+  .card dt{font-weight:700;color:var(--muted);text-transform:uppercase;font-size:10.5px;letter-spacing:.4px;margin-top:11px}
+  .card dd{margin-top:2px}
+  .card a.src{font-size:12px;color:var(--red);text-decoration:none;margin-top:14px;display:inline-block}
+  /* comparison table */
+  .tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);background:#fff}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:760px}
+  th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:#fafbfc;font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);position:sticky;top:0}
+  th.us,td.us{background:#fff5f5}
+  th.us{color:var(--red)}
+  .yes{color:var(--good);font-weight:700}
+  .no{color:#b0b4bd}
+  .partial{color:#b8860b;font-weight:600}
+  tbody tr:hover{background:#fafbfc}
+  tbody tr:hover td.us{background:#ffecec}
+  /* seo suggestions */
+  .seo-item{background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:10px;padding:16px 18px;margin-bottom:14px;box-shadow:var(--shadow)}
+  .seo-item h4{font-size:15.5px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .seo-item .pri{font-size:11px;font-weight:700;padding:2px 9px;border-radius:6px;white-space:nowrap}
+  .pri.high{background:#fde7e6;color:#b3261e}.pri.med{background:#fdf3da;color:#946200}.pri.low{background:#e3f4ea;color:#0a7a42}
+  .seo-item p{font-size:13.5px;color:#374151;margin-top:7px}
+  .seo-item .who{font-size:12px;color:var(--muted);margin-top:8px}
+  .seo-item code{background:#f0f2f5;padding:1px 6px;border-radius:4px;font-size:12.5px}
+  /* positioning / market share callout */
+  .callout{background:linear-gradient(135deg,#fff,#fff7f7);border:1px solid #f3d3d1;border-radius:14px;padding:24px;box-shadow:var(--shadow)}
+  .callout h3{color:var(--red);font-size:17px;margin-bottom:8px}
+  .callout ul{margin:10px 0 0 18px;font-size:14px}
+  .callout li{margin-bottom:9px}
+  .callout .ex{background:#fff;border:1px dashed #e7b7b4;border-radius:8px;padding:10px 14px;margin-top:6px;font-size:13.5px}
+  .callout .ex b{color:var(--good)}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-bottom:18px}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle}
+  footer{padding:30px 0 60px;color:var(--muted);font-size:12px;text-align:center}
+  @media(max-width:600px){header.hero h1{font-size:25px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1><span>Kentall</span>Tech : Competitor &amp; SEO Analysis</h1>
+    <p>Where we stand against GPS / fleet-tracking rivals in the yacht &amp; boat space (Greece first, EU context), and what their SEO is doing that we should borrow. Built from public marketing pages, June 2026.</p>
+    <div class="meta-row">
+      <span><b>9</b> competitors reviewed</span>
+      <span><b>Most direct threat:</b> Openichnos (GR)</span>
+      <span><b>Our edge:</b> Greek VAT / ΠΟΛ.1240 reports + 95% device compatibility</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tabs">
+    <button class="tab active" data-tab="comp">Competitors</button>
+    <button class="tab" data-tab="matrix">Feature Comparison</button>
+    <button class="tab" data-tab="seo">SEO Opportunities</button>
+    <button class="tab" data-tab="position">Positioning &amp; Market Share</button>
+  </div>
+
+  <!-- ============ COMPETITORS ============ -->
+  <section class="panel active" id="comp" style="padding-top:0">
+    <h2 class="sec">The <span class="k">field</span></h2>
+    <p class="sub">Sorted by how directly they threaten us in the Greek yacht/charter niche. Red border = head-to-head competitor, amber = adjacent, green = different game.</p>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--bad)"></span>High threat: same niche, same country</span>
+      <span><span class="dot" style="background:var(--warn)"></span>Medium: overlapping but different focus</span>
+      <span><span class="dot" style="background:var(--good)"></span>Low: device-only or different segment</span>
+    </div>
+    <div class="grid" id="compGrid"></div>
+  </section>
+
+  <!-- ============ MATRIX ============ -->
+  <section class="panel" id="matrix" style="padding-top:0">
+    <h2 class="sec">Feature <span class="k">comparison</span></h2>
+    <p class="sub">How our offering stacks up against the most relevant rivals. <span class="yes">●</span> has it · <span class="partial">◐</span> partial / unclear · <span class="no">○</span> not offered.</p>
+    <div class="tbl-scroll"><table id="matrix"></table></div>
+  </section>
+
+  <!-- ============ SEO ============ -->
+  <section class="panel" id="seo" style="padding-top:0">
+    <h2 class="sec">SEO <span class="k">opportunities</span></h2>
+    <p class="sub">Patterns that are clearly working for competitors and are realistic to add to our Next.js site, ranked by impact-to-effort.</p>
+    <div id="seoList"></div>
+  </section>
+
+  <!-- ============ POSITIONING ============ -->
+  <section class="panel" id="position" style="padding-top:0">
+    <h2 class="sec">Positioning &amp; <span class="k">market share</span></h2>
+    <p class="sub">How to signal dominance without handing competitors your client list or your prices.</p>
+    <div class="callout">
+      <h3>The problem</h3>
+      <p style="font-size:14px">We hold a large share of the Greek market, but our biggest rival (Openichnos) publishes named client testimonials and others publish prices. We want the <i>credibility</i> of scale without giving away <b>who</b> our clients are or <b>what</b> we charge.</p>
+      <h3 style="margin-top:20px">How to word it safely</h3>
+      <ul id="posList"></ul>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">Static analysis snapshot for internal use : KentallTech Ltd. : generated June 2026. Figures on competitors are from their public marketing pages and may change.</div>
+</footer>
+
+<script>
+/* ---------------- DATA ---------------- */
+const competitors = [
+  {name:"Openichnos", flag:"🇬🇷 Greece", threat:"high", threatLabel:"High threat",
+   badges:["Made in EU","Yacht + charter","Names clients"],
+   tagline:"“Monitor your Boat & Fleet : instantly, remotely, globally”",
+   audience:"Private boat owners AND charter fleet managers : same dual targeting as us.",
+   features:"Global GPS, IoT engine monitoring, SOS button, geofencing, route history, nautical depth maps, multi-device dashboard.",
+   diff:"“100% made in EU / Greece”, plug-and-play, 24/7 support, displays 4 named customer testimonials (charter cos, owners, rentals).",
+   pricing:"Hidden : “Get a quote” (same as us).",
+   takeaway:"Our most direct rival. Beats us on social proof + IoT engine sensors. We beat them on Greek VAT reporting and 95% device compatibility.",
+   src:"https://openichnos.com/"},
+
+  {name:"AutoLeaders", flag:"🇬🇷 Greece", threat:"high", threatLabel:"High threat",
+   badges:["e-shop","Teltonika reseller","Public prices"],
+   tagline:"GPS trackers for boats / yachts + fleet management for fleets.",
+   audience:"Owners and fleet operators; strong e-commerce / SEO-driven product catalog.",
+   features:"Waterproof Teltonika devices, vehicle+boat+aircraft tracking, fleet management platform, summer-only subscriptions.",
+   diff:"Broad device catalog and category pages built for search; transactional e-shop with prices and 'add to cart'.",
+   pricing:"Public, per-device pricing.",
+   takeaway:"Wins organic search via dozens of indexed product/category pages. We have far fewer indexable pages : this is our biggest SEO gap.",
+   src:"https://autoleaders.gr/"},
+
+  {name:"GPS-Trackers.gr", flag:"🇬🇷 Greece", threat:"med", threatLabel:"Medium",
+   badges:["e-shop","IP68 hardware","Trust logos"],
+   tagline:"“M2M GPS Tracker, Waterproof” : theft prevention for unattended assets.",
+   audience:"Boat & jet-ski owners, rental operators, off-season storage anti-theft.",
+   features:"IP68 waterproof, 1-year battery, arm/disarm + towing + harbor-exit alerts, engine immobilization, mic, route history.",
+   diff:"Displays trust logos (Bank of Greece, fire service, police) and a 5-year warranty.",
+   pricing:"Public : €69 to €375 per device.",
+   takeaway:"Device-led, weaker on fleet software. Their authority-logo trust signals are something we could echo (without naming private clients).",
+   src:"https://www.gps-trackers.gr/gps-tracker-skafon-jet-ski/"},
+
+  {name:"Fleet Complete / Powerfleet", flag:"🇬🇷 Greece", threat:"med", threatLabel:"Medium",
+   badges:["Enterprise","Vehicle-first","Global brand"],
+   tagline:"Manage your entire fleet from one screen.",
+   audience:"Enterprise vehicle fleets, logistics, tourism; not boat-specialised.",
+   features:"GPS fleet tracking, asset tracking, driver/productivity metrics, compliance.",
+   diff:"Large international backing (Powerfleet), enterprise sales motion.",
+   pricing:"Hidden : enterprise quote.",
+   takeaway:"Strong brand but vehicle-centric. We out-specialise them on marine/VAT. They out-rank us on generic 'fleet management' terms.",
+   src:"https://www.fleetcomplete.gr/"},
+
+  {name:"Mister Track", flag:"🇫🇷 France / EU", threat:"med", threatLabel:"Medium",
+   badges:["No-install","Multi-language","Blog"],
+   tagline:"“The GPS tracker for boats, catamarans and jet ski.”",
+   audience:"Charter pros, excursion operators, security-conscious owners.",
+   features:"Sub-2m accuracy (GPS/GLONASS/QZSS), magnetic wireless waterproof, geofencing, motion alerts, exportable reports.",
+   diff:"“Most precise GPS tracker in Europe”; ready-to-use no-install; strong multilingual + blog SEO.",
+   pricing:"Subscription (monthly/annual), prices not shown.",
+   takeaway:"EU SEO benchmark : multilingual site + blog category structure. Their content engine is a model for our /guides expansion.",
+   src:"https://mistertrack.com/en/gps-tracker-for-boats/"},
+
+  {name:"Capturs", flag:"🇫🇷 France / EU", threat:"low", threatLabel:"Low",
+   badges:["Sigfox/LTE-M","Sport+nautical"],
+   tagline:"GPS tracker dedicated to nautical equipment and fleet.",
+   audience:"Nautical equipment, coastal Europe, also sports tracking.",
+   features:"No-wiring install, Sigfox / GSM LTE-M / NB-IoT coverage, fleet view.",
+   diff:"Low-power IoT network coverage across Europe.",
+   pricing:"Mixed / device-led.",
+   takeaway:"Different network/tech niche; not a Greek-market threat but shows IoT-network angle.",
+   src:"https://www.capturs.com/en/gps-nautical/"},
+
+  {name:"Teltonika GPS", flag:"🇱🇹 Lithuania / EU", threat:"low", threatLabel:"Low",
+   badges:["Device maker","Use-case SEO"],
+   tagline:"Theft prevention & remote monitoring for charter yachts (use-case page).",
+   audience:"Sells to integrators/resellers, not end fleet owners.",
+   features:"Hardware platform; the trackers many rivals (and we) resell.",
+   diff:"Publishes detailed 'use-case' SEO pages per industry : excellent template.",
+   pricing:"B2B / via resellers.",
+   takeaway:"Not a direct rival (we resell compatible devices) but their use-case page format is a proven SEO pattern to copy.",
+   src:"https://www.teltonika-gps.com/use-cases/telematics/theft-prevention-and-remote-monitoring-for-charter-yachts"},
+
+  {name:"WAIV", flag:"🇪🇺 / US", threat:"low", threatLabel:"Low",
+   badges:["Rental SaaS","Integrations"],
+   tagline:"GPS tracking for boat rentals : protect your fleet.",
+   audience:"Boat rental / club operators.",
+   features:"Integrates with SpeedyDock, BoatClubSoftware, Fleetio.",
+   diff:"Booking-platform integrations as the wedge.",
+   pricing:"SaaS, hidden.",
+   takeaway:"Integration-led positioning. A reminder that 'works with your booking software' is an untapped angle for us.",
+   src:"https://waiv.ai/"},
+
+  {name:"MarineTraffic", flag:"🇬🇷 Athens", threat:"low", threatLabel:"Low",
+   badges:["AIS analytics","Not fleet-GPS"],
+   tagline:"Real-time AIS ship positions & maritime analytics.",
+   audience:"Shipping, ports, analytics : commercial vessels.",
+   features:"AIS-based global ship tracking, port data.",
+   diff:"Huge Greek tech brand but a different problem (AIS analytics, not asset-tracking devices).",
+   pricing:"Subscription tiers.",
+   takeaway:"Not a competitor, but high domain authority : a potential backlink/PR target, not a rival.",
+   src:"https://en.wikipedia.org/wiki/MarineTraffic"},
+];
+
+const matrix = {
+  cols:["KentallTech (us)","Openichnos","AutoLeaders","GPS-Trackers.gr","Mister Track","Fleet Complete"],
+  rows:[
+    ["Boat / yacht specialised", 2,2,1,2,2,0],
+    ["Owners + charter fleet targeting", 2,2,1,1,2,1],
+    ["Own fleet-management platform (web+app)", 2,2,1,1,2,2],
+    ["Greek VAT / ΠΟΛ.1240 reports", 2,0,0,0,0,0],
+    ["95% 3rd-party device compatibility", 2,0,1,1,0,1],
+    ["Own hardware (KEN-M)", 2,2,1,2,2,1],
+    ["IoT engine / sensor monitoring", 1,2,0,1,0,1],
+    ["SOS / emergency button", 0,2,0,1,1,0],
+    ["Named client testimonials (public)", 0,2,0,0,0,1],
+    ["Public prices", 0,0,2,2,0,0],
+    ["Multilingual site (EN+EL)", 1,2,1,0,2,1],
+    ["Content / blog SEO engine", 1,1,2,1,2,2],
+    ["Indexable product/category pages", 0,1,2,2,1,2],
+    ["2-year warranty", 2,1,1,2,1,1],
+  ]
+};
+
+const seo = [
+  {pri:"high", t:"Build out indexable product & use-case pages",
+   d:"AutoLeaders, Teltonika and Mister Track each rank by having many narrow pages (per device, per use-case, per vessel type). We have ~10 routes. Add SSG pages like <code>/yacht-tracking</code>, <code>/charter-fleet-tracking</code>, <code>/jet-ski-tracker</code>, <code>/sailboat-vat-tracking</code> : each a thin server component with unique title/description, mirroring how guides are generated.",
+   who:"Pattern from: AutoLeaders, Teltonika use-cases, Mister Track"},
+  {pri:"high", t:"Own the Greek VAT / ΠΟΛ.1240 search term",
+   d:"No competitor surfaced ranks for the Greek charter VAT-reporting niche : this is genuinely ours. Create a dedicated page + guide targeting 'μισθωμένο σκάφος ФΠΑ GPS', 'ΔΕΠΕΑ / charter logbook', 'ΠΟΛ.1240/2018 πλους'. High intent, zero competition.",
+   who:"Gap nobody fills : our unique moat"},
+  {pri:"high", t:"Add a bilingual (Greek) version of every page",
+   d:"Most Greek rivals publish in Greek; Mister Track ranks via multilingual pages. We are English-first. Add <code>hreflang</code> alternates and EL routes : huge for Greek organic where buyers search in Greek.",
+   who:"Pattern from: AutoLeaders, GPS-Trackers.gr, Mister Track"},
+  {pri:"med", t:"Start a marine-tracking blog / resource hub",
+   d:"Mister Track and Fleet Complete drive organic traffic with category-structured blogs. Extend our <code>/guides</code> into evergreen articles: 'how to track a charter yacht', 'choosing a boat GPS tracker', 'preventing off-season boat theft'. Each targets a real search query and links to product pages.",
+   who:"Pattern from: Mister Track, Fleet Complete, Teltonika"},
+  {pri:"med", t:"Add Product, FAQ & Breadcrumb structured data everywhere",
+   d:"We already ship Organization + Product JSON-LD. Add <code>FAQPage</code> schema on PDPs/guides and <code>BreadcrumbList</code> sitewide to win rich results and 'People also ask' real estate that competitors leave open.",
+   who:"Underused by all : easy win"},
+  {pri:"med", t:"Trust & authority signals (without naming clients)",
+   d:"GPS-Trackers.gr shows authority logos; Openichnos shows testimonials. We can match the credibility with anonymised proof: '5-year warranty', '95% device compatibility', aggregate counts ('thousands of assets tracked'), and sector badges ('trusted by Greek charter operators') : no names needed.",
+   who:"Pattern from: GPS-Trackers.gr, Openichnos"},
+  {pri:"low", t:"Capture 'works with your booking software' intent",
+   d:"WAIV positions on integrations (SpeedyDock, Fleetio). If our platform exports/integrates, a page targeting 'charter booking + GPS integration' captures an audience nobody in Greece addresses.",
+   who:"Pattern from: WAIV"},
+  {pri:"low", t:"Pursue backlinks from high-authority Greek marine sites",
+   d:"MarineTraffic and similar Athens maritime brands have strong domain authority. PR / guest content / directory listings there would lift our domain rating faster than on-page tweaks alone.",
+   who:"Authority-building"},
+];
+
+const positioning = [
+  {h:"Lead with market position, not client names.",
+   ex:"“<b>The tracking platform trusted by a large share of Greece’s charter fleet.</b>” : claims dominance, names no one."},
+  {h:"Use aggregate, non-identifying numbers.",
+   ex:"“<b>Thousands of vessels tracked across Greek waters</b>” or “<b>X years securing Greek fleets</b>” : credibility without a client list."},
+  {h:"Show sectors served, not companies.",
+   ex:"“<b>Trusted by charter operators, yacht owners and rental fleets nationwide</b>” : the segments, never the brands."},
+  {h:"Anonymised testimonials beat none.",
+   ex:"“‘Cut our VAT reporting to minutes.’ : <b>Charter operator, Cyclades</b>” : real quote, role + region only, no company."},
+  {h:"Keep prices behind 'Request a quote'.",
+   ex:"Openichnos and Fleet Complete both hide pricing : stay consistent. Frame it as <b>“solutions tailored to your fleet size”</b>, not a price gap."},
+  {h:"Turn the VAT moat into the headline differentiator.",
+   ex:"“<b>The only platform with automated ΠΟΛ.1240 VAT trip reports built in</b>” : a claim no competitor can copy, and it implies Greek-market depth without naming a soul."},
+];
+
+/* ---------------- RENDER ---------------- */
+const sym = v => v===2 ? '<span class="yes">●</span>' : v===1 ? '<span class="partial">◐</span>' : '<span class="no">○</span>';
+
+document.getElementById('compGrid').innerHTML = competitors.map(c=>`
+  <div class="card threat-${c.threat}">
+    <h3>${c.name} <span class="flag">${c.flag}</span></h3>
+    <div class="badges"><span class="badge t-${c.threat}">${c.threatLabel}</span>${c.badges.map(b=>`<span class="badge">${b}</span>`).join('')}</div>
+    <div class="tagline">${c.tagline}</div>
+    <dl>
+      <dt>Target audience</dt><dd>${c.audience}</dd>
+      <dt>Key features</dt><dd>${c.features}</dd>
+      <dt>Differentiator</dt><dd>${c.diff}</dd>
+      <dt>Pricing</dt><dd>${c.pricing}</dd>
+      <dt>What it means for us</dt><dd>${c.takeaway}</dd>
+    </dl>
+    <a class="src" href="${c.src}" target="_blank" rel="noopener">Visit ↗</a>
+  </div>`).join('');
+
+document.getElementById('matrix').innerHTML =
+  '<thead><tr><th>Capability</th>'+matrix.cols.map((c,i)=>`<th class="${i===0?'us':''}">${c}</th>`).join('')+'</tr></thead>'+
+  '<tbody>'+matrix.rows.map(r=>{
+    const [label,...vals]=r;
+    return `<tr><td><b>${label}</b></td>`+vals.map((v,i)=>`<td class="${i===0?'us':''}">${sym(v)}</td>`).join('')+'</tr>';
+  }).join('')+'</tbody>';
+
+document.getElementById('seoList').innerHTML = seo.map(s=>`
+  <div class="seo-item">
+    <h4>${s.t}<span class="pri ${s.pri}">${s.pri.toUpperCase()} PRIORITY</span></h4>
+    <p>${s.d}</p>
+    <div class="who">${s.who}</div>
+  </div>`).join('');
+
+document.getElementById('posList').innerHTML = positioning.map(p=>`
+  <li><b>${p.h}</b><div class="ex">${p.ex}</div></li>`).join('');
+
+/* tabs */
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');
+  document.getElementById(t.dataset.tab).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}));
+</script>
+</body>
+</html>

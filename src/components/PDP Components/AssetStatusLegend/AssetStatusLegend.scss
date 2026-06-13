@@ -1,0 +1,33 @@
+@use '../../../imports' as *;
+
+.big-features {
+    .feature--icon {
+        // fixed, centered icon column so the label always starts at the
+        // same x regardless of how wide the glyph is (e.g. signal-slash)
+        width: 64px;
+        display: flex;
+        justify-content: center;
+        flex-shrink: 0;
+
+        svg {
+            width: 44px;
+            height: 44px;
+        }
+
+        &.status-moving {
+            color: #16a34a;
+        }
+
+        &.status-stationary {
+            color: $col-gray-800;
+        }
+
+        &.status-last-report {
+            color: #d97706;
+        }
+
+        &.status-disconnected {
+            color: $primary-red;
+        }
+    }
+}

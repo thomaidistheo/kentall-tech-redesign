@@ -1,0 +1,24 @@
+import React from 'react'
+import Link from 'next/link'
+import Contact from '../Contact/Contact'
+
+import './error-page.scss'
+
+export default function ErrorPage() {
+  return (
+      <div className="error-page-cont">
+        <h1>
+          This page does not exist.
+        </h1>
+
+        <Link href='/' className='btn btn-primary-blue'>
+          Return Home
+        </Link>
+
+        <div className='error-suggestion'>
+          <Contact />
+        </div>
+
+      </div>
+    )
+  }
