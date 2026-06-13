@@ -1,5 +1,6 @@
 import Script from 'next/script'
 import { Roboto } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 
 import Preheader from '../src/components/Header/Preheader'
 import Header from '../src/components/Header/Header'
@@ -89,6 +90,7 @@ export default function RootLayout({ children }) {
           strategy="lazyOnload"
           src="https://chimpstatic.com/mcjs-connected/js/users/eef2f9194aa71d6bf20f23f15/ec6a8be524e08bdcdb4868a08.js"
         />
+        <Analytics />
       </body>
     </html>
   )
