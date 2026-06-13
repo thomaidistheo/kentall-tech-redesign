@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import Banner from '../../../components/PDP Components/Banner/Banner'
 import Spacer from '../../../components/Spacer/Spacer'
 import FeatureStrip from '../../../components/PDP Components/Feature Strip/FeatureStrip'
@@ -137,6 +138,8 @@ function PDPBoat() {
                         This report can be setup to be created every week for each asset and then automatically sent out to your e-mail to provide a clear view of each trip with data required by the Greek law,
                         <br/>
                         making it easy to submit for VAT purposes.
+                        <br/><br/>
+                        Learn more about <a href="/sailboat-vat-tracking">sailboat VAT tracking (ΠΟΛ.1240/2018)</a> or how we handle <a href="/charter-fleet-tracking">charter fleet tracking</a>.
                     </div>
 
                     <Image className="trip-report-img" src={tripReportImg1} alt="Automated VAT trip report with distances and zones" />
@@ -153,6 +156,16 @@ function PDPBoat() {
                     <Image className="trip-zone-img" src={tripZoneImg1} alt="Nautical mile zones mapped around a Greek island port" />
                 </div>
                 
+                <nav className="related-solutions" aria-label="Related solutions">
+                    <h2 className="centered-title">Explore by use case</h2>
+                    <ul>
+                        <li><Link href="/yacht-tracking">Yacht tracking</Link></li>
+                        <li><Link href="/charter-fleet-tracking">Charter fleet tracking</Link></li>
+                        <li><Link href="/sailboat-vat-tracking">Sailboat VAT tracking (ΠΟΛ.1240/2018)</Link></li>
+                        <li><Link href="/jet-ski-tracker">Jet ski GPS tracker</Link></li>
+                    </ul>
+                </nav>
+
                 <div className="cta-section">
                     <h2 className="centered-title">
                         Already have a GPS Tracker device installed? No problem.

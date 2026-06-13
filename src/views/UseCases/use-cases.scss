@@ -1,6 +1,11 @@
-@use '../../../imports' as *;
+@use '../../imports' as *;
 
-.product-page {
+// These use-case pages share the boat PDP's visual language. The layout
+// classes below mirror src/views/ProductPages/PDPBoat/PDPBoat.scss so the
+// reused components (device-showcase, fleet map, trip history, VAT report)
+// look identical, with the FAQ / related blocks added at the end.
+
+.product-page.use-case-page {
     padding-bottom: 128px;
     color: $col-dark-200;
 
@@ -10,25 +15,19 @@
 
     .device-showcase {
         max-width: 614px;
-        margin: 0 auto;
-        margin-top: -264px;
+        margin: -264px auto 64px;
         position: relative;
         z-index: 2;
-        margin-bottom: 64px;
-    
+
         img {
             width: 100%;
             height: auto;
         }
-    
+
         @media (max-width: 1280px) {
             padding: 0 16px;
             margin-top: -128px;
         }
-    }
-
-    .title {
-        font-size: 24px;
     }
 
     .features-title {
@@ -36,15 +35,14 @@
             display: none;
         }
     }
-    
+
     .subtitle {
         max-width: 678px;
         font-size: 24px;
         line-height: 28px;
-        margin: 0 auto;
-        margin-bottom: 64px;
+        margin: 0 auto 64px;
         text-align: center;
-    
+
         @media (max-width: 1280px) {
             padding: 0 16px;
         }
@@ -52,18 +50,18 @@
 
     .centered-title {
         max-width: 800px;
+        margin: 0 auto 32px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         font-size: 32px;
         line-height: 32px;
-        margin-bottom: 32px;
-
     }
 
     .centered-paragraph {
         max-width: 800px;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -71,41 +69,36 @@
         font-size: 16px;
         line-height: 22px;
     }
-    
+
     .section {
         max-width: 1288px;
-        margin: 0 auto;
-        margin-bottom: 32px;
+        margin: 0 auto 32px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-    
-        &--title {
-            font-size: 24px;
-            line-height: 28px;
-            width: 100%;
-    
-            margin-bottom: 32px;
-            position: relative;
-            border-bottom: 2px solid $col-dark-200;
-        }
-    
-        &--text {
-            font-size: 16px;
-        }
 
-        
-    
         @media (max-width: 1280px) {
             padding: 0 16px;
         }
     }
-    
+
+    .use-case-list {
+        max-width: 800px;
+        margin: 16px auto 0;
+        padding-left: 22px;
+        font-size: 16px;
+        line-height: 22px;
+        align-self: center;
+
+        li {
+            margin-bottom: 8px;
+        }
+    }
+
     .image-container {
-        margin: 0 auto;
         max-width: 1288px;
-        margin-bottom: 64px;
+        margin: 0 auto 64px;
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -153,11 +146,11 @@
                 flex-direction: row;
                 justify-content: flex-start;
                 min-width: 256px;
-    
+
                 &--icon {
                     max-width: 64px;
                     max-height: 64px;
-                
+
                     img {
                         width: 100%;
                         height: auto;
@@ -172,11 +165,6 @@
                     min-width: unset;
                     flex-direction: column;
                     justify-content: center;
-                    
-                    &--icon {
-                        max-width: 64px;
-                        max-height: 64px;
-                    }
 
                     &--text {
                         width: auto;
@@ -185,114 +173,6 @@
                     }
                 }
             }
-    
-        }
-
-
-    }
-
-    .img-grid {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        margin: 0 auto;
-        max-width: 1288px;
-        height: 456px;
-    
-        .big-img {
-            background-color: $col-gray-400;
-            background-image: url('../../../assets/Product Pages/trip-report.png');
-            background-position: left bottom;
-            background-size: cover;
-            background-repeat: no-repeat;
-            height: 100%;
-            width: 50%;
-        }
-    
-        .small-img-col {
-            height: 100%;
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-    
-            .image-one {
-                background-color: $col-gray-400;
-                background-image: url('../../../assets/Product Pages/map-view.png');
-                background-position: left bottom;
-                background-size: cover;
-                background-repeat: no-repeat;
-                height: 70%;
-                width: 100%;
-            }
-    
-            .image-two {
-                background-color: $col-gray-400;
-                background-image: url('../../../assets/Product Pages/satellite-view.png');
-                background-position: left center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                height: 30%;
-                width: 100%;
-            }
-        }
-    
-        @media (max-width: 1288px) {
-            padding: 0 16px;
-        }
-
-        @media (max-width: 512px) {
-            flex-direction: column;
-
-            .big-img {
-                width: 100%;
-            }
-
-            .small-img-col {
-                width: 100%;
-            }
-        }
-    }
-
-    .map-showcase {
-        width: 100%;
-        height: 100%;
-        background-color: $primary-blue;
-        @include flexColCenter;
-        padding: 32px 32px;
-        margin-bottom: 164px;
-
-        .centered-title {
-            color: $primary-white;
-        }
-
-        .slider {
-            width: 100%;
-            height: auto;
-        }
-
-        .map {
-            margin-bottom: 64px;
-
-            @media (max-width: 767px) {
-                margin-bottom: 64px;
-            }
-
-            .compareImg {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        .overlay-img {
-            width: 100%;
-            max-width: 820px;
-            height: auto;
-            margin-bottom: -124px;
         }
     }
 
@@ -303,8 +183,7 @@
         flex-direction: column;
         margin: 0 auto;
         width: 100%;
-        padding: 0 16px;
-        padding-bottom: 32px;
+        padding: 0 16px 32px;
 
         .photo-grid {
             display: flex;
@@ -329,8 +208,7 @@
     }
 
     .trip-reports {
-        padding: 0 16px;
-        padding-top: 64px;
+        padding: 64px 16px 0;
         background-color: $primary-white;
         width: 100%;
         display: flex;
@@ -348,7 +226,6 @@
             height: auto;
             max-width: 800px;
         }
-
 
         .trip-report-desc {
             background-color: $primary-blue;
@@ -369,10 +246,61 @@
         }
     }
 
-    .related-solutions {
+    // ---- FAQ ------------------------------------------------------------
+    .use-case-faq {
         max-width: 800px;
-        margin: 0 auto;
-        padding: 64px 16px 0;
+        margin: 64px auto 0;
+        padding: 0 16px;
+
+        .use-case-faq-list {
+            margin-top: 24px;
+        }
+
+        .use-case-faq-item {
+            border-bottom: 1px solid $col-gray-200;
+            padding: 16px 0;
+
+            summary {
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 18px;
+                color: $primary-black;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 16px;
+
+                &::-webkit-details-marker {
+                    display: none;
+                }
+
+                &::after {
+                    content: '+';
+                    color: $primary-red;
+                    font-size: 1.4em;
+                    line-height: 1;
+                }
+            }
+
+            &[open] summary::after {
+                content: '−';
+            }
+
+            p {
+                margin-top: 12px;
+                font-size: 16px;
+                line-height: 22px;
+                color: $col-dark-100;
+            }
+        }
+    }
+
+    // ---- Related links --------------------------------------------------
+    .use-case-related {
+        max-width: 800px;
+        margin: 64px auto 0;
+        padding: 0 16px;
 
         ul {
             list-style: none;
@@ -402,8 +330,7 @@
     }
 
     .cta-section {
-        padding: 0 16px;
-        padding-top: 64px;
+        padding: 64px 16px 0;
         width: 100%;
         display: flex;
         align-items: center;
@@ -413,10 +340,9 @@
         .centered-title {
             max-width: 660px;
         }
-        
+
         .centered-paragraph {
             margin-bottom: 32px;
         }
     }
 }
-

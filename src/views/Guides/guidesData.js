@@ -183,6 +183,25 @@ export const guideCategories = [
                     'Contact us at info@kentall-tech.com if you need help configuring the VAT special report for your vessel.',
                 ],
             },
+            {
+                slug: 'charter-vat-pol-1240',
+                title: 'Charter VAT & ΠΟΛ.1240/2018',
+                blocks: [
+                    'If you charter out a sailboat or yacht in Greece (μισθωμένο σκάφος), the way each voyage is treated for VAT depends on how much of the trip took place inside versus outside defined nautical-mile zones. The Greek regulation ΠΟΛ.1240/2018 sets out the movement report (έκθεση πλου) you are expected to keep for this.',
+                    'This guide explains how the Kentall platform turns that requirement into an automated report, so you do not have to calculate zones from raw coordinates by hand.',
+                    'What the regulation expects for each trip:',
+                    {
+                        list: [
+                            'Timestamps and positions: a recorded track of when and where the vessel travelled',
+                            'Zone breakdown: the share of the voyage spent inside and outside the relevant nautical-mile zone',
+                            'Per-trip evidence: a record you can archive and submit as supporting documentation for VAT (ΦΠΑ)',
+                        ],
+                    },
+                    'How the platform handles it: we have pre-mapped the nautical-mile zones around every island and major port base used for this purpose. For each trip, the platform measures the recorded track against those zones and calculates the inside/outside percentages automatically.',
+                    'You can schedule a weekly VAT report per vessel. It is generated and emailed to you as an archive-ready PDF, with the trips, timestamps, positions and zone percentages already worked out. Combined with up to 6 months of replayable trip history, it backs your charter logbook (ημερολόγιο πλου) with a complete, verifiable record.',
+                    'For a full overview of this for owners and charter operators, see the dedicated Sailboat VAT tracking page at www.kentall-tech.com/sailboat-vat-tracking. For help configuring it, contact us at info@kentall-tech.com.',
+                ],
+            },
         ],
     },
 ]
