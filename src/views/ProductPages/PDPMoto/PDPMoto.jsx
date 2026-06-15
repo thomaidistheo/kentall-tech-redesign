@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState, useRef, useEffect } from 'react'
 import Banner from '../../../components/PDP Components/Banner/Banner'
 import Spacer from '../../../components/Spacer/Spacer'
@@ -250,7 +251,16 @@ function PDPMoto() {
                 </div>
 
                 <Spacer />
-                
+
+                <nav className="related-solutions" aria-label="Related solutions">
+                    <h2 className="centered-title">Looking to protect a watercraft too?</h2>
+                    <ul>
+                        <li><Link href="/jet-ski-tracker">Jet ski GPS tracker</Link></li>
+                    </ul>
+                </nav>
+
+                <Spacer />
+
                 <div className="cta-section">
                     <h2 className="centered-title">
                         Already have a GPS Tracker device installed? No problem.

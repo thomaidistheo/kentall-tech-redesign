@@ -263,13 +263,18 @@
 
         img {
             display: block;
+            width: auto;
+            height: auto;
             max-width: 92vw;
             max-height: 78vh;
+            object-fit: contain;
             cursor: zoom-in;
         }
 
         // zoomed: natural size, pan by scrolling
         &.zoomed img {
+            width: auto;
+            height: auto;
             max-width: none;
             max-height: none;
             cursor: zoom-out;
